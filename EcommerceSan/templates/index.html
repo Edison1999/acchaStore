@@ -1,0 +1,629 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extra_links %}
+<link rel="stylesheet" href="{% static 'css/indexStyle.css' %}?20090712">
+{% endblock %}
+{% block head_title %}CognitioCyT{% endblock %}
+
+{% block content %}
+<main>
+  <!--Principal Container-->
+  <section class="principalSection">
+    <div class="shopify-section no-index-section slider-section">
+      <div>
+        <div class="slideshow-wrapper">
+          <div class="slideshow slick-initialized slick-slider">
+            <div class="slick-list draggable">
+              <div class="slick-track">
+                <div class="slideshow__slide slideshow__slide--slideshow-0 slick-slide slick-current slick-active">
+                  <div class="slideshow__image">
+                    <img src="{% static 'images/principalPage/slider-1.jpg' %}">
+                  </div>
+                  <div class="slideshow__text-wrap slideshow__overlay">
+                    <div class="slideshow__text-content">
+                      <div class="section-slider left">
+
+                        <h2 class="h1 mega-title slideshow__title">
+                          The Organic Store
+                        </h2>
+
+
+                        <span class="mega-subtitle slideshow__subtitle">
+                          Skin Care
+                        </span>
+
+
+                        <span class="mega-slider_txt slideshow__slider_txt">
+                          Enercos products were created using all natural ingredients to offer safe, effective
+                          relaxation
+                          without harmful side effects
+                        </span>
+
+
+                        <div class="slider--button">
+                          <a href="#" class="btn-Shop-now" tabindex="0">Shop now</a>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Intro-->
+  <section class="intro-Section">
+    <div class="container-inner-intro">
+      <div class="section-feature-image section-bg">
+        <div class="section-feature-inner page-width">
+          <div class="grid feature-image">
+            <div class="grid__item  medium-up--one-half pb-60 feature-row__text feature-row__text--right">
+              <div class="features-heading heading-box">
+                <img class="features-heading__image lozad fade"
+                  src="{% static 'images/principalPage/icon_feature.png' %}" alt="Featured Image"
+                  data-srclozad="//cdn.shopify.com/s/files/1/0038/3759/1619/files/icon_feature.png?v=1537773960"
+                  data-loaded="true">
+                <h2 class="featured-row__title">What is the Enercos ?</h2>
+              </div>
+              <div class="rte rte-setting featured-row__subtext">
+                <p>Apparently we had reached a great height in the<br> atmosphere, for the sky was a dead black, and the
+                  stars<br> had ceased to twinkle.</p>
+              </div>
+              <a href="#" class="btn-Shop-now">
+                Read more
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="grid__item medium-up--one-half pb-60">
+              <div id="FeatureRowImageWrapper-feature-row" class="feature-row__image-wrapper js">
+                <div style="padding-top:73.6842105263158%;">
+                  <img id="FeatureRowImage-feature-row" class="feature-row__image lazyload lozad fade"
+                    src="{% static 'images/principalPage/banner-Second.png' %}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Description product-->
+  <section class="descrip-Section">
+    <div class="shopify-section no-index-section">
+      <div class="feature-row__bg-image section-bg">
+        <img class="secondContainerImage" src="{% static 'images/principalPage/secondContainer.png' %}">
+        <div class="page-width ">
+          <div class="feature-row grid section-padding">
+            <div class="grid__item medium-up--one-half feature-row__text feature-row__text--right">
+              <div class="features-heading heading-box">
+                <img class="features-heading__image " src="{% static 'images/principalPage/icon_feature.png' %}"
+                  alt="Featured Image">
+                <h2 class="featured-row__title">Natural Organic Skin Care</h2>
+                <p class="features-heading__description">Every treatment is specifically designed to offer a unique
+                  experience, using powerful massage sequences.</p>
+              </div>
+              <div class="features-heading heading-box">
+                <div class="features_list">
+                  <div class="features-images features-icon">
+                    <img src="//cdn.shopify.com/s/files/1/0038/3759/1619/files/icon_feature_1.png?v=1536061765" alt=""
+                      class="image features lozad fade"
+                      data-srclozad="//cdn.shopify.com/s/files/1/0038/3759/1619/files/icon_feature_1.png?v=1536061765"
+                      data-loaded="true">
+                  </div>
+                  <div class="features-description">
+                    <h4 class="title">No Chemicals, 100% Pure</h4>
+                    <div class="decription">
+                      <p>100% Pure aims to create the world’s most pure and all-natural line of cosmetics, beauty
+                        products skincare.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="features_list">
+                  <div class="features-images features-icon">
+                    <img src="//cdn.shopify.com/s/files/1/0038/3759/1619/files/icon_feature_2.png?v=1536304270" alt=""
+                      class="image features lozad fade"
+                      data-srclozad="//cdn.shopify.com/s/files/1/0038/3759/1619/files/icon_feature_2.png?v=1536304270"
+                      data-loaded="true">
+                  </div>
+                  <div class="features-description">
+                    <h4 class="title">Real Purity</h4>
+                    <div class="decription">
+                      <p>Uses only the highest quality botanicals, plant-derived to make naturally good-for-you
+                        cosmetics at affordable!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="features_list">
+
+
+                  <div class="features-images features-icon">
+                    <img src="//cdn.shopify.com/s/files/1/0038/3759/1619/files/icon_feature_3.png?v=1536304294" alt=""
+                      class="image features lozad fade"
+                      data-srclozad="//cdn.shopify.com/s/files/1/0038/3759/1619/files/icon_feature_3.png?v=1536304294"
+                      data-loaded="true">
+                  </div>
+
+
+                  <div class="features-description">
+
+                    <h4 class="title">Afterglow Cosmetics</h4>
+
+
+                    <div class="decription">
+                      <p>Afterglow Cosmetics was the first certified makeup line and offers a wide range of colorful
+                        cosmetics with pure.</p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- How to ....  -->
+  <section class="order-Processing">
+    <div class="innerOrderProcessing">
+      <div class="container-createYour">
+        <div class="elementor-row">
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-81af111">
+            <div class="elementor-column-wrap elementor-element-populated">
+              <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-df44b6d elementor-widget elementor-widget-heading"
+                  data-id="df44b6d" data-element_type="widget" data-widget_type="heading.default">
+                  <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default">
+                        Create your SpotiGlass ™ in 3 steps
+                    </h2>
+                  </div>
+                </div>
+                <section class="elementor-section elementor-inner-section elementor-element elementor-element-3c277e2 elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+                  <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+                      <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2d19156">
+                        <div class="elementor-column-wrap elementor-element-populated-shadow">
+                          <div class="elementor-widget-wrap">
+                            <div
+                              class="elementor-element elementor-element-5f73c69 elementor-view-default elementor-widget elementor-widget-icon">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-icon-wrapper">
+                                  <div class="elementor-icon">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M4.05499 5.33806C4.05499 5.11406 3.71899 4.93506 3.30499 4.93506C2.89099 4.93506 2.55499 5.11506 2.55499 5.33806V5.55406H4.05499V5.33806Z" fill="black"/>
+                                      <path d="M9.4 5.45304L9.813 4.21004C9.851 4.09604 10.061 3.94504 10.181 3.94504H14.816C14.937 3.94504 15.146 4.09504 15.183 4.20904L15.597 5.45304L15.636 5.55504H16.674C16.669 5.53704 16.674 5.52304 16.668 5.50504L16.132 3.89404C15.958 3.37304 15.365 2.94604 14.816 2.94604H10.181C9.631 2.94604 9.038 3.37304 8.865 3.89404L8.329 5.50405C8.323 5.52205 8.328 5.53604 8.323 5.55404H9.361L9.4 5.45304Z" fill="black"/>
+                                      <path d="M22.5 6.05505H2.5C1.125 6.05505 0 7.18005 0 8.55505V10.5551H7.028C8.183 8.75205 10.2 7.55505 12.5 7.55505C14.8 7.55505 16.816 8.75205 17.973 10.5551H25V8.55505C25 7.18005 23.875 6.05505 22.5 6.05505Z" fill="black"/>
+                                      <path d="M19 14.0551C19 17.6451 16.09 20.5551 12.5 20.5551C8.91 20.5551 6 17.6451 6 14.0551C6 13.1681 6.179 12.3251 6.5 11.5551H0V19.5551C0 20.9301 1.125 22.0551 2.5 22.0551H22.5C23.875 22.0551 25 20.9301 25 19.5551V11.5551H18.5C18.82 12.3241 19 13.1681 19 14.0551Z" fill="black"/>
+                                      <path d="M23 5.60409V5.10809C23 4.74109 22.039 4.44409 20.854 4.44409C19.669 4.44409 18.708 4.74109 18.708 5.10809V5.55309H22.5C22.671 5.55509 22.837 5.57709 23 5.60409Z" fill="black"/>
+                                      <path d="M15.682 17.2351C17.44 15.4781 17.44 12.6291 15.682 10.8721C13.925 9.11507 11.077 9.11507 9.31897 10.8721C7.56197 12.6291 7.56197 15.4781 9.31897 17.2351C11.076 18.9921 13.925 18.9921 15.682 17.2351ZM10.379 11.9341C11.549 10.7631 13.451 10.7631 14.621 11.9341C15.792 13.1041 15.792 15.0061 14.621 16.1761C13.451 17.3471 13.671 15.2261 12.5 14.0551C11.329 12.8831 9.20797 13.1041 10.379 11.9341Z" fill="black"/>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="elementor-element elementor-element-dc0808d elementor-widget elementor-widget-heading">
+                              <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">
+                                   Upload a cover photo
+                                </h2>
+                              </div>
+                            </div>
+                            <div class="elementor-element elementor-element-1f850b6 elementor-widget elementor-widget-text-editor">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-text-editor elementor-clearfix">
+                                  <p>
+                                      Take a high quality photo with an aspect
+                                        ratio of 1: 1
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7a163cd">
+                        <div class="elementor-column-wrap elementor-element-populated-shadow">
+                          <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-1e4e320 elementor-view-default elementor-widget elementor-widget-icon">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-icon-wrapper">
+                                  <div class="elementor-icon">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M10.2196 5.1986C8.89922 4.23088 7.54453 3.03816 6.58037 1.59191L5.73633 0.325899C5.55752 0.0576863 5.22422 -0.0617473 4.9145 0.0312214C4.60552 0.124923 4.39453 0.409591 4.39453 0.732198V12.2236C3.96191 11.9713 3.46567 11.8162 2.92969 11.8162C1.31392 11.8162 0 13.1301 0 14.7459C0 16.3616 1.31392 17.6755 2.92969 17.6755C4.54546 17.6755 5.85938 16.3616 5.85938 14.7458V3.13703C6.89434 4.44524 8.18896 5.52619 9.35342 6.3802C9.92559 6.79934 10.2539 7.44597 10.2539 8.15402C10.2539 9.36565 9.26826 10.3513 8.05664 10.3513C7.65181 10.3513 7.32422 10.6789 7.32422 11.0837C7.32422 11.4885 7.65181 11.8161 8.05664 11.8161C10.0758 11.8161 11.7188 10.1732 11.7188 8.15402C11.7188 6.99172 11.1587 5.88737 10.2196 5.1986Z" fill="black"/>
+                                      <path d="M24.0666 5.98487L13.715 8.91455C13.4003 9.00469 13.1836 9.29219 13.1836 9.61909V19.548C12.751 19.2957 12.2547 19.1406 11.7188 19.1406C10.103 19.1406 8.78906 20.4545 8.78906 22.0703C8.78906 23.686 10.103 25 11.7188 25C13.3345 25 14.6484 23.686 14.6484 22.0703C14.6484 21.9033 14.6484 13.1015 14.6484 13.1015L23.5352 10.5903V16.6183C23.1025 16.366 22.6063 16.2109 22.0703 16.2109C20.4545 16.2109 19.1406 17.5248 19.1406 19.1406C19.1406 20.7563 20.4545 22.0703 22.0703 22.0703C23.6861 22.0703 25 20.7563 25 19.1406C25 18.9736 25 6.68941 25 6.68941C25 6.20498 24.5366 5.8521 24.0666 5.98487Z" fill="black"/>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="elementor-element elementor-element-e7af6d4 elementor-widget elementor-widget-heading"
+                              data-id="e7af6d4" data-element_type="widget" data-widget_type="heading.default">
+                              <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">
+                                    The song title
+                                </h2>
+                              </div>
+                            </div>
+                            <div
+                              class="elementor-element elementor-element-ccb6476 elementor-widget elementor-widget-text-editor"
+                              data-id="ccb6476" data-element_type="widget" data-widget_type="text-editor.default">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-text-editor elementor-clearfix">
+                                  <p>
+                                    Choose your favorite song or add a nice title
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2aa1b54"
+                        data-id="2aa1b54" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated-shadow">
+                          <div class="elementor-widget-wrap">
+                            <div
+                              class="elementor-element elementor-element-589344b elementor-view-default elementor-widget elementor-widget-icon"
+                              data-id="589344b" data-element_type="widget" data-widget_type="icon.default">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-icon-wrapper">
+                                  <div class="elementor-icon">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M4.05499 5.33806C4.05499 5.11406 3.71899 4.93506 3.30499 4.93506C2.89099 4.93506 2.55499 5.11506 2.55499 5.33806V5.55406H4.05499V5.33806Z" fill="black"/>
+                                      <path d="M9.4 5.45304L9.813 4.21004C9.851 4.09604 10.061 3.94504 10.181 3.94504H14.816C14.937 3.94504 15.146 4.09504 15.183 4.20904L15.597 5.45304L15.636 5.55504H16.674C16.669 5.53704 16.674 5.52304 16.668 5.50504L16.132 3.89404C15.958 3.37304 15.365 2.94604 14.816 2.94604H10.181C9.631 2.94604 9.038 3.37304 8.865 3.89404L8.329 5.50405C8.323 5.52205 8.328 5.53604 8.323 5.55404H9.361L9.4 5.45304Z" fill="black"/>
+                                      <path d="M22.5 6.05505H2.5C1.125 6.05505 0 7.18005 0 8.55505V10.5551H7.028C8.183 8.75205 10.2 7.55505 12.5 7.55505C14.8 7.55505 16.816 8.75205 17.973 10.5551H25V8.55505C25 7.18005 23.875 6.05505 22.5 6.05505Z" fill="black"/>
+                                      <path d="M19 14.0551C19 17.6451 16.09 20.5551 12.5 20.5551C8.91 20.5551 6 17.6451 6 14.0551C6 13.1681 6.179 12.3251 6.5 11.5551H0V19.5551C0 20.9301 1.125 22.0551 2.5 22.0551H22.5C23.875 22.0551 25 20.9301 25 19.5551V11.5551H18.5C18.82 12.3241 19 13.1681 19 14.0551Z" fill="black"/>
+                                      <path d="M23 5.60409V5.10809C23 4.74109 22.039 4.44409 20.854 4.44409C19.669 4.44409 18.708 4.74109 18.708 5.10809V5.55309H22.5C22.671 5.55509 22.837 5.57709 23 5.60409Z" fill="black"/>
+                                      <path d="M15.682 17.2351C17.44 15.4781 17.44 12.6291 15.682 10.8721C13.925 9.11507 11.077 9.11507 9.31897 10.8721C7.56197 12.6291 7.56197 15.4781 9.31897 17.2351C11.076 18.9921 13.925 18.9921 15.682 17.2351ZM10.379 11.9341C11.549 10.7631 13.451 10.7631 14.621 11.9341C15.792 13.1041 15.792 15.0061 14.621 16.1761C13.451 17.3471 13.671 15.2261 12.5 14.0551C11.329 12.8831 9.20797 13.1041 10.379 11.9341Z" fill="black"/>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="elementor-element elementor-element-1003797 elementor-widget elementor-widget-heading"
+                              data-id="1003797" data-element_type="widget" data-widget_type="heading.default">
+                              <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default">
+                                  
+                                    The name of the artist
+                                 
+                                </h2>
+                              </div>
+                            </div>
+                            <div
+                              class="elementor-element elementor-element-1fa7549 elementor-widget elementor-widget-text-editor"
+                              data-id="1fa7549" data-element_type="widget" data-widget_type="text-editor.default">
+                              <div class="elementor-widget-container">
+                                <div class="elementor-text-editor elementor-clearfix">
+                                  <p>
+                                    Post the name of the artist or post a
+                                        personal message
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Get Inspired-->
+  <section class="-get-inspired-container">
+    <div class="inner-o-container">
+      <div class="get-inspired-header">
+        <div>
+          <h2 class="heading-get-inspired">
+            <span>Nuestra #ACCHA crew</span>
+          </h2>
+        </div>
+        <a class="get-inspired-instagram-accha" href="#">Follow us on Instagram</a>
+      </div>
+      <div class="c-get-inspired-wrapper">
+        <div class="c-get-inspired-grid">
+          <div class="c-social-title o-tile_inner">
+            <div>
+              <button class="c-social-tile-button">
+                <picture class="c-social-title-iamge">
+                  <img class="instagram-image" src="">
+                </picture>
+                <div class="c-social-title-footer">
+                  <span class="c-social-title-footer-username">
+                    @christiannblake
+                  </span>
+                  <span class="c-social-title-footer-likes">
+                    
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <!-- Our Team-->
+  <section class="section section-xxl bg-default">
+    <div class="container">
+      <h2 class="title-style-8 wow fadeScale">Our Team</h2>
+      <!-- Owl Carousel-->
+      <div class="owl-carousel owl-style-10 owl-dots-styles-1" data-items="1" data-sm-items="2" data-lg-items="3"
+        data-margin="30" data-dots="true" data-mouse-drag="false">
+        <article class="team-karen wow slideInUp" data-wow-delay=".1s">
+          <div class="team-karen-header"><a class="team-karen-figure" href="#"><img src="images/team-18-250x233.jpg"
+                alt="" width="250" height="233" /></a>
+            <svg x="0px" y="0px" width="330px" height="245px" viewBox="0 0 330 245" enable-background="new 0 0 330 245">
+              <path d="M305,0v206.855c0,7.26-5.373,13.145-12,13.145H37c-6.627,0-12-5.885-12-13.145V0H0v245h330V0H305z">
+              </path>
+            </svg>
+          </div>
+          <div class="team-karen-body">
+            <h4 class="team-karen-name"><a href="#">Emily Thompson</a></h4>
+            <div class="team-karen-status">CEO, Founder</div>
+            <ul class="list-inline team-karen-list-social list-social-2 list-inline-md">
+              <li><a class="icon mdi mdi-facebook" href="#"></a></li>
+              <li><a class="icon mdi mdi-twitter" href="#"></a></li>
+              <li><a class="icon mdi mdi-instagram" href="#"></a></li>
+              <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
+            </ul>
+          </div>
+        </article>
+        <article class="team-karen wow slideInUp">
+          <div class="team-karen-header"><a class="team-karen-figure" href="#"><img src="images/team-19-250x233.jpg"
+                alt="" width="250" height="233" /></a>
+            <svg x="0px" y="0px" width="330px" height="245px" viewBox="0 0 330 245" enable-background="new 0 0 330 245">
+              <path d="M305,0v206.855c0,7.26-5.373,13.145-12,13.145H37c-6.627,0-12-5.885-12-13.145V0H0v245h330V0H305z">
+              </path>
+            </svg>
+          </div>
+          <div class="team-karen-body">
+            <h4 class="team-karen-name"><a href="#">Rebecca Martinez</a></h4>
+            <div class="team-karen-status">Store Manager</div>
+            <ul class="list-inline team-karen-list-social list-social-2 list-inline-md">
+              <li><a class="icon mdi mdi-facebook" href="#"></a></li>
+              <li><a class="icon mdi mdi-twitter" href="#"></a></li>
+              <li><a class="icon mdi mdi-instagram" href="#"></a></li>
+              <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
+            </ul>
+          </div>
+        </article>
+        <article class="team-karen wow slideInUp" data-wow-delay=".1s">
+          <div class="team-karen-header"><a class="team-karen-figure" href="#"><img src="images/team-20-250x233.jpg"
+                alt="" width="250" height="233" /></a>
+            <svg x="0px" y="0px" width="330px" height="245px" viewBox="0 0 330 245" enable-background="new 0 0 330 245">
+              <path d="M305,0v206.855c0,7.26-5.373,13.145-12,13.145H37c-6.627,0-12-5.885-12-13.145V0H0v245h330V0H305z">
+              </path>
+            </svg>
+          </div>
+          <div class="team-karen-body">
+            <h4 class="team-karen-name"><a href="#">Julia Zimmer</a></h4>
+            <div class="team-karen-status">Quality Control Manager</div>
+            <ul class="list-inline team-karen-list-social list-social-2 list-inline-md">
+              <li><a class="icon mdi mdi-facebook" href="#"></a></li>
+              <li><a class="icon mdi mdi-twitter" href="#"></a></li>
+              <li><a class="icon mdi mdi-instagram" href="#"></a></li>
+              <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counter Modern-->
+  <section class="section parallax-container" data-parallax-img="images/parallax-5.jpg">
+    <div class="parallax-content section-xxl">
+      <div class="container">
+        <div class="row row-30 justify-content-center">
+          <div class="col-6 col-sm-3">
+            <div class="counter-modern">
+              <h2 class="counter-modern-number"><span class="counter">20</span>
+              </h2>
+              <div class="counter-modern-decor"></div>
+              <h5 class="counter-modern-title">Years<br class="d-none d-sm-block"> of Experience</h5>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="counter-modern">
+              <h2 class="counter-modern-number"><span class="counter">27</span>
+              </h2>
+              <div class="counter-modern-decor"></div>
+              <h5 class="counter-modern-title">Partners<br class="d-none d-sm-block"> Worldwide</h5>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="counter-modern">
+              <h2 class="counter-modern-number"><span class="counter">160</span>
+              </h2>
+              <div class="counter-modern-decor"></div>
+              <h5 class="counter-modern-title">Qualified<br class="d-none d-sm-block"> Specialists</h5>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="counter-modern">
+              <h2 class="counter-modern-number"><span class="counter">47</span>
+              </h2>
+              <div class="counter-modern-decor"></div>
+              <h5 class="counter-modern-title">Exclusive<br class="d-none d-sm-block"> Fragrances</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- What People Say-->
+  <section class="section section-xxl bg-default">
+    <div class="container">
+      <h2 class="title-style-8 wow fadeScale">What People Say</h2>
+      <!-- Owl Carousel-->
+      <div class="owl-carousel owl-style-12 owl-dots-styles-1" data-items="1" data-sm-items="2" data-lg-items="3"
+        data-margin="30" data-dots="true" data-autoplay="true">
+        <!-- Quote Creative-->
+        <article class="quote-creative">
+          <div class="quote-creative-text">
+            <div class="q">The best place to buy exclusive perfumes!</div>
+          </div>
+          <div class="quote-creative-rating"><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span></div>
+          <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+            <div class="unit-left">
+              <div class="quote-creative-figure"><img src="images/user-6-62x62.jpg" alt="" width="62" height="62" />
+              </div>
+            </div>
+            <div class="unit-body">
+              <div class="quote-creative-author">Lisa Goodman</div>
+            </div>
+          </div>
+        </article>
+        <!-- Quote Creative-->
+        <article class="quote-creative">
+          <div class="quote-creative-text">
+            <div class="q">Thank you for the excellent fragrance selection!</div>
+          </div>
+          <div class="quote-creative-rating"><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span></div>
+          <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+            <div class="unit-left">
+              <div class="quote-creative-figure"><img src="images/user-10-62x62.jpg" alt="" width="62" height="62" />
+              </div>
+            </div>
+            <div class="unit-body">
+              <div class="quote-creative-author">Mark Johnson</div>
+            </div>
+          </div>
+        </article>
+        <!-- Quote Creative-->
+        <article class="quote-creative">
+          <div class="quote-creative-text">
+            <div class="q">Perfumor is the best online perfume shop.</div>
+          </div>
+          <div class="quote-creative-rating"><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span></div>
+          <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+            <div class="unit-left">
+              <div class="quote-creative-figure"><img src="images/user-11-62x62.jpg" alt="" width="62" height="62" />
+              </div>
+            </div>
+            <div class="unit-body">
+              <div class="quote-creative-author">jane williams</div>
+            </div>
+          </div>
+        </article>
+        <!-- Quote Creative-->
+        <article class="quote-creative">
+          <div class="quote-creative-text">
+            <div class="q">Perfumor is my #1 perfume store with the best service!</div>
+          </div>
+          <div class="quote-creative-rating"><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span></div>
+          <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+            <div class="unit-left">
+              <div class="quote-creative-figure"><img src="images/user-5-62x62.jpg" alt="" width="62" height="62" />
+              </div>
+            </div>
+            <div class="unit-body">
+              <div class="quote-creative-author">Sam Peterson</div>
+            </div>
+          </div>
+        </article>
+        <!-- Quote Creative-->
+        <article class="quote-creative">
+          <div class="quote-creative-text">
+            <div class="q">I recommend this perfume store to everyone!</div>
+          </div>
+          <div class="quote-creative-rating"><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span></div>
+          <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+            <div class="unit-left">
+              <div class="quote-creative-figure"><img src="images/user-12-62x62.jpg" alt="" width="62" height="62" />
+              </div>
+            </div>
+            <div class="unit-body">
+              <div class="quote-creative-author">James mcMillan</div>
+            </div>
+          </div>
+        </article>
+        <!-- Quote Creative-->
+        <article class="quote-creative">
+          <div class="quote-creative-text">
+            <div class="q">You have the best selection of my favorite perfumes!</div>
+          </div>
+          <div class="quote-creative-rating"><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span><span
+              class="icon mdi mdi-star"></span><span class="icon mdi mdi-star"></span></div>
+          <div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">
+            <div class="unit-left">
+              <div class="quote-creative-figure"><img src="images/user-13-62x62.jpg" alt="" width="62" height="62" />
+              </div>
+            </div>
+            <div class="unit-body">
+              <div class="quote-creative-author">Kate Johnson</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery-->
+  <section class="section section-sm section-last bg-default">
+    <div class="container">
+      <div class="row no-gutters" data-lightgallery="group">
+        <div class="col-6 col-sm-4 col-lg-3"><a class="thumbnail-minimal"
+            href="images/grid-gallery-1-1200x800-original.jpg" data-lightgallery="item"><img
+              src="images/grid-gallery-1-290x219.jpg" alt="" width="290" height="219" /></a></div>
+        <div class="col-6 col-sm-4 col-lg-3"><a class="thumbnail-minimal"
+            href="images/grid-gallery-2-2-1200x800-original.jpg" data-lightgallery="item"><img
+              src="images/grid-gallery-2-290x219.jpg" alt="" width="290" height="219" /></a></div>
+        <div class="col-6 col-sm-4 col-lg-3"><a class="thumbnail-minimal"
+            href="images/grid-gallery-3-3-1200x800-original.jpg" data-lightgallery="item"><img
+              src="images/grid-gallery-3-290x219.jpg" alt="" width="290" height="219" /></a></div>
+        <div class="col-6 col-sm-4 col-lg-3"><a class="thumbnail-minimal"
+            href="images/grid-gallery-4-1200x800-original.jpg" data-lightgallery="item"><img
+              src="images/grid-gallery-4-290x219.jpg" alt="" width="290" height="219" /></a></div>
+        <div class="col-6 col-sm-4 col-lg-3"><a class="thumbnail-minimal"
+            href="images/grid-gallery-5-1200x800-original.jpg" data-lightgallery="item"><img
+              src="images/grid-gallery-5-290x219.jpg" alt="" width="290" height="219" /></a></div>
+        <div class="col-6 col-sm-4 col-lg-3"><a class="thumbnail-minimal"
+            href="images/grid-gallery-6-1200x800-original.jpg" data-lightgallery="item"><img
+              src="images/grid-gallery-6-290x219.jpg" alt="" width="290" height="219" /></a></div>
+        <div class="col-6 col-sm-4 col-lg-3"><a class="thumbnail-minimal"
+            href="images/grid-gallery-7-1200x800-original.jpg" data-lightgallery="item"><img
+              src="images/grid-gallery-7-290x219.jpg" alt="" width="290" height="219" /></a></div>
+        <div class="col-sm-4 col-lg-3 d-flex align-items-center justify-content-center">
+          <div class="box-info-rose-2">
+            <p class="box-info-rose-text">Instagram</p><a class="link-classic link-primary" href="#">@perfumor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+{% endblock %}
