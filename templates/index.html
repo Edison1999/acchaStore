@@ -1,0 +1,3544 @@
+{%extends 'base.html'%}
+{% load static %}
+
+
+    
+  {% block extra_links %}
+    <!--
+    <script data-cfasync="false">
+      window.$crisp = [];
+      CRISP_RUNTIME_CONFIG = {
+        locale: "es",
+      };
+      CRISP_WEBSITE_ID = "6520fb92-8dd1-489a-bce0-03b1fb6b37fa";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script> --> <!--Función de Crisp adicional-->
+    
+    <link rel="dns-prefetch" href="//js.jilt.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//s.w.org" />
+    <link rel="alternate" type="application/rss+xml" title="Acchastore &raquo; Feed" href="#"/>
+    <link rel="alternate" type="application/rss+xml" title="Acchastore &raquo; Reactiesfeed" href="#"/>
+    <style>
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link rel="stylesheet" id="jet-menu-astra-css" href="{% static 'css/style.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-menu-astra-css" href="{% static 'css/style1.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-menu-astra-css" href="{% static 'css/style2.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="woolementor-css" href="{% static 'css/front.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="woolementor-grid-css" href="{% static 'css/cx-grid.min.css' %}?20090712" media="all"/>
+
+    <link rel="stylesheet" id="astra-google-fonts-css" href="//fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C500&#038;display=fallback&#038;ver=2.6.1" media="all"/>
+    <link rel="stylesheet" id="astra-menu-animation-css" href="{% static 'css/menu-animation.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="wp-block-library-css" href="{% static 'css/style.minroot.css' %}?20090712"media="all"/>
+    <link rel="stylesheet" id="wc-block-vendors-style-css" href="{% static 'css/vendors-style.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="wc-block-style-css" href="{% static 'css/style.wc-block.css' %}?20090712"  media="all"/>
+    
+    <link rel="stylesheet" id="contact-form-7-css" href="{% static 'css/styles.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="astra-contact-form-7-css" href="{% static 'css/contact-form-7.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="dashicons-css" href="{% static 'css/dashicons.min.css' %}?20090712"  media="all"/>
+    <link rel="stylesheet" id="ewd-urp-style-css" href="{% static 'css/ewd-urp-styles.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="ewd-urp-jquery-ui-css" href="{% static 'css/ewd-urp-jquery-ui.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="woocommerce-layout-css" href="{% static 'css/woocommerce-layout.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="woocommerce-smallscreen-css" href="{% static 'css/woocommerce-smallscreen.min.css' %}?20090712" media="only screen and (max-width: 921px)"/>
+    <link rel="stylesheet" id="woocommerce-general-css" href="{% static 'css/woocommerce.min.css' %}?20090712" media="all"/>
+
+    <!--Estilo dentro de cabecera-->
+    <style id="woocommerce-general-inline-css">
+      .woocommerce span.onsale,
+      .wc-block-grid__product .wc-block-grid__product-onsale {
+        background-color: #1dd660;
+        color: #000000;
+      }
+      .woocommerce a.button,
+      .woocommerce button.button,
+      .woocommerce .woocommerce-message a.button,
+      .woocommerce #respond input#submit.alt,
+      .woocommerce a.button.alt,
+      .woocommerce button.button.alt,
+      .woocommerce input.button.alt,
+      .woocommerce input.button,
+      .woocommerce input.button:disabled,
+      .woocommerce input.button:disabled[disabled],
+      .woocommerce input.button:disabled:hover,
+      .woocommerce input.button:disabled[disabled]:hover,
+      .woocommerce #respond input#submit,
+      .woocommerce button.button.alt.disabled,
+      .wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
+      .wc-block-grid__product-onsale {
+        color: #ffffff;
+        border-color: #1dd660;
+        background-color: #1dd660;
+      }
+      .woocommerce a.button:hover,
+      .woocommerce button.button:hover,
+      .woocommerce .woocommerce-message a.button:hover,
+      .woocommerce #respond input#submit:hover,
+      .woocommerce #respond input#submit.alt:hover,
+      .woocommerce a.button.alt:hover,
+      .woocommerce button.button.alt:hover,
+      .woocommerce input.button.alt:hover,
+      .woocommerce input.button:hover,
+      .woocommerce button.button.alt.disabled:hover,
+      .wc-block-grid__products
+        .wc-block-grid__product
+        .wp-block-button__link:hover {
+        color: #ffffff;
+        border-color: #17ac4d;
+        background-color: #17ac4d;
+      }
+      .woocommerce-message,
+      .woocommerce-info {
+        border-top-color: #0274be;
+      }
+      .woocommerce-message::before,
+      .woocommerce-info::before {
+        color: #0274be;
+      }
+      .woocommerce ul.products li.product .price,
+      .woocommerce div.product p.price,
+      .woocommerce div.product span.price,
+      .widget_layered_nav_filters ul li.chosen a,
+      .woocommerce-page ul.products li.product .ast-woo-product-category,
+      .wc-layered-nav-rating a {
+        color: #333333;
+      }
+      .woocommerce nav.woocommerce-pagination ul,
+      .woocommerce nav.woocommerce-pagination ul li {
+        border-color: #0274be;
+      }
+      .woocommerce nav.woocommerce-pagination ul li a:focus,
+      .woocommerce nav.woocommerce-pagination ul li a:hover,
+      .woocommerce nav.woocommerce-pagination ul li span.current {
+        background: #0274be;
+        color: #ffffff;
+      }
+      .woocommerce-MyAccount-navigation-link.is-active a {
+        color: #333333;
+      }
+      .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+      .woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+        background-color: #0274be;
+      }
+      .woocommerce a.button,
+      .woocommerce button.button,
+      .woocommerce .woocommerce-message a.button,
+      .woocommerce #respond input#submit.alt,
+      .woocommerce a.button.alt,
+      .woocommerce button.button.alt,
+      .woocommerce input.button.alt,
+      .woocommerce input.button,
+      .woocommerce-cart table.cart td.actions .button,
+      .woocommerce form.checkout_coupon .button,
+      .woocommerce #respond input#submit,
+      .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+        border-radius: 2px;
+        padding-top: 10px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+      }
+      .woocommerce .star-rating,
+      .woocommerce .comment-form-rating .stars a,
+      .woocommerce .star-rating::before {
+        color: #0274be;
+      }
+      .woocommerce div.product .woocommerce-tabs ul.tabs li.active:before {
+        background: #0274be;
+      }
+      .ast-site-header-cart a {
+        color: #333333;
+      }
+      .ast-site-header-cart a:focus,
+      .ast-site-header-cart a:hover,
+      .ast-site-header-cart .current-menu-item a {
+        color: #0274be;
+      }
+      .ast-cart-menu-wrap .count,
+      .ast-cart-menu-wrap .count:after {
+        border-color: #0274be;
+        color: #0274be;
+      }
+      .ast-cart-menu-wrap:hover .count {
+        color: #ffffff;
+        background-color: #0274be;
+      }
+      .ast-site-header-cart
+        .widget_shopping_cart
+        .total
+        .woocommerce-Price-amount {
+        color: #0274be;
+      }
+      .woocommerce a.remove:hover,
+      .ast-woocommerce-cart-menu
+        .main-header-menu
+        .woocommerce-custom-menu-item
+        .menu-item:hover
+        > .menu-link.remove:hover {
+        color: #0274be;
+        border-color: #0274be;
+        background-color: #ffffff;
+      }
+      .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout,
+      .woocommerce
+        .widget_shopping_cart
+        .woocommerce-mini-cart__buttons
+        .checkout.wc-forward {
+        color: #ffffff;
+        border-color: #17ac4d;
+        background-color: #17ac4d;
+      }
+      .site-header .ast-site-header-cart-data .button.wc-forward,
+      .site-header .ast-site-header-cart-data .button.wc-forward:hover {
+        color: #ffffff;
+      }
+      .below-header-user-select .ast-site-header-cart .widget,
+      .ast-above-header-section .ast-site-header-cart .widget a,
+      .below-header-user-select .ast-site-header-cart .widget_shopping_cart a {
+        color: #333333;
+      }
+      .below-header-user-select
+        .ast-site-header-cart
+        .widget_shopping_cart
+        a:hover,
+      .ast-above-header-section
+        .ast-site-header-cart
+        .widget_shopping_cart
+        a:hover,
+      .below-header-user-select
+        .ast-site-header-cart
+        .widget_shopping_cart
+        a.remove:hover,
+      .ast-above-header-section
+        .ast-site-header-cart
+        .widget_shopping_cart
+        a.remove:hover {
+        color: #0274be;
+      }
+      @media (min-width: 545px) and (max-width: 921px) {
+        .woocommerce.tablet-columns-6 ul.products li.product,
+        .woocommerce-page.tablet-columns-6 ul.products li.product {
+          width: calc(16.66% - 16.66px);
+        }
+        .woocommerce.tablet-columns-5 ul.products li.product,
+        .woocommerce-page.tablet-columns-5 ul.products li.product {
+          width: calc(20% - 16px);
+        }
+        .woocommerce.tablet-columns-4 ul.products li.product,
+        .woocommerce-page.tablet-columns-4 ul.products li.product {
+          width: calc(25% - 15px);
+        }
+        .woocommerce.tablet-columns-3 ul.products li.product,
+        .woocommerce-page.tablet-columns-3 ul.products li.product {
+          width: calc(33.33% - 14px);
+        }
+        .woocommerce.tablet-columns-2 ul.products li.product,
+        .woocommerce-page.tablet-columns-2 ul.products li.product {
+          width: calc(50% - 10px);
+        }
+        .woocommerce.tablet-columns-1 ul.products li.product,
+        .woocommerce-page.tablet-columns-1 ul.products li.product {
+          width: 100%;
+        }
+        .woocommerce div.product .related.products ul.products li.product {
+          width: calc(33.33% - 14px);
+        }
+      }
+      @media (min-width: 545px) and (max-width: 921px) {
+        .woocommerce[class*="columns-"].columns-3 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-4 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-5 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-6 > ul.products li.product {
+          width: calc(33.33% - 14px);
+          margin-right: 20px;
+        }
+        .woocommerce[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(3n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(3n + 1) {
+          clear: left;
+        }
+        .woocommerce[class*="columns-"] ul.products li.product:nth-child(n),
+        .woocommerce-page[class*="columns-"]
+          ul.products
+          li.product:nth-child(n) {
+          margin-right: 20px;
+          clear: none;
+        }
+        .woocommerce.tablet-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce-page.tablet-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce.tablet-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce-page.tablet-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce.tablet-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce-page.tablet-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce.tablet-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce-page.tablet-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce.tablet-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce-page.tablet-columns-6
+          ul.products
+          li.product:nth-child(6n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce.tablet-columns-2 ul.products li.product:nth-child(2n + 1),
+        .woocommerce-page.tablet-columns-2
+          ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce.tablet-columns-3 ul.products li.product:nth-child(3n + 1),
+        .woocommerce-page.tablet-columns-3
+          ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce.tablet-columns-4 ul.products li.product:nth-child(4n + 1),
+        .woocommerce-page.tablet-columns-4
+          ul.products
+          li.product:nth-child(4n + 1),
+        .woocommerce.tablet-columns-5 ul.products li.product:nth-child(5n + 1),
+        .woocommerce-page.tablet-columns-5
+          ul.products
+          li.product:nth-child(5n + 1),
+        .woocommerce.tablet-columns-6 ul.products li.product:nth-child(6n + 1),
+        .woocommerce-page.tablet-columns-6
+          ul.products
+          li.product:nth-child(6n + 1) {
+          clear: left;
+        }
+        .woocommerce
+          div.product
+          .related.products
+          ul.products
+          li.product:nth-child(3n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce
+          div.product
+          .related.products
+          ul.products
+          li.product:nth-child(3n + 1) {
+          clear: left;
+        }
+      }
+      @media (min-width: 922px) {
+        .woocommerce #reviews #comments {
+          width: 55%;
+          float: left;
+        }
+        .woocommerce #reviews #review_form_wrapper {
+          width: 45%;
+          float: right;
+          padding-left: 2em;
+        }
+        .woocommerce form.checkout_coupon {
+          width: 50%;
+        }
+      }
+      @media (max-width: 921px) {
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-1.ast-mobile-header-stack.ast-no-menu-items
+          .ast-site-header-cart,
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-3.ast-mobile-header-stack.ast-no-menu-items
+          .ast-site-header-cart {
+          padding-right: 0;
+          padding-left: 0;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-1.ast-mobile-header-stack
+          .main-header-bar {
+          text-align: center;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-1.ast-mobile-header-stack
+          .ast-site-header-cart,
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-1.ast-mobile-header-stack
+          .ast-mobile-menu-buttons {
+          display: inline-block;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-2.ast-mobile-header-inline
+          .site-branding {
+          flex: auto;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-3.ast-mobile-header-stack
+          .site-branding {
+          flex: 0 0 100%;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-3.ast-mobile-header-stack
+          .main-header-container {
+          display: flex;
+          justify-content: center;
+        }
+        .woocommerce-cart .woocommerce-shipping-calculator .button {
+          width: 100%;
+        }
+        .woocommerce div.product div.images,
+        .woocommerce div.product div.summary,
+        .woocommerce #content div.product div.images,
+        .woocommerce #content div.product div.summary,
+        .woocommerce-page div.product div.images,
+        .woocommerce-page div.product div.summary,
+        .woocommerce-page #content div.product div.images,
+        .woocommerce-page #content div.product div.summary {
+          float: none;
+          width: 100%;
+        }
+        .woocommerce-cart table.cart td.actions .ast-return-to-shop {
+          display: block;
+          text-align: center;
+          margin-top: 1em;
+        }
+      }
+      @media (max-width: 544px) {
+        .ast-separate-container .ast-woocommerce-container {
+          padding: 0.54em 1em 1.33333em;
+        }
+        .woocommerce-message,
+        .woocommerce-error,
+        .woocommerce-info {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .woocommerce-message a.button,
+        .woocommerce-error a.button,
+        .woocommerce-info a.button {
+          order: 1;
+          margin-top: 0.5em;
+        }
+        .woocommerce.mobile-columns-6 ul.products li.product,
+        .woocommerce-page.mobile-columns-6 ul.products li.product {
+          width: calc(16.66% - 16.66px);
+        }
+        .woocommerce.mobile-columns-5 ul.products li.product,
+        .woocommerce-page.mobile-columns-5 ul.products li.product {
+          width: calc(20% - 16px);
+        }
+        .woocommerce.mobile-columns-4 ul.products li.product,
+        .woocommerce-page.mobile-columns-4 ul.products li.product {
+          width: calc(25% - 15px);
+        }
+        .woocommerce.mobile-columns-3 ul.products li.product,
+        .woocommerce-page.mobile-columns-3 ul.products li.product {
+          width: calc(33.33% - 14px);
+        }
+        .woocommerce.mobile-columns-2 ul.products li.product,
+        .woocommerce-page.mobile-columns-2 ul.products li.product {
+          width: calc(50% - 10px);
+        }
+        .woocommerce.mobile-columns-1 ul.products li.product,
+        .woocommerce-page.mobile-columns-1 ul.products li.product {
+          width: 100%;
+        }
+        .woocommerce .woocommerce-ordering,
+        .woocommerce-page .woocommerce-ordering {
+          float: none;
+          margin-bottom: 2em;
+          width: 100%;
+        }
+        .woocommerce ul.products a.button,
+        .woocommerce-page ul.products a.button {
+          padding: 0.5em 0.75em;
+        }
+        .woocommerce div.product .related.products ul.products li.product {
+          width: calc(50% - 10px);
+        }
+        .woocommerce table.cart td.actions .button,
+        .woocommerce #content table.cart td.actions .button,
+        .woocommerce-page table.cart td.actions .button,
+        .woocommerce-page #content table.cart td.actions .button {
+          padding-left: 1em;
+          padding-right: 1em;
+        }
+        .woocommerce #content table.cart .button,
+        .woocommerce-page #content table.cart .button {
+          width: 100%;
+        }
+        .woocommerce #content table.cart .product-thumbnail,
+        .woocommerce-page #content table.cart .product-thumbnail {
+          display: block;
+          text-align: center !important;
+        }
+        .woocommerce #content table.cart .product-thumbnail::before,
+        .woocommerce-page #content table.cart .product-thumbnail::before {
+          display: none;
+        }
+        .woocommerce #content table.cart td.actions .coupon,
+        .woocommerce-page #content table.cart td.actions .coupon {
+          float: none;
+        }
+        .woocommerce #content table.cart td.actions .coupon .button,
+        .woocommerce-page #content table.cart td.actions .coupon .button {
+          flex: 1;
+        }
+        .woocommerce #content div.product .woocommerce-tabs ul.tabs li a,
+        .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a {
+          display: block;
+        }
+      }
+      @media (max-width: 544px) {
+        .woocommerce[class*="columns-"].columns-3 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-4 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-5 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-6 > ul.products li.product {
+          width: calc(50% - 10px);
+          margin-right: 20px;
+        }
+        .woocommerce-page[class*="columns-"]
+          ul.products
+          li.product:nth-child(n),
+        .woocommerce[class*="columns-"] ul.products li.product:nth-child(n) {
+          margin-right: 20px;
+          clear: none;
+        }
+        .woocommerce-page[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce-page[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce-page[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce-page[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(2n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(2n + 1) {
+          clear: left;
+        }
+        .woocommerce[class*="columns-"] ul.products li.product:nth-child(n),
+        .woocommerce-page[class*="columns-"]
+          ul.products
+          li.product:nth-child(n) {
+          margin-right: 20px;
+          clear: none;
+        }
+        .woocommerce.mobile-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce-page.mobile-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce.mobile-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce-page.mobile-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce.mobile-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce-page.mobile-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce.mobile-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce-page.mobile-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce.mobile-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce-page.mobile-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce
+          div.product
+          .related.products
+          ul.products
+          li.product:nth-child(2n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce.mobile-columns-6 ul.products li.product:nth-child(6n + 1),
+        .woocommerce-page.mobile-columns-6
+          ul.products
+          li.product:nth-child(6n + 1),
+        .woocommerce.mobile-columns-5 ul.products li.product:nth-child(5n + 1),
+        .woocommerce-page.mobile-columns-5
+          ul.products
+          li.product:nth-child(5n + 1),
+        .woocommerce.mobile-columns-4 ul.products li.product:nth-child(4n + 1),
+        .woocommerce-page.mobile-columns-4
+          ul.products
+          li.product:nth-child(4n + 1),
+        .woocommerce.mobile-columns-3 ul.products li.product:nth-child(3n + 1),
+        .woocommerce-page.mobile-columns-3
+          ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce.mobile-columns-2 ul.products li.product:nth-child(2n + 1),
+        .woocommerce-page.mobile-columns-2
+          ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce
+          div.product
+          .related.products
+          ul.products
+          li.product:nth-child(2n + 1) {
+          clear: left;
+        }
+        .woocommerce ul.products a.button.loading::after,
+        .woocommerce-page ul.products a.button.loading::after {
+          display: inline-block;
+          margin-left: 5px;
+          position: initial;
+        }
+        .woocommerce.mobile-columns-1 ul.products li.product:nth-child(n),
+        .woocommerce-page.mobile-columns-1 ul.products li.product:nth-child(n) {
+          margin-right: 0;
+        }
+        .woocommerce #content div.product .woocommerce-tabs ul.tabs li,
+        .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+          display: block;
+          margin-right: 0;
+        }
+      }
+      @media (min-width: 922px) {
+        .woocommerce #content .ast-woocommerce-container div.product div.images,
+        .woocommerce .ast-woocommerce-container div.product div.images,
+        .woocommerce-page
+          #content
+          .ast-woocommerce-container
+          div.product
+          div.images,
+        .woocommerce-page .ast-woocommerce-container div.product div.images {
+          width: 50%;
+        }
+        .woocommerce
+          #content
+          .ast-woocommerce-container
+          div.product
+          div.summary,
+        .woocommerce .ast-woocommerce-container div.product div.summary,
+        .woocommerce-page
+          #content
+          .ast-woocommerce-container
+          div.product
+          div.summary,
+        .woocommerce-page .ast-woocommerce-container div.product div.summary {
+          width: 46%;
+        }
+        .woocommerce.woocommerce-checkout
+          form
+          #customer_details.col2-set
+          .col-1,
+        .woocommerce.woocommerce-checkout
+          form
+          #customer_details.col2-set
+          .col-2,
+        .woocommerce-page.woocommerce-checkout
+          form
+          #customer_details.col2-set
+          .col-1,
+        .woocommerce-page.woocommerce-checkout
+          form
+          #customer_details.col2-set
+          .col-2 {
+          float: none;
+          width: auto;
+        }
+      }
+      .woocommerce a.button,
+      .woocommerce button.button.alt,
+      .woocommerce-page table.cart td.actions .button,
+      .woocommerce-page #content table.cart td.actions .button,
+      .woocommerce a.button.alt,
+      .woocommerce .woocommerce-message a.button,
+      .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout,
+      .woocommerce button.button.alt.disabled,
+      .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+        border: solid;
+        border-top-width: 0;
+        border-right-width: 0;
+        border-left-width: 0;
+        border-bottom-width: 0;
+        border-color: #1dd660;
+      }
+      .woocommerce a.button:hover,
+      .woocommerce button.button.alt:hover,
+      .woocommerce-page table.cart td.actions .button:hover,
+      .woocommerce-page #content table.cart td.actions .button:hover,
+      .woocommerce a.button.alt:hover,
+      .woocommerce .woocommerce-message a.button:hover,
+      .ast-site-header-cart
+        .widget_shopping_cart
+        .buttons
+        .button.checkout:hover,
+      .woocommerce button.button.alt.disabled:hover,
+      .wc-block-grid__products
+        .wc-block-grid__product
+        .wp-block-button__link:hover {
+        border-color: #17ac4d;
+      }
+      @media (min-width: 922px) {
+        .woocommerce.woocommerce-checkout form #customer_details.col2-set,
+        .woocommerce-page.woocommerce-checkout form #customer_details.col2-set {
+          width: 55%;
+          float: left;
+          margin-right: 4.347826087%;
+        }
+        .woocommerce.woocommerce-checkout form #order_review,
+        .woocommerce.woocommerce-checkout form #order_review_heading,
+        .woocommerce-page.woocommerce-checkout form #order_review,
+        .woocommerce-page.woocommerce-checkout form #order_review_heading {
+          width: 40%;
+          float: right;
+          margin-right: 0;
+          clear: right;
+        }
+      }
+    </style>
+    
+    <style id="woocommerce-inline-inline-css">
+      .woocommerce form .form-row .required {
+        visibility: visible;
+      }
+    </style>
+    <link rel="stylesheet" id="reviewx-magnific-popup-css" href="{% static 'css/magnific-popup.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="reviewx-css" href="{% static 'css/reviewx-public.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-cw-css" href="{% static 'css/jet-cw.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-cw-frontend-css" href="{% static 'css/jet-cw-frontend-font.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="font-awesome-all-css" href="{% static 'css/all.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="font-awesome-v4-shims-css" href="{% static 'css/v4-shims.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-menu-public-css" href="{% static 'css/public.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-popup-frontend-css" href="{% static 'css/jet-popup-frontend.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-reviews-css" href="{% static 'css/jet-reviews.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-blocks-css" href="{% static 'css/jet-blocks.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-elements-css" href="{% static 'css/jet-elements.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-elements-skin-css" href="{% static 'css/jet-elements-skin.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="elementor-animations-css" href="{% static 'css/animations.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="powerpack-frontend-css" href="{% static 'css/frontend1.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-blog-css" href="{% static 'css/jet-blog.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jquery-chosen-css" href="{% static 'css/chosen.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-search-css" href="{% static 'css/jet-search.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-tabs-frontend-css" href="{% static 'css/jet-tabs-frontend.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-tricks-frontend-css" href="{% static 'css/jet-tricks-frontend.css' %}?20090712" media="all"/>
+    
+    <link rel="stylesheet" id="elementor-post-31-css" href="{% static 'css/post-31.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-woo-builder-css" href="{% static 'css/jet-woo-builder.css' %}?20090712"media="all"/>
+
+    <!--Estilo dentro de cabecera-->
+    <style id="jet-woo-builder-inline-css">
+      @font-face {
+        font-family: "WooCommerce";
+        src: url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot");
+        src: url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff")
+            format("woff"),
+          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf")
+            format("truetype"),
+          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce")
+            format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" id="jet-woo-builder-frontend-css" href="{% static 'css/jetwoobuilder-frontend-font.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-woo-product-gallery-css" href="{% static 'css/jet-woo-product-gallery.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jetwoo-widgets-for-elementor-css" href="{% static 'css/jet-woo-widgets.css' %}?20090712" media="all"/>
+
+    <!--Estilo dentro de cabecera-->
+    <style id="jetwoo-widgets-for-elementor-inline-css">
+      @font-face {
+        font-family: "WooCommerce";
+        src: url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot");
+        src: url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff")
+            format("woff"),
+          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf")
+            format("truetype"),
+          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce")
+            format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" id="astra-child-theme-css-css" href="{% static 'css/styleastra.css' %}?20090712" media="all"/>
+    <!-- <script id="jquery-core-js-extra">
+      var pp = {
+        ajax_url: "https:\/\/spotiglass.nl\/wp-admin\/admin-ajax.php",
+      };
+    </script> -->
+    <script src="{% static 'js/Skripts/jquery.js' %}" id="jquery-core-js"></script>
+    <!--[if IE]>
+      <script
+        src="https://spotiglass.nl/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=2.6.1"
+        id="astra-flexibility-js"
+      ></script>
+      <script id="astra-flexibility-js-after">
+        flexibility(document.documentElement);
+      </script>
+    <![endif]-->
+    <script src="{% static 'js/Skripts/core.min.js' %}" id="jquery-ui-core-js"></script>
+    <script src="{% static 'js/Skripts/widget.min.js' %}" id="jquery-ui-widget-js"></script>
+    <script src="{% static 'js/Skripts/position.min.js' %}" id="jquery-ui-position-js"></script>
+    <script src="{% static 'js/Skripts/menu.min.js' %}" id="jquery-ui-menu-js"></script>
+    <script src="{% static 'js/Skripts/wp-polyfill.min.js' %}" id="wp-polyfill-js"></script>
+    <script id="wp-polyfill-js-after">
+      "fetch" in window ||
+        document.write(
+          '<script src="{% static 'js/Skripts/wp-polyfill-fetch.min.js' %}">></scr' +
+            "ipt>"
+        );
+      document.contains || 
+        document.write(
+          '<script src="{% static 'js/Skripts/wp-polyfill-node-contains.min.js' %}"></scr' +
+            "ipt>"
+        );
+      window.DOMRect ||  
+        document.write(
+          '<script src="{% static 'js/Skripts/wp-polyfill-dom-rect.min.js' %}"></scr' +
+            "ipt>"
+        );
+      (window.URL && window.URL.prototype && window.URLSearchParams) ||
+        document.write( 
+          '<script src="{% static 'js/Skripts/wp-polyfill-url.min.js' %}"></scr' +
+            "ipt>"
+        );
+      (window.FormData && window.FormData.prototype.keys) ||
+        document.write(
+          '<script src="{% static 'js/Skripts/wp-polyfill-formdata.min.js' %}"></scr' + 
+            "ipt>"
+        );
+      (Element.prototype.matches && Element.prototype.closest) ||
+        document.write(
+          '<script src="{% static 'js/Skripts/wp-polyfill-element-closest.min.js' %}"></scr' + 
+            "ipt>"
+        );
+    </script>
+    <script src="{% static 'js/Skripts/dom-ready.min.js' %}" id="wp-dom-ready-js"></script>
+    <script src="{% static 'js/Skripts/i18n.min.js' %}" id="wp-i18n-js"></script>
+    <script id="wp-a11y-js-translations">
+      (function (domain, translations) {
+        var localeData =
+          translations.locale_data[domain] || translations.locale_data.messages;
+        localeData[""].domain = domain;
+        wp.i18n.setLocaleData(localeData, domain);
+      })("default", {
+        "translation-revision-date": "2020-11-22 23:35:28+0000",
+        generator: "GlotPress\/3.0.0-alpha.2",
+        domain: "messages",
+        locale_data: {
+          messages: {
+            "": {
+              domain: "messages",
+              "plural-forms": "nplurals=2; plural=n != 1;",
+              lang: "nl",
+            },
+            Notifications: ["Meldingen"],
+          },
+        },
+        comment: { reference: "wp-includes\/js\/dist\/a11y.js" },
+      });
+    </script>
+    <script src="{% static 'js/Skripts/a11y.min.js' %}" id="wp-a11y-js"></script>
+    <script id="jquery-ui-autocomplete-js-extra">
+      var uiAutocompleteL10n = {
+        noResults: "Niets gevonden.",
+        oneResult:
+          "1 Resultado encontrado. Utilice las flechas de arriba y abajo para navegar.",
+        manyResults:
+          "%d Resultados encontrados. Utilice las flechas de arriba y abajo para navegar.",
+        itemSelected: "Item seleccionado.",
+      };
+    </script>
+    <script src="{% static 'js/Skripts/autocomplete.min.js' %}"> id="jquery-ui-autocomplete-js"</script>
+    <script src="{% static 'js/Skripts/mouse.min.js' %}" id="jquery-ui-mouse-js"></script>
+    <script src="{% static 'js/Skripts/slider.min.js' %}" id="jquery-ui-slider-js"></script>
+    <script src="{% static 'js/Skripts/masonry.pkgd.min.js' %}" id="ewd-urp-masonry-js-js"></script>
+    <!-- <script id="ewd-urp-js-js-extra">
+      var ewd_urp_php_data = {
+        maximum_score: "5",
+        review_character_limit: "",
+        flag_inappropriate_enabled: "Yes",
+      };
+    </script> -->
+    <script src="{% static 'js/Skripts/ewd-urp-js.js' %}" id="ewd-urp-js-js"></script>
+    <!-- <script id="ewd-urp-pie-graph-js-js-extra">
+      var ewd_urp_pie_data = {
+        maximum_score: "5",
+        circle_graph_background_color: "",
+        circle_graph_fill_color: "",
+      };
+    </script> -->
+    <script src="{% static 'js/Skripts/ewd-urp-pie-graph.js' %}" id="ewd-urp-pie-graph-js-js"></script>
+    <script src="{% static 'js/Skripts/ewd-urp-datepicker.js' %}"id="ewd-urp-jquery-datepicker-js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-183798982-1" id="google_gtagjs-js"></script>
+    <script id="google_gtagjs-js-after">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("set", "developer_id.dZTNiMT", true);
+      gtag("config", "UA-183798982-1", { anonymize_ip: true });
+    </script>
+    <meta name="generator" content="Site Kit by Google 1.21.0" />
+
+    <!--Estilo en cabecera-->
+    <style type="text/css">
+      .rx-temp-rating .rx-temp-rating-number p {
+        color: #333;
+        font-size: px !important;
+      }
+
+      .rx-temp-rating .rx-temp-rating-number span {
+        color: #9e9e9e !important;
+        font-size: px !important;
+      }
+
+      .rx_avg_star_color {
+        fill: #ffaf22 !important;
+      }
+      .rx-temp-rating-star svg {
+        width: px !important;
+        height: px !important;
+      }
+
+      .rx-temp-total-rating-count p {
+        color: #444 !important;
+        font-size: px !important;
+      }
+
+      .rx_recommended_box .rx_recommended_box_heading {
+        color: #444 !important;
+        font-size: px !important;
+      }
+
+      .rx_recommended_box .rx_recommended_box_content {
+        color: #444 !important;
+        font-size: px !important;
+      }
+
+      .rx_recommended_wrapper hr {
+        border-style: solid !important;
+        width: 100% !important;
+        height: 1px !important;
+        border-color: #ddd !important;
+        background-color: #ddd !important;
+      }
+
+      .rx_recommended_wrapper {
+        box-shadow: px px px px #797979 !important;
+        border-style: !important;
+        border-width: px !important;
+        border-color: !important;
+      }
+
+      .rx-graph-style-2 .progress-bar-t,
+      .rx_style_two_free_progress_bar .progressbar-title,
+      .vertical .vertical_bar_label {
+        color: #1a1a1a !important;
+        font-size: #2f4fffpx !important;
+      }
+
+      .rx-horizontal .progress-fill,
+      .rx_style_one_progress .rx_style_one_progress-bar,
+      .rx_style_two_free_progress_bar .progress .progress-bar,
+      .vertical .progress-fill {
+        background-color: !important;
+      }
+
+      .rx-horizontal .progress-fill span,
+      .rx_style_one_progress.orange .rx_style_one_progress-icon,
+      .rx_style_one_progress.orange .rx_style_one_progress-value,
+      .rx_style_two_free_progress_bar .progress .progress-bar span,
+      .vertical .progress-fill {
+        color: #fff;
+        font-size: px !important;
+      }
+
+      .rx_style_one_progress.orange .rx_style_one_progress-icon,
+      .rx_style_one_progress.orange .rx_style_one_progress-value {
+        border-color: !important;
+      }
+
+      .rx_rating_graph_wrapper {
+        box-shadow: px px px px #797979 !important;
+        border-style: !important;
+        border-width: px !important;
+        border-color: #000 !important;
+      }
+
+      .rx-filter-bar .rx_filter_header h4,
+      .rx-filter-bar .rx-short-by h4 {
+        color: #676767 !important;
+        font-size: px !important;
+      }
+
+      .rx-filter-bar .rx_review_shorting_2 .box select {
+        color: #373747 !important;
+        background-color: #fff !important;
+      }
+
+      .rx-filter-bar .rx_review_shorting_2 .box .rx-selection-arrow b {
+        border-color: #fff transparent transparent transparent !important;
+      }
+      .rx-filter-bar .rx_review_shorting_2 .box .rx-selection-arrow {
+        background-color: !important;
+      }
+      .rx-filter-bar {
+        background-color: #ececec !important;
+      }
+      .rx_listing .rx_review_block .rx_thumb {
+        box-shadow: px px px px #797979;
+        border-style: !important;
+        border-width: px !important;
+        border-color: #000 !important;
+      }
+
+      .rx_listing .rx_review_block .rx_author_info .rx_author_name h4 {
+        color: #373747 !important;
+        font-size: px !important;
+      }
+
+      .rx_review_sort_list
+        .rx_listing_container
+        .rx_listing
+        .rx_avg_star_color {
+        fill: #ffaf22 !important;
+      }
+
+      .rx_listing .rx_review_block .rx_body .review_rating svg {
+        width: px !important;
+        height: px !important;
+      }
+
+      .rx_listing .rx_review_block .review_title {
+        color: #373747 !important;
+        font-size: px !important;
+      }
+
+      .rx_listing .rx_review_block .rx_body p {
+        color: #9b9b9b !important;
+        font-size: px !important;
+      }
+
+      .rx_listing .rx_review_block .rx_body .rx_review_calender svg .st0 {
+        fill: #707070 !important;
+      }
+
+      .rx_listing .rx_review_block .rx_body .rx_review_calender {
+        color: #6d6d6d !important;
+        font-size: px !important;
+      }
+
+      .rx_listing
+        .rx_review_block
+        .rx_body
+        .rx_varified
+        .rx_varified_user
+        svg
+        .st0 {
+        fill: #12d585 !important;
+      }
+
+      .rx_review_block .rx_body .rx_varified .rx_varified_user span {
+        color: !important;
+        font-size: #12D585px !important;
+      }
+
+      .rx_listing .rx_review_block .rx_body .rx_meta .rx_review_vote_icon p {
+        color: #333 !important;
+        font-size: px !important;
+      }
+
+      .rx_listing .rx_review_vote_icon .like {
+        background-color: #eaeaea !important;
+      }
+
+      .rx_listing .rx_helpful_style_1_svg svg {
+        fill: #a4a4a4 !important;
+      }
+
+      .rx_listing .rx_review_vote_icon .like .rx_helpful_count_val {
+        color: #696969 !important;
+      }
+
+      .rx_listing .rx_review_block .rx_body .rx_meta .rx_share p {
+        color: #333 !important;
+        font-size: px !important;
+      }
+
+      .rx_listing .social-links .wc_rx_btns ul li:nth-child(1) svg {
+        fill: #a4a4a4 !important;
+      }
+
+      .rx_listing .social-links .wc_rx_btns ul li:nth-child(2) a svg .st0 {
+        fill: #b7b7b8 !important;
+      }
+
+      .rx_listing .social-links .wc_rx_btns ul li:nth-child(3) a svg .st0 {
+        fill: #b7b7b8 !important;
+      }
+
+      .rx_listing .rx_review_block + .rx_review_block {
+        border-top: 2px solid #ececec !important;
+      }
+
+      .rx_listing .reviewx_highlight_comment {
+        border-color: !important;
+      }
+      .rx_listing .rx_review_block .rx_body .rx_photos {
+        justify-content: flex-start !important;
+      }
+
+      .rx_listing_container {
+        background-color: !important;
+        border-color: !important;
+      }
+
+      .rx_listing .rx_review_block .children .rx_thumb svg .st0 {
+        fill: !important;
+      }
+
+      .rx_listing .rx_review_block .children .rx_thumb {
+        background-color: #fff !important;
+        border-radius: px !important;
+        border: none !important;
+      }
+
+      .rx_listing .rx_review_block .children .review_title {
+        color: #373747 !important;
+        font-size: px !important;
+      }
+
+      .rx_listing .rx_review_block .children .owner_arrow svg .st0 {
+        fill: #707070 !important;
+      }
+
+      .rx_listing .rx_review_block .children .comment-content p {
+        color: #707070 !important;
+        font-size: px !important;
+      }
+
+      .rx_listing .rx_review_block .children .rx_review_calender {
+        color: #6d6d6d !important;
+        font-size: px !important;
+      }
+
+      .rx_listing
+        .rx_review_block
+        .children
+        .rx_body
+        .rx_review_calender
+        svg
+        .st0 {
+        fill: #707070 !important;
+      }
+
+      .admin-reply-edit-icon svg {
+        fill: #000 !important;
+      }
+
+      .admin-reply-delete-icon svg {
+        fill: #000 !important;
+      }
+
+      .rx_listing .rx_review_block .rx_meta .rx-admin-reply {
+        color: #fff !important;
+        font-size: px !important;
+        background-color: !important;
+        border-color: !important;
+      }
+
+      .rx_listing .children {
+        background-color: #fff !important;
+      }
+
+      .rx-admin-edit-reply-area,
+      .rx-admin-reply-area {
+        background-color: #fff !important;
+        border-color: #f7f7f7 !important;
+        border-radius: px !important;
+      }
+
+      .rx_listing_style_1 .rx_review_block .rx_body .admin-reply-form-title,
+      .rx_listing_style_1 .rx-admin-edit-reply-area .admin-reply-form-title {
+        color: #f7f7f7 !important;
+        font-size: px !important;
+      }
+
+      .rx_listing
+        .rx_review_block
+        .rx_body
+        .rx-admin-reply-area
+        .comment-form-comment
+        textarea,
+      .rx-admin-edit-reply-area .comment-form-comment textarea {
+        background-color: #ebebf3 !important;
+      }
+
+      .rx-admin-edit-reply-area .form-submit .admin-review-edit-reply,
+      .rx-admin-reply-area .form-submit .admin-review-reply {
+        background-color: !important;
+        color: #fff !important;
+        font-size: px !important;
+      }
+
+      .rx-admin-edit-reply-area .form-submit .cancel-admin-edit-reply,
+      .rx-admin-reply-area .form-submit .cancel-admin-reply {
+        color: #333 !important;
+        background-color: #eeeeee !important;
+      }
+
+      .rx-admin-edit-reply-area .form-submit .cancel-admin-reply,
+      .rx-admin-reply-area .form-submit .cancel-admin-reply {
+        font-size: px !important;
+      }
+
+      .rx_listing_style_1 .rx_pagination a {
+        color: #6f7484 !important;
+        font-size: px !important;
+        background-color: #f3f3f7 !important;
+      }
+
+      .rx_listing_style_1 .rx_pagination .rx-page.active a {
+        color: #fff !important;
+        background-color: #2f4fff !important;
+      }
+
+      .rx_listing_style_1 .rx_pagination a:hover {
+        color: #23527c !important;
+        background-color: #2f4fff !important;
+      }
+
+      .rx-review-form-area-style-1 .rx-criteria-table td {
+        color: #1a1a1a !important;
+        font-size: px !important;
+      }
+
+      .rx-review-form-area-style-1
+        .rx_star_rating
+        > input:checked
+        ~ label
+        .icon-star,
+      .rx-review-form-area-style-1
+        .reviewx-thumbs-rating
+        input[type="radio"]:checked
+        + label
+        svg,
+      .rx-review-form-area-style-1
+        .reviewx-thumbs-rating
+        input[type="radio"]:checked
+        + label
+        svg
+        #rx_dislike
+        path,
+      .rx-review-form-area-style-1
+        .reviewx-face-rating
+        fieldset
+        input[type="radio"]:checked
+        + label
+        .happy_st0,
+      .rx-review-form-area-style-1
+        .reviewx-face-rating
+        fieldset
+        input[type="radio"]:checked
+        + label
+        .st1 {
+        fill: #ffaf22 !important;
+      }
+      .rx-review-form-area-style-1 .rx_star_rating .icon-star,
+      .rx-review-form-area-style-1
+        .rx_star_rating:not(:checked)
+        > label:hover
+        .icon-star,
+      .rx_star_rating:not(:checked) > label:hover ~ label .icon-star {
+        stroke: #ffaf22 !important;
+      }
+
+      .rx_star_rating .icon-star {
+        width: px !important;
+        height: px !important;
+      }
+
+      .rx-review-form-area-style-1
+        .reviewx_recommended_list
+        .reviewx_radio
+        input[type="radio"]:checked
+        + .radio-label
+        svg
+        .rx_happy,
+      .rx-review-form-area-style-1
+        .reviewx_recommended_list
+        .reviewx_radio
+        input[type="radio"]:checked
+        + .radio-label
+        svg
+        .st1 {
+        fill: !important;
+      }
+
+      .rx-review-form-area-style-1 #review_form .rx-note-video {
+        color: #6d6d6d !important;
+        font-size: px !important;
+      }
+
+      .rx-review-form-area-style-1 #review_form input[type="submit"],
+      .rx-review-form-area-style-1 #review_form input[type="submit"]:focus {
+        color: #fff !important;
+        font-size: px !important;
+        background-color: !important;
+      }
+
+      .rx-review-form-area-style-1 #respond input#submit {
+        border-radius: px !important;
+      }
+    </style>
+  
+    <noscript>
+      <style>
+        .woocommerce-product-gallery {
+          opacity: 1 !important;
+        }
+      </style>
+      </noscript>
+    <style>
+      .recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    </style>
+
+    <script type="text/javascript">
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+    </script>
+    <!-- WooCommerce Facebook Integration Begin -->
+    <script type="text/javascript">
+      fbq(
+        "init",
+        "368486284386964",
+        {},
+        {
+          agent: "woocommerce-4.7.1-2.2.0",
+        }
+      );
+
+      fbq("track", "PageView", {
+        source: "woocommerce",
+        version: "4.7.1",
+        pluginVersion: "2.2.0",
+      });
+
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          jQuery &&
+            jQuery(function ($) {
+              // insert placeholder for events injected when a product is added to the cart through AJAX
+              $(document.body).append(
+                '<div class="wc-facebook-pixel-event-placeholder"></div>'
+              );
+            });
+        },
+        false
+      );
+    </script>
+    <!-- WooCommerce Facebook Integration End -->
+    <link
+      rel="icon"
+      href="https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-favicon.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-favicon.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-favicon.png"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-favicon.png"
+    />
+
+    <style id="custom-style">
+      .rx_review_shorting_2 .box .rx-selection-arrow {
+        background-color: #1dd660 !important;
+      }
+      .rx_listing .rx_review_block .children .rx_thumb svg {
+        fill: #1dd660 !important;
+      }
+      .woocommerce-page div.product div.summary .star-rating,
+      .woocommerce-page div.product div.summary .star-rating span:before,
+      ul.products li.product .woocommerce-loop-product__link .star-rating,
+      ul.products
+        li.product
+        .woocommerce-loop-product__link
+        .star-rating
+        span:before {
+        color: #1dd660;
+      }
+
+      .rx-horizontal .progress-fill {
+        background-color: #1dd660;
+      }
+
+      .reviewx_recommended_list
+        .reviewx_radio
+        input[type="radio"]:checked
+        + .radio-label
+        svg
+        .rx_happy,
+      .reviewx_recommended_list
+        .reviewx_radio
+        input[type="radio"]:checked
+        + .radio-label
+        svg
+        .st1 {
+        fill: #1dd660;
+      }
+
+      a.play-btn {
+        color: #1dd660;
+      }
+
+      #review_form input[type="submit"],
+      #review_form input[type="submit"]:focus {
+        background-color: #1dd660;
+        border-color: #1dd660;
+        outline-color: #1dd660;
+      }
+      /*Theme Oshine*/
+      .theme-oshin.woocommerce #respond .reviewx_front_end_from input#submit,
+      .theme-oshin.woocommerce-page
+        #respond
+        .reviewx_front_end_from
+        input#submit {
+        background-color: #1dd660 !important;
+        border-color: #1dd660 !important;
+        outline-color: #1dd660 !important;
+      }
+      .theme-jupiter.woocommerce #respond .reviewx_front_end_from input#submit,
+      .theme-jupiter.woocommerce-page
+        #respond
+        .reviewx_front_end_from
+        input#submit {
+        background-color: #1dd660 !important;
+        border-color: #1dd660 !important;
+        outline-color: #1dd660 !important;
+      }
+
+      .reviewx-rating .rx-star-rating > label:before {
+        background-color: #1dd660;
+        -webkit-background-clip: text;
+      }
+
+      /*-------Pagination----------*/
+      .rx_pagination .rx-page.active a {
+        background-color: #1dd660;
+      }
+
+      /*---------My Account Page-------*/
+      .swal2-modal button.styled {
+        background-color: #1dd660 !important;
+      }
+      .woocommerce-orders
+        .woocommerce-orders-table__cell
+        p
+        .rx_my_account_view_review,
+      .woocommerce-orders
+        .woocommerce-orders-table__cell
+        p
+        .rx_my_account_edit_review,
+      .woocommerce-orders
+        .woocommerce-orders-table__cell
+        p
+        .rx_my_account_submit_review {
+        background-color: #1dd660 !important;
+      }
+      .woocommerce-orders
+        .woocommerce-orders-table__cell
+        p
+        .rx_my_account_view_review:hover,
+      .woocommerce-orders
+        .woocommerce-orders-table__cell
+        p
+        .rx_my_account_edit_review:hover,
+      .woocommerce-orders
+        .woocommerce-orders-table__cell
+        p
+        .rx_my_account_submit_review:hover {
+        background-color: #1dd660 !important;
+        color: #fff !important;
+      }
+      .rx_myaccount-review_form .rx-form-btn.rv-btn {
+        background-color: #1dd660 !important;
+        border: 1px solid #1dd660 !important;
+      }
+      /*-------Style one review summery progress bar-------*/
+      .rx_style_one_progress.orange .rx_style_one_progress-icon,
+      .rx_style_one_progress.orange .rx_style_one_progress-value {
+        color: #1dd660;
+        border-color: #1dd660;
+      }
+
+      .rx-cancel-btn {
+        color: #1dd660 !important;
+        border-color: #1dd660 !important;
+      }
+      .rx_double_spinner > div {
+        border-color: #1dd660 transparent #1dd660 transparent;
+      }
+
+      .rx_double_spinner > div:nth-child(2) div:before,
+      .rx_double_spinner > div:nth-child(2) div:after {
+        background: #1dd660 !important;
+        box-shadow: 0 64px 0 0 #1dd660 !important;
+      }
+
+      .rx_double_spinner > div:nth-child(2) div:after {
+        box-shadow: 64px 0 0 0 #1dd660 !important;
+      }
+
+      .rx_listing .rx_review_block .children .rx_thumb svg .st0 {
+        fill: #1dd660;
+      }
+
+      .reviewx_highlight_comment {
+        border-color: #1dd660 !important;
+      }
+
+      .rx_review_shorting .box .rx-selection-arrow {
+        background-color: #1dd660;
+      }
+
+      /* Single Order Page*/
+      .rx_listing
+        .rx_review_block
+        .rx_body
+        .rx_photos
+        .rx_photo.rx_video
+        .rx_overlay
+        i {
+        color: #1dd660 !important;
+      }
+
+      .rx-form-btn {
+        background: #1dd660;
+        border: 1px solid #1dd660;
+      }
+
+      .rx_video .rx_overlay .st0 {
+        fill: #1dd660 !important;
+      }
+
+      .rx_style_one_progress .rx_style_one_progress-bar {
+        background: #1dd660;
+      }
+
+      .rx_style_two_free_progress_bar .progress .progress-bar {
+        background: #1dd660;
+      }
+    </style>
+  {% endblock %}
+
+     {% block content %}
+
+        <!-- Content -->
+      <div id="content" class="site-content">
+        <div class="ast-container">
+          <div id="primary" class="content-area primary">
+            <main id="main" class="site-main">
+              <article
+                class="post-31 page type-page status-publish ast-article-single"
+                id="post-31"
+                itemtype="https://schema.org/CreativeWork"
+                itemscope="itemscope">
+
+                <header class="entry-header ast-header-without-markup"></header>
+                <!-- .entry-header -->
+
+                <div class="entry-content clear" itemprop="text">
+                  <div
+                    data-elementor-type="wp-page"
+                    data-elementor-id="31"
+                    class="elementor elementor-31"
+                    data-elementor-settings="[]">
+                    <div class="elementor-inner">
+                      <div class="elementor-section-wrap">
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-b20c8e2 elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-middle elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default"
+                          data-id="b20c8e2"
+                          data-element_type="section"
+                          data-settings='{"background_background":"classic"}'>
+                          <div class="elementor-background-overlay"></div>
+                          <div
+                            class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-690bcbf"
+                                data-id="690bcbf"
+                                data-element_type="column">
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated">
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-14c5619 elementor-widget elementor-widget-spacer"
+                                      data-id="14c5619"
+                                      data-element_type="widget"
+                                      data-widget_type="spacer.default">
+                                      <div class="elementor-widget-container">
+                                        <div class="elementor-spacer">
+                                          <div
+                                            class="elementor-spacer-inner"
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5dc2dc4"
+                                data-id="5dc2dc4"
+                                data-element_type="column">
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated">
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-52148b3 elementor-widget elementor-widget-heading"
+                                      data-id="52148b3"
+                                      data-element_type="widget"
+                                      data-widget_type="heading.default">
+                                      <div class="elementor-widget-container">
+                                        <h2
+                                          class="elementor-heading-title elementor-size-large">
+                                          Tu canción favorita o tu propia foto y texto en tu SpotiGlass!
+                                        </h2>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-94e4762 elementor-widget elementor-widget-heading"
+                                      data-id="94e4762"
+                                      data-element_type="widget"
+                                      data-widget_type="heading.default">
+                                      <div class="elementor-widget-container">
+                                        <h2
+                                          class="elementor-heading-title elementor-size-default">
+                                          ¡Escoge una canción, un álbum o un artista 
+                                          e imprímelo con tu tema preferido!
+                                        </h2>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-cc07601 elementor-align-center elementor-widget elementor-widget-button"
+                                      data-id="cc07601"
+                                      data-element_type="widget"
+                                      data-widget_type="button.default">
+                                      <div class="elementor-widget-container">
+                                        <div class="elementor-button-wrapper">
+                                          <a
+                                            href="https://spotiglass.nl/product/spotiglass-artwork/"
+                                            class="elementor-button-link elementor-button elementor-size-md"
+                                            role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                              <span class="elementor-button-text">
+                                               Personalizar ahora
+                                              </span>
+                                            </span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <section
+                                      class="elementor-section elementor-inner-section elementor-element elementor-element-6ce3bde elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                      data-id="6ce3bde"
+                                      data-element_type="section">
+                                      <div
+                                        class="elementor-container elementor-column-gap-no">
+                                        <div class="elementor-row">
+                                          <div
+                                            class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-f3cb3e1"
+                                            data-id="f3cb3e1"
+                                            data-element_type="column">
+                                            <div
+                                              class="elementor-column-wrap elementor-element-populated">
+                                              <div
+                                                class="elementor-widget-wrap">
+                                                <div
+                                                  class="elementor-element elementor-element-f67d2bc elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="f67d2bc"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default">
+                                                  <div
+                                                    class="elementor-widget-container">
+                                                    <ul
+                                                      class="elementor-icon-list-items">
+                                                      <li
+                                                        class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true" class="fas fa-star"></i>
+                                                        </span>
+                                                        <span class="elementor-icon-list-text"></span>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-36275c0 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="36275c0"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default">
+                                                  <div
+                                                    class="elementor-widget-container">
+                                                    <ul
+                                                      class="elementor-icon-list-items">
+                                                      <li
+                                                        class="elementor-icon-list-item">
+                                                        <span
+                                                          class="elementor-icon-list-icon">
+                                                          <i
+                                                            aria-hidden="true"
+                                                            class="fas fa-star">
+                                                          </i>
+                                                        </span>
+                                                        <span class="elementor-icon-list-text"></span>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-8f8f235 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="8f8f235"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default">
+                                                  <div
+                                                    class="elementor-widget-container">
+                                                    <ul
+                                                      class="elementor-icon-list-items">
+                                                      <li
+                                                        class="elementor-icon-list-item">
+                                                        <span
+                                                          class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true" class="fas fa-star">
+                                                          </i>
+                                                        </span>
+                                                        <span
+                                                          class="elementor-icon-list-text">
+                                                        </span>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-fad8075 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="fad8075"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default">
+                                                  <div
+                                                    class="elementor-widget-container">
+                                                    <ul
+                                                      class="elementor-icon-list-items">
+                                                      <li
+                                                        class="elementor-icon-list-item">
+                                                        <span
+                                                          class="elementor-icon-list-icon">
+                                                          <i
+                                                            aria-hidden="true"
+                                                            class="fas fa-star">
+                                                          </i>
+                                                        </span>
+                                                        <span class="elementor-icon-list-text">
+                                                        </span>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-ee134bf elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="ee134bf"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default">
+                                                  <div
+                                                    class="elementor-widget-container">
+                                                    <ul
+                                                      class="elementor-icon-list-items">
+                                                      <li
+                                                        class="elementor-icon-list-item">
+                                                        <span
+                                                          class="elementor-icon-list-icon">
+                                                          <i
+                                                            aria-hidden="true"
+                                                            class="fas fa-star">
+                                                          </i>
+                                                        </span>
+                                                        <span class="elementor-icon-list-text">
+                                                          4.7 | Más de 100 clientes
+                                                          satisfechos</span
+                                                        >
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-2ac497d elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-middle elementor-hidden-phone elementor-section-boxed elementor-section-height-default"
+                          data-id="2ac497d"
+                          data-element_type="section"
+                          data-settings='{"background_background":"classic"}'
+                        >
+                          <div
+                            class="elementor-container elementor-column-gap-default"
+                          >
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b72bca3"
+                                data-id="b72bca3"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-998be20 elementor-widget elementor-widget-heading"
+                                      data-id="998be20"
+                                      data-element_type="widget"
+                                      data-widget_type="heading.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <h2
+                                          class="elementor-heading-title elementor-size-large"
+                                        >
+                                          Tu canción favorita o tu propia foto y texto 
+                                          en tu SpotiGlass!
+                                        </h2>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-56fd9af elementor-widget elementor-widget-heading"
+                                      data-id="56fd9af"
+                                      data-element_type="widget"
+                                      data-widget_type="heading.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <h2
+                                          class="elementor-heading-title elementor-size-default"
+                                        >
+                                          ¡Escoge una canción, un álbum o un artista e
+                                          imprímelo con tu tema preferido!
+                                        </h2>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-57a22d3 elementor-align-center elementor-widget elementor-widget-button"
+                                      data-id="57a22d3"
+                                      data-element_type="widget"
+                                      data-widget_type="button.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <div class="elementor-button-wrapper">
+                                          <a
+                                            href="#"
+                                            class="elementor-button-link elementor-button elementor-size-md"
+                                            role="button"
+                                          >
+                                            <span
+                                              class="elementor-button-content-wrapper"
+                                            >
+                                              <span
+                                                class="elementor-button-text"
+                                                >Personalizar ahora</span
+                                              >
+                                            </span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <section
+                                      class="elementor-section elementor-inner-section elementor-element elementor-element-e6bdfbc elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                      data-id="e6bdfbc"
+                                      data-element_type="section"
+                                    >
+                                      <div
+                                        class="elementor-container elementor-column-gap-no"
+                                      >
+                                        <div class="elementor-row">
+                                          <div
+                                            class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-40b21de"
+                                            data-id="40b21de"
+                                            data-element_type="column"
+                                          >
+                                            <div
+                                              class="elementor-column-wrap elementor-element-populated"
+                                            >
+                                              <div
+                                                class="elementor-widget-wrap"
+                                              >
+                                                <div
+                                                  class="elementor-element elementor-element-0767e74 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="0767e74"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <ul
+                                                      class="elementor-icon-list-items"
+                                                    >
+                                                      <li
+                                                        class="elementor-icon-list-item"
+                                                      >
+                                                        <span
+                                                          class="elementor-icon-list-icon"
+                                                        >
+                                                          <i
+                                                            aria-hidden="true"
+                                                            class="fas fa-star"
+                                                          ></i>
+                                                        </span>
+                                                        <span
+                                                          class="elementor-icon-list-text"
+                                                        ></span>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-4bf3595 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="4bf3595"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <ul
+                                                      class="elementor-icon-list-items"
+                                                    >
+                                                      <li
+                                                        class="elementor-icon-list-item"
+                                                      >
+                                                        <span
+                                                          class="elementor-icon-list-icon"
+                                                        >
+                                                          <i
+                                                            aria-hidden="true"
+                                                            class="fas fa-star"
+                                                          ></i>
+                                                        </span>
+                                                        <span
+                                                          class="elementor-icon-list-text"
+                                                        ></span>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-cd01b74 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="cd01b74"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <ul
+                                                      class="elementor-icon-list-items"
+                                                    >
+                                                      <li
+                                                        class="elementor-icon-list-item"
+                                                      >
+                                                        <span
+                                                          class="elementor-icon-list-icon"
+                                                        >
+                                                          <i
+                                                            aria-hidden="true"
+                                                            class="fas fa-star"
+                                                          ></i>
+                                                        </span>
+                                                        <span
+                                                          class="elementor-icon-list-text"
+                                                        ></span>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-efaac0d elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="efaac0d"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <ul
+                                                      class="elementor-icon-list-items"
+                                                    >
+                                                      <li
+                                                        class="elementor-icon-list-item"
+                                                      >
+                                                        <span
+                                                          class="elementor-icon-list-icon"
+                                                        >
+                                                          <i
+                                                            aria-hidden="true"
+                                                            class="fas fa-star"
+                                                          ></i>
+                                                        </span>
+                                                        <span
+                                                          class="elementor-icon-list-text"
+                                                        ></span>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-b4f5352 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                  data-id="b4f5352"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon-list.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <ul
+                                                      class="elementor-icon-list-items"
+                                                    >
+                                                      <li
+                                                        class="elementor-icon-list-item"
+                                                      >
+                                                        <span
+                                                          class="elementor-icon-list-icon"
+                                                        >
+                                                          <i
+                                                            aria-hidden="true"
+                                                            class="fas fa-star"
+                                                          ></i>
+                                                        </span>
+                                                        <span
+                                                          class="elementor-icon-list-text"
+                                                        >
+                                                          4.7 | Más de 100 clientes satisfechos
+                                                          </span
+                                                        >
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-87229fb"
+                                data-id="87229fb"
+                                data-element_type="column"
+                              >
+                                <div class="elementor-column-wrap">
+                                  <div class="elementor-widget-wrap"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-40ddae6 elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                          data-id="40ddae6"
+                          data-element_type="section"
+                        >
+                          <div
+                            class="elementor-container elementor-column-gap-default"
+                          >
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d96dd66"
+                                data-id="d96dd66"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-72615c2 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="72615c2"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true"class="far fa-check-circle">
+                                              </i>
+                                            </span>
+                                            <span class="elementor-icon-list-text">
+                                              Pago seguro con iDeal y Paypal
+                                            </span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-42fa98d"
+                                data-id="42fa98d"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-b52fe65 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="b52fe65"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-2331e42 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="2331e42"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-3375518 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="3375518"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-e129799 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="e129799"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-b5d0f34 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="b5d0f34"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            >
+                                              4.7 | Más de 100 clientes
+                                              satisfechos</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c92be20"
+                                data-id="c92be20"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-5eae536 elementor-align-right elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="5eae536"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-truck"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                              >Entrega gratis dentro de 5
+                                              días</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-999b369 elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                          data-id="999b369"
+                          data-element_type="section"
+                        >
+                          <div
+                            class="elementor-container elementor-column-gap-default"
+                          >
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-fbcd207"
+                                data-id="fbcd207"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-e61ecb0 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="e61ecb0"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="far fa-check-circle"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                              >Pago seguro con iDeal y Paypal</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-22edf27"
+                                data-id="22edf27"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-0d871f9 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="0d871f9"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-0f119c4 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="0f119c4"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-9f0f353 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="9f0f353"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-d925029 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="d925029"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-5aaf823 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="5aaf823"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            >
+                                              4.7 | Más de 100 clientes
+                                              satisfechos</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b3b19a6"
+                                data-id="b3b19a6"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-b35c2cb elementor-align-right elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="b35c2cb"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-truck"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                              >Entrega gratis dentro de 5
+                                              días</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-c7e111d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                          data-id="c7e111d"
+                          data-element_type="section"
+                        >
+                          <div
+                            class="elementor-container elementor-column-gap-default"
+                          >
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-81af111"
+                                data-id="81af111"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-df44b6d elementor-widget elementor-widget-heading"
+                                      data-id="df44b6d"
+                                      data-element_type="widget"
+                                      data-widget_type="heading.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <h2
+                                          class="elementor-heading-title elementor-size-default"
+                                        >
+                                          Crea tu Spotiglass en 3 pasos!
+                                        </h2>
+                                      </div>
+                                    </div>
+                                    <section
+                                      class="elementor-section elementor-inner-section elementor-element elementor-element-3c277e2 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                      data-id="3c277e2"
+                                      data-element_type="section"
+                                    >
+                                      <div
+                                        class="elementor-container elementor-column-gap-default"
+                                      >
+                                        <div class="elementor-row">
+                                          <div
+                                            class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2d19156"
+                                            data-id="2d19156"
+                                            data-element_type="column"
+                                          >
+                                            <div
+                                              class="elementor-column-wrap elementor-element-populated"
+                                            >
+                                              <div
+                                                class="elementor-widget-wrap"
+                                              >
+                                                <div
+                                                  class="elementor-element elementor-element-5f73c69 elementor-view-default elementor-widget elementor-widget-icon"
+                                                  data-id="5f73c69"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <div
+                                                      class="elementor-icon-wrapper"
+                                                    >
+                                                      <div
+                                                        class="elementor-icon"
+                                                      >
+                                                        <i
+                                                          aria-hidden="true"
+                                                          class="fas fa-camera-retro"
+                                                        ></i>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-dc0808d elementor-widget elementor-widget-heading"
+                                                  data-id="dc0808d"
+                                                  data-element_type="widget"
+                                                  data-widget_type="heading.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <h2
+                                                      class="elementor-heading-title elementor-size-default"
+                                                    >
+                                                      Sube una foto 
+                                                    </h2>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-1f850b6 elementor-widget elementor-widget-text-editor"
+                                                  data-id="1f850b6"
+                                                  data-element_type="widget"
+                                                  data-widget_type="text-editor.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <div
+                                                      class="elementor-text-editor elementor-clearfix"
+                                                    >
+                                                      <p>
+                                                        Toma una foto de
+                                                        alta calidad con 
+                                                        una relación 1:1
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7a163cd"
+                                            data-id="7a163cd"
+                                            data-element_type="column"
+                                          >
+                                            <div
+                                              class="elementor-column-wrap elementor-element-populated"
+                                            >
+                                              <div
+                                                class="elementor-widget-wrap"
+                                              >
+                                                <div
+                                                  class="elementor-element elementor-element-1e4e320 elementor-view-default elementor-widget elementor-widget-icon"
+                                                  data-id="1e4e320"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <div
+                                                      class="elementor-icon-wrapper"
+                                                    >
+                                                      <div
+                                                        class="elementor-icon"
+                                                      >
+                                                        <i
+                                                          aria-hidden="true"
+                                                          class="fas fa-music"
+                                                        ></i>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-e7af6d4 elementor-widget elementor-widget-heading"
+                                                  data-id="e7af6d4"
+                                                  data-element_type="widget"
+                                                  data-widget_type="heading.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <h2
+                                                      class="elementor-heading-title elementor-size-default"
+                                                    >
+                                                      El título de la canción
+                                                    </h2>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-ccb6476 elementor-widget elementor-widget-text-editor"
+                                                  data-id="ccb6476"
+                                                  data-element_type="widget"
+                                                  data-widget_type="text-editor.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <div
+                                                      class="elementor-text-editor elementor-clearfix"
+                                                    >
+                                                      <p>
+                                                        Elije tu canción favorita
+                                                        o ponle un título a tu foto
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2aa1b54"
+                                            data-id="2aa1b54"
+                                            data-element_type="column"
+                                          >
+                                            <div
+                                              class="elementor-column-wrap elementor-element-populated"
+                                            >
+                                              <div
+                                                class="elementor-widget-wrap"
+                                              >
+                                                <div
+                                                  class="elementor-element elementor-element-589344b elementor-view-default elementor-widget elementor-widget-icon"
+                                                  data-id="589344b"
+                                                  data-element_type="widget"
+                                                  data-widget_type="icon.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <div
+                                                      class="elementor-icon-wrapper"
+                                                    >
+                                                      <div
+                                                        class="elementor-icon"
+                                                      >
+                                                        <i
+                                                          aria-hidden="true"
+                                                          class="fas fa-camera-retro"
+                                                        ></i>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-1003797 elementor-widget elementor-widget-heading"
+                                                  data-id="1003797"
+                                                  data-element_type="widget"
+                                                  data-widget_type="heading.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <h2
+                                                      class="elementor-heading-title elementor-size-default"
+                                                    >
+                                                      Nombre del artista
+                                                    </h2>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  class="elementor-element elementor-element-1fa7549 elementor-widget elementor-widget-text-editor"
+                                                  data-id="1fa7549"
+                                                  data-element_type="widget"
+                                                  data-widget_type="text-editor.default"
+                                                >
+                                                  <div
+                                                    class="elementor-widget-container"
+                                                  >
+                                                    <div
+                                                      class="elementor-text-editor elementor-clearfix"
+                                                    >
+                                                      <p>
+                                                        Pon el nombre del artista
+                                                        o inserta un mensaje personal
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-26f105a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                          data-id="26f105a"
+                          data-element_type="section"
+                        >
+                          <div
+                            class="elementor-container elementor-column-gap-default"
+                          >
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-765c507"
+                                data-id="765c507"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-5baa227 elementor-widget elementor-widget-heading"
+                                      data-id="5baa227"
+                                      data-element_type="widget"
+                                      data-widget_type="heading.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <h1
+                                          class="elementor-heading-title elementor-size-default"
+                                        >
+                                          Resistente ⚡️
+                                        </h1>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-f741d7c elementor-widget elementor-widget-text-editor"
+                                      data-id="f741d7c"
+                                      data-element_type="widget"
+                                      data-widget_type="text-editor.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <div
+                                          class="elementor-text-editor elementor-clearfix"
+                                        >
+                                          <p>
+                                            Impresión laser directamente 
+                                            sobre la placa de cristal acrílico 
+                                            para crear una superfice resistente 
+                                            a los arañazos que garantiza 
+                                            su máxima calidad.
+                                          </p>
+                                          <p>
+                                            La resistencia a la luz del vidrio acrílico
+                                            ha sido probada para una duración de al menos 100
+                                            años.
+                                          </p>
+                                          <p>
+                                            ¡Nos aseguramos que tu SpotiGlass dure!
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-fd9eed1 elementor-align-center elementor-widget elementor-widget-button"
+                                      data-id="fd9eed1"
+                                      data-element_type="widget"
+                                      data-widget_type="button.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <div class="elementor-button-wrapper">
+                                          <a
+                                            href="#"
+                                            class="elementor-button-link elementor-button elementor-size-md"
+                                            role="button"
+                                          >
+                                            <span
+                                              class="elementor-button-content-wrapper"
+                                            >
+                                              <span
+                                                class="elementor-button-text"
+                                                >Hacer mi placa</span
+                                              >
+                                            </span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-28e54c6"
+                                data-id="28e54c6"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-16a07eb elementor-widget elementor-widget-image"
+                                      data-id="16a07eb"
+                                      data-element_type="widget"
+                                      data-widget_type="image.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <div class="elementor-image">
+                                          <img
+                                            width="1020"
+                                            height="1020"
+                                            src="https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover.jpg"
+                                            class="attachment-large size-large"
+                                            alt=""
+                                            loading="lazy"
+                                            srcset="
+                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover.jpg         1020w,
+                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-300x300.jpg  300w,
+                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-150x150.jpg  150w,
+                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-768x768.jpg  768w,
+                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-400x400.jpg  400w,
+                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-600x600.jpg  600w,
+                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-100x100.jpg  100w,
+                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-60x60.jpg     60w
+                                            "
+                                            sizes="(max-width: 1020px) 100vw, 1020px"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-bc5ea71 elementor-section-full_width elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-height-default elementor-section-height-default"
+                          data-id="bc5ea71"
+                          data-element_type="section"
+                        >
+                          <div
+                            class="elementor-container elementor-column-gap-default"
+                          >
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5bec994"
+                                data-id="5bec994"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-2040ce0 elementor-widget elementor-widget-heading"
+                                      data-id="2040ce0"
+                                      data-element_type="widget"
+                                      data-widget_type="heading.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <h2
+                                          class="elementor-heading-title elementor-size-default"
+                                        >
+                                          SpotiGlass™ Artworks
+                                        </h2>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-02fc75f elementor-widget elementor-widget-heading"
+                                      data-id="02fc75f"
+                                      data-element_type="widget"
+                                      data-widget_type="heading.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <h2
+                                          class="elementor-heading-title elementor-size-default"
+                                        >
+                                          Estos 
+                                          
+                                        </h2>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-ee4125e pp-insta-title-middle elementor-widget elementor-widget-pp-instafeed"
+                                      data-id="ee4125e"
+                                      data-element_type="widget"
+                                      data-settings='{"username":"spotiglass.nl","insta_likes":"yes","feed_layout":"grid","insta_comments":"no","icons_style":"solid"}'
+                                      data-widget_type="pp-instafeed.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <div
+                                          class="pp-instagram-feed clearfix pp-instagram-feed-grid pp-instagram-feed-always pp-instagram-feed-grid-4 pp-if-square-images"
+                                          data-settings='{"user_id":"spotiglass.nl","access_token":"","sort_by":"none","images_count":8,"target":"pp-instafeed-ee4125e","resolution":"thumbnail","popup":"1","img_link":"0"}'
+                                        >
+                                          <div class="pp-insta-feed-inner">
+                                            <div class="pp-instafeed">
+                                              <span
+                                                class="pp-instagram-feed-title-wrap"
+                                              >
+                                                <a
+                                                  href="https://www.instagram.com/spotiglass.nl/"
+                                                >
+                                                  <span
+                                                    class="pp-instagram-feed-title"
+                                                  >
+                                                    <span
+                                                      class="pp-icon pp-icon-before_title"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        class="fab fa-instagram"
+                                                      ></i>
+                                                    </span>
+
+                                                    Sígue Spotiglass.nl @
+                                                    Instagram
+                                                  </span>
+                                                </a>
+                                              </span>
+                                              <div
+                                                id="pp-instafeed-ee4125e"
+                                                class="pp-instafeed-grid"
+                                              ></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-19f8f67f elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                          data-id="19f8f67f"
+                          data-element_type="section"
+                        >
+                          <div
+                            class="elementor-container elementor-column-gap-default"
+                          >
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3c54d637"
+                                data-id="3c54d637"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-1068e340 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="1068e340"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="far fa-check-circle"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                              >Pago ideal con iDeal y
+                                              Paypal</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-5145452c"
+                                data-id="5145452c"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-545a218a elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="545a218a"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-21488bbb elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="21488bbb"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-16e6ed48 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="16e6ed48"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-44efbc6b elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="44efbc6b"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-22e4a273 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="22e4a273"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            >
+                                              4.7 | Más de 100 clientes
+                                              Satisfechos</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-18384507"
+                                data-id="18384507"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-2bde7bcf elementor-align-right elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="2bde7bcf"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-truck"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                              >Entrega gratis dentro de 5 
+                                              días</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section
+                          class="elementor-section elementor-top-section elementor-element elementor-element-db6fef2 elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                          data-id="db6fef2"
+                          data-element_type="section"
+                        >
+                          <div
+                            class="elementor-container elementor-column-gap-default"
+                          >
+                            <div class="elementor-row">
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-303067c"
+                                data-id="303067c"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-0cda9fc elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="0cda9fc"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="far fa-check-circle"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                              >Pago Seguro con iDeal y
+                                              Paypal</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a23fb33"
+                                data-id="a23fb33"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-be49102 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="be49102"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-fcaef3c elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="fcaef3c"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-0c9bc29 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="0c9bc29"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-9e6c3ed elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="9e6c3ed"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            ></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="elementor-element elementor-element-a405826 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="a405826"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-star"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                            >
+                                              4.7 | Más de 100 clientes
+                                              satisfechos</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2ed93a2"
+                                data-id="2ed93a2"
+                                data-element_type="column"
+                              >
+                                <div
+                                  class="elementor-column-wrap elementor-element-populated"
+                                >
+                                  <div class="elementor-widget-wrap">
+                                    <div
+                                      class="elementor-element elementor-element-eb587ec elementor-align-right elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                      data-id="eb587ec"
+                                      data-element_type="widget"
+                                      data-widget_type="icon-list.default"
+                                    >
+                                      <div class="elementor-widget-container">
+                                        <ul class="elementor-icon-list-items">
+                                          <li class="elementor-icon-list-item">
+                                            <span
+                                              class="elementor-icon-list-icon"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="fas fa-truck"
+                                              ></i>
+                                            </span>
+                                            <span
+                                              class="elementor-icon-list-text"
+                                              >Entrega gratis dentro de 5  
+                                              días</span
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .entry-content .clear -->
+              </article>
+              <!-- #post-## -->
+            </main>
+            <!-- #main -->
+          </div>
+          <!-- #primary -->
+        </div>
+        <!-- ast-container -->
+      </div>
+      <!-- End Content -->
+
+
+
+     {% endblock %}
+      
+
+      
+      
+
+    
+    
+
+    
+ 
