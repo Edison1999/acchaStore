@@ -8,11 +8,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HomeView, name='home_page'),
-    path('compras/', views.ProductView, name='product_page'),
-    path('contacto/', views.ContactoView, name='contacto_page'),
-    path('nosotros/', views.NosotrosView, name='nosotros_page'),
-    path('checkout/', views.CheckoutView, name='checkout_page'),
+    path('', include('core.urls', namespace='core')),
+    path(r'store/', include('store.urls', namespace='store')),
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

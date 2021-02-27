@@ -1,0 +1,168 @@
+/**
+Theme Name: Astra Child
+Author: Brekky
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+ 
+/* EPO product page */
+.tm-epo-field-label .tc-label-wrap{
+	width: 55%;
+}
+
+.tm-extra-product-options .radio_image, .tm-extra-product-options .checkbox_image {
+	border: 1px solid #00000030!important;
+    border-radius: 50px!important;
+}
+
+.tm-extra-product-options .tmcp-field-wrap.tc-active .tc-label-wrap img.radio_image {
+	border: 1px solid #000!important;
+	border-radius: 50px!important;
+}
+
+.tm-extra-product-options label.tm-epo-element-label, .tm-extra-product-options div.tm-epo-element-label, .tm-extra-product-options p.tm-epo-element-label, .tm-extra-product-options span.tm-epo-element-label {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.tm-box {
+    padding: 15px 0;
+}
+
+.woocommerce div.product.elementor .elementor-add-to-cart--align-justify form.cart.variations_form .woocommerce-variation-add-to-cart button, .woocommerce div.product.elementor .elementor-add-to-cart--align-justify form.cart:not(.grouped_form):not(.variations_form) button {
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+}
+
+.tc-extra-product-options .tmcp-field-wrap label.cpf-upload-container {
+    border-radius: 4px;
+}
+
+
+
+/*
+.tm-extra-product-options .tm-epo-element-label {
+    margin-bottom: 5px;
+}
+
+.tm-epo-required {
+    display: none;
+}
+
+.tm-epo-field.tmcp-select {
+	min-width: 100%;
+}
+
+.woocommerce div.product.elementor .elementor-add-to-cart--align-justify form.cart.variations_form .woocommerce-variation-add-to-cart, .woocommerce div.product.elementor .elementor-add-to-cart--align-justify form.cart:not(.grouped_form):not(.variations_form) {
+    -ms-flex-wrap: nowrap!important;
+    flex-wrap: nowrap!important;
+}
+
+.elementor-element-10eed494 .single_variation_wrap .tc-extra-product-options.tc-show, .tc-extra-product-options.tc-show-override {
+	display: none;
+}
+
+.woocommerce div.product form.cart .reset_variations {
+	display: none!important;
+}
+
+.tm-extra-product-options .tc-cell, .tc-cell {
+	margin-bottom: 5px!important;
+}
+
+.woocommerce .select2-container .select2-selection--single, .woocommerce select, .woocommerce-page .select2-container .select2-selection--single, .woocommerce-page select {
+    border: 1px solid transparent;
+    border-color: rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+*/
+
+/* Single product page carousel
+.woocommerce div.product div.woocommerce-product-gallery--columns-4 .flex-control-thumbs li {
+    width: calc(15% - .75em);
+}*/
+
+/* Cart page */
+.wl .wl-ci-product-style table thead tr.wl-ci-heading-nav th {
+    border: 0px solid #ebebeb!important;
+    background: #fff!important;
+    color: #000;
+    background-color: #fff!important;
+}
+
+/* Checkout page */
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+    border-color: #aaaaaa;
+    border-radius: 4px;
+}
+
+.woocommerce button.button, .woocommerce button.button.alt {
+    border-radius: 3px;
+    padding-top: 14px;
+    padding-right: 40px;
+    padding-bottom: 14px;
+    padding-left: 40px;
+}
+
+.woocommerce button.button, .woocommerce .woocommerce-message a.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce input.button, .woocommerce-cart table.cart td.actions .button, .woocommerce form.checkout_coupon .button, .woocommerce #respond input#submit, .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+    border-radius: 3px;
+}
+
+input[type=email], input[type=number], input[type=password], input[type=reset], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+    color: #666;
+    padding: .75em;
+    height: auto;
+    border-radius: 3px!important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #818a91!important;
+    transition: all .2s linear;
+}
+
+selection--single, .woocommerce select, .woocommerce-page .select2-container .select2-selection--single, .woocommerce-page select {
+    border-color: #818a91!important;
+}
+
+/* checkoutwc */
+.cfw-input-wrap input[type=email], .cfw-input-wrap input[type=number], .cfw-input-wrap input[type=password], .cfw-input-wrap input[type=tel], .cfw-input-wrap input[type=text], .cfw-input-wrap select, .cfw-input-wrap textarea {
+	padding: 0.85em .8em .85em!important;
+}
+
+.elementor-menu-cart__footer-buttons .elementor-button.elementor-size-md {
+    padding: 15px 5px;
+}
+
+.widget_shopping_cart_content {
+	display: flex;
+    flex-direction: column;
+}
+
+.elementor-menu-cart__products {
+	order: 2;
+}
+
+.elementor-menu-cart__subtotal {
+	order: 3;
+
+}
+
+.elementor-menu-cart__footer-buttons {
+	order: 1;
+	padding-top: 0;
+	padding-bottom: 2em;
+}
+
+.woocommerce form .form-row textarea, .woocommerce input[type=email], .woocommerce input[type=number], .woocommerce input[type=password], .woocommerce input[type=reset], .woocommerce input[type=search], .woocommerce input[type=tel], .woocommerce input[type=text], .woocommerce input[type=url], .woocommerce textarea, .woocommerce-page form .form-row textarea, .woocommerce-page input[type=email], .woocommerce-page input[type=number], .woocommerce-page input[type=password], .woocommerce-page input[type=reset], .woocommerce-page input[type=search], .woocommerce-page input[type=tel], .woocommerce-page input[type=text], .woocommerce-page input[type=url], .woocommerce-page textarea {
+	background-color: rgba(122, 120, 175, 0.1)!important;
+	border: 0px solid #000!important;
+	border-radius: 8px!important;
+	height: 49px;
+}
+

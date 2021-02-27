@@ -1,8 +1,1773 @@
 {%extends 'base.html'%}
 {% load static %}
-
+{% block head_title %}Contacto{% endblock %}
 
 {% block extra_links %}
+
+    <link rel="stylesheet" id="jet-menu-astra-css" href="{% static 'css/style.css' %}?20090712" media="all"/> 
+    <link rel="stylesheet" id="jet-menu-astra-css" href="{% static 'css/style1.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-menu-astra-css" href="{% static 'css/style2.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="woolementor-css" href="{% static 'css/front.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="woolementor-grid-css" href="{% static 'css/cx-grid.min.css' %}?20090712" media="all"/>
+    <style id="astra-theme-css-inline-css">
+      html {
+        font-size: 93.75%;
+      }
+      a,
+      .page-title {
+        color: #0274be;
+      }
+      a:hover,
+      a:focus {
+        color: #333333;
+      }
+      body,
+      button,
+      input,
+      select,
+      textarea,
+      .ast-button,
+      .ast-custom-button {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        font-size: 1rem;
+      }
+      blockquote {
+        color: #000000;
+      }
+      .site-title {
+        font-size: 35px;
+        font-size: 2.3333333333333rem;
+      }
+      .ast-archive-description .ast-archive-title {
+        font-size: 40px;
+        font-size: 2.6666666666667rem;
+      }
+      .site-header .site-description {
+        font-size: 15px;
+        font-size: 1rem;
+      }
+      .entry-title {
+        font-size: 40px;
+        font-size: 2.6666666666667rem;
+      }
+      .comment-reply-title {
+        font-size: 24px;
+        font-size: 1.6rem;
+      }
+      .ast-comment-list #cancel-comment-reply-link {
+        font-size: 15px;
+        font-size: 1rem;
+      }
+      h1,
+      .entry-content h1 {
+        font-size: 40px;
+        font-size: 2.6666666666667rem;
+      }
+      h2,
+      .entry-content h2 {
+        font-size: 30px;
+        font-size: 2rem;
+      }
+      h3,
+      .entry-content h3 {
+        font-size: 25px;
+        font-size: 1.6666666666667rem;
+      }
+      h4,
+      .entry-content h4 {
+        font-size: 20px;
+        font-size: 1.3333333333333rem;
+      }
+      h5,
+      .entry-content h5 {
+        font-size: 18px;
+        font-size: 1.2rem;
+      }
+      h6,
+      .entry-content h6 {
+        font-size: 15px;
+        font-size: 1rem;
+      }
+      .ast-single-post .entry-title,
+      .page-title {
+        font-size: 30px;
+        font-size: 2rem;
+      }
+      #secondary,
+      #secondary button,
+      #secondary input,
+      #secondary select,
+      #secondary textarea {
+        font-size: 15px;
+        font-size: 1rem;
+      }
+      ::selection {
+        background-color: #1dd660;
+        color: #000000;
+      }
+      body,
+      h1,
+      .entry-title a,
+      .entry-content h1,
+      h2,
+      .entry-content h2,
+      h3,
+      .entry-content h3,
+      h4,
+      .entry-content h4,
+      h5,
+      .entry-content h5,
+      h6,
+      .entry-content h6,
+      .wc-block-grid__product-title {
+        color: #333333;
+      }
+      .tagcloud a:hover,
+      .tagcloud a:focus,
+      .tagcloud a.current-item {
+        color: #ffffff;
+        border-color: #0274be;
+        background-color: #0274be;
+      }
+      .main-header-menu .menu-link,
+      .ast-header-custom-item a {
+        color: #333333;
+      }
+      .main-header-menu .menu-item:hover > .menu-link,
+      .main-header-menu .menu-item:hover > .ast-menu-toggle,
+      .main-header-menu .ast-masthead-custom-menu-items a:hover,
+      .main-header-menu .menu-item.focus > .menu-link,
+      .main-header-menu .menu-item.focus > .ast-menu-toggle,
+      .main-header-menu .current-menu-item > .menu-link,
+      .main-header-menu .current-menu-ancestor > .menu-link,
+      .main-header-menu .current-menu-item > .ast-menu-toggle,
+      .main-header-menu .current-menu-ancestor > .ast-menu-toggle {
+        color: #0274be;
+      }
+      input:focus,
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="url"]:focus,
+      input[type="password"]:focus,
+      input[type="reset"]:focus,
+      input[type="search"]:focus,
+      textarea:focus {
+        border-color: #0274be;
+      }
+      input[type="radio"]:checked,
+      input[type="reset"],
+      input[type="checkbox"]:checked,
+      input[type="checkbox"]:hover:checked,
+      input[type="checkbox"]:focus:checked,
+      input[type="range"]::-webkit-slider-thumb {
+        border-color: #0274be;
+        background-color: #0274be;
+        box-shadow: none;
+      }
+      .site-footer a:hover + .post-count,
+      .site-footer a:focus + .post-count {
+        background: #0274be;
+        border-color: #0274be;
+      }
+      .footer-adv .footer-adv-overlay {
+        border-top-style: solid;
+        border-top-color: #7a7a7a;
+      }
+      .ast-comment-meta {
+        line-height: 1.666666667;
+        font-size: 12px;
+        font-size: 0.8rem;
+      }
+      .single .nav-links .nav-previous,
+      .single .nav-links .nav-next,
+      .single .ast-author-details .author-title,
+      .ast-comment-meta {
+        color: #0274be;
+      }
+      .entry-meta,
+      .entry-meta * {
+        line-height: 1.45;
+        color: #0274be;
+      }
+      .entry-meta a:hover,
+      .entry-meta a:hover *,
+      .entry-meta a:focus,
+      .entry-meta a:focus * {
+        color: #333333;
+      }
+      .ast-404-layout-1 .ast-404-text {
+        font-size: 200px;
+        font-size: 13.333333333333rem;
+      }
+      .widget-title {
+        font-size: 21px;
+        font-size: 1.4rem;
+        color: #333333;
+      }
+      #cat option,
+      .secondary .calendar_wrap thead a,
+      .secondary .calendar_wrap thead a:visited {
+        color: #0274be;
+      }
+      .secondary .calendar_wrap #today,
+      .ast-progress-val span {
+        background: #0274be;
+      }
+      .secondary a:hover + .post-count,
+      .secondary a:focus + .post-count {
+        background: #0274be;
+        border-color: #0274be;
+      }
+      .calendar_wrap #today > a {
+        color: #ffffff;
+      }
+      .ast-pagination a,
+      .page-links .page-link,
+      .single .post-navigation a {
+        color: #0274be;
+      }
+      .ast-pagination a:hover,
+      .ast-pagination a:focus,
+      .ast-pagination > span:hover:not(.dots),
+      .ast-pagination > span.current,
+      .page-links > .page-link,
+      .page-links .page-link:hover,
+      .post-navigation a:hover {
+        color: #333333;
+      }
+      .ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle {
+        background: transparent;
+        color: #1dd660;
+      }
+      .ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle {
+        background: transparent;
+        border: 1px solid #1dd660;
+        color: #1dd660;
+      }
+      .ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle {
+        background: #1dd660;
+        color: #ffffff;
+      }
+      .wp-block-buttons.aligncenter {
+        justify-content: center;
+      }
+      @media (min-width: 1200px) {
+        .ast-separate-container.ast-right-sidebar
+          .entry-content
+          .wp-block-image.alignfull,
+        .ast-separate-container.ast-left-sidebar
+          .entry-content
+          .wp-block-image.alignfull,
+        .ast-separate-container.ast-right-sidebar
+          .entry-content
+          .wp-block-cover.alignfull,
+        .ast-separate-container.ast-left-sidebar
+          .entry-content
+          .wp-block-cover.alignfull {
+          margin-left: -6.67em;
+          margin-right: -6.67em;
+          max-width: unset;
+          width: unset;
+        }
+        .ast-separate-container.ast-right-sidebar
+          .entry-content
+          .wp-block-image.alignwide,
+        .ast-separate-container.ast-left-sidebar
+          .entry-content
+          .wp-block-image.alignwide,
+        .ast-separate-container.ast-right-sidebar
+          .entry-content
+          .wp-block-cover.alignwide,
+        .ast-separate-container.ast-left-sidebar
+          .entry-content
+          .wp-block-cover.alignwide {
+          margin-left: -20px;
+          margin-right: -20px;
+          max-width: unset;
+          width: unset;
+        }
+        .wp-block-group .has-background {
+          padding: 20px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .ast-separate-container.ast-right-sidebar
+          .entry-content
+          .wp-block-group.alignwide,
+        .ast-separate-container.ast-left-sidebar
+          .entry-content
+          .wp-block-group.alignwide,
+        .ast-separate-container.ast-right-sidebar
+          .entry-content
+          .wp-block-cover.alignwide,
+        .ast-separate-container.ast-left-sidebar
+          .entry-content
+          .wp-block-cover.alignwide,
+        .ast-no-sidebar.ast-separate-container
+          .entry-content
+          .wp-block-group.alignwide,
+        .ast-no-sidebar.ast-separate-container
+          .entry-content
+          .wp-block-cover.alignwide {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .ast-separate-container.ast-right-sidebar
+          .entry-content
+          .wp-block-group.alignfull,
+        .ast-separate-container.ast-left-sidebar
+          .entry-content
+          .wp-block-group.alignfull,
+        .ast-no-sidebar.ast-separate-container
+          .entry-content
+          .wp-block-group.alignfull,
+        .ast-separate-container.ast-right-sidebar
+          .entry-content
+          .wp-block-cover.alignfull,
+        .ast-separate-container.ast-left-sidebar
+          .entry-content
+          .wp-block-cover.alignfull,
+        .ast-no-sidebar.ast-separate-container
+          .entry-content
+          .wp-block-cover.alignfull {
+          margin-left: -6.67em;
+          margin-right: -6.67em;
+          padding-left: 6.67em;
+          padding-right: 6.67em;
+        }
+        .ast-plain-container.ast-right-sidebar
+          .entry-content
+          .wp-block-group.alignwide,
+        .ast-plain-container.ast-left-sidebar
+          .entry-content
+          .wp-block-group.alignwide,
+        .ast-plain-container.ast-right-sidebar
+          .entry-content
+          .wp-block-group.alignfull,
+        .ast-plain-container.ast-left-sidebar
+          .entry-content
+          .wp-block-group.alignfull {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .ast-plain-container.ast-no-sidebar
+          .entry-content
+          .alignwide
+          .wp-block-group__inner-container,
+        .ast-plain-container.ast-no-sidebar
+          .entry-content
+          .alignfull
+          .wp-block-group__inner-container,
+        .ast-plain-container.ast-no-sidebar
+          .entry-content
+          .alignwide
+          .wp-block-cover__inner-container,
+        .ast-plain-container.ast-no-sidebar
+          .entry-content
+          .alignfull
+          .wp-block-cover__inner-container {
+          max-width: 1240px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .ast-plain-container.ast-no-sidebar
+          .entry-content
+          .alignwide
+          .wp-block-cover__inner-container,
+        .ast-plain-container.ast-no-sidebar
+          .entry-content
+          .alignfull
+          .wp-block-cover__inner-container {
+          width: 1240px;
+        }
+        .ast-page-builder-template.ast-no-sidebar
+          .entry-content
+          .wp-block-group.alignwide,
+        .ast-page-builder-template.ast-no-sidebar
+          .entry-content
+          .wp-block-group.alignfull {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .wp-block-cover-image.alignwide .wp-block-cover__inner-container,
+        .wp-block-cover.alignwide .wp-block-cover__inner-container,
+        .wp-block-cover-image.alignfull .wp-block-cover__inner-container,
+        .wp-block-cover.alignfull .wp-block-cover__inner-container {
+          width: 100%;
+        }
+        .ast-page-builder-template.ast-no-sidebar
+          .entry-content
+          .wp-block-cover.alignwide,
+        .ast-page-builder-template.ast-left-sidebar
+          .entry-content
+          .wp-block-cover.alignwide,
+        .ast-page-builder-template.ast-right-sidebar
+          .entry-content
+          .wp-block-cover.alignwide,
+        .ast-page-builder-template.ast-no-sidebar
+          .entry-content
+          .wp-block-cover.alignfull,
+        .ast-page-builder-template.ast-left-sidebar
+          .entry-content
+          .wp-block-cover.alignfull,
+        .ast-page-builder-template.ast-right-sidebar
+          .entry-content
+          .wp-block-cover.alignful {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+      .ast-plain-container.ast-no-sidebar #primary {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      @media (max-width: 921px) {
+        .ast-theme-transparent-header #primary,
+        .ast-theme-transparent-header #secondary {
+          padding: 0;
+        }
+      }
+      .wp-block-columns {
+        margin-bottom: unset;
+      }
+      .wp-block-image.size-full {
+        margin: 2rem 0;
+      }
+      .wp-block-separator.has-background {
+        padding: 0;
+      }
+      .wp-block-gallery {
+        margin-bottom: 1.6em;
+      }
+      .wp-block-group {
+        padding-top: 4em;
+        padding-bottom: 4em;
+      }
+      .wp-block-group__inner-container .wp-block-columns:last-child,
+      .wp-block-group__inner-container :last-child,
+      .wp-block-table table {
+        margin-bottom: 0;
+      }
+      .blocks-gallery-grid {
+        width: 100%;
+      }
+      .wp-block-navigation-link__content {
+        padding: 5px 0;
+      }
+      .wp-block-group .wp-block-group .has-text-align-center,
+      .wp-block-group .wp-block-column .has-text-align-center {
+        max-width: 100%;
+      }
+      .has-text-align-center {
+        margin: 0 auto;
+      }
+      @media (min-width: 1200px) {
+        .wp-block-cover__inner-container,
+        .alignwide .wp-block-group__inner-container,
+        .alignfull .wp-block-group__inner-container {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .wp-block-group.alignnone,
+        .wp-block-group.aligncenter,
+        .wp-block-group.alignleft,
+        .wp-block-group.alignright,
+        .wp-block-group.alignwide,
+        .wp-block-columns.alignwide {
+          margin: 2rem 0 1rem 0;
+        }
+      }
+      @media (max-width: 1200px) {
+        .wp-block-group {
+          padding: 3em;
+        }
+        .wp-block-group .wp-block-group {
+          padding: 1.5em;
+        }
+        .wp-block-columns,
+        .wp-block-column {
+          margin: 1rem 0;
+        }
+      }
+      @media (min-width: 921px) {
+        .wp-block-columns .wp-block-group {
+          padding: 2em;
+        }
+      }
+      @media (max-width: 544px) {
+        .wp-block-cover-image .wp-block-cover__inner-container,
+        .wp-block-cover .wp-block-cover__inner-container {
+          width: unset;
+        }
+        .wp-block-cover,
+        .wp-block-cover-image {
+          padding: 2em 0;
+        }
+        .wp-block-group,
+        .wp-block-cover {
+          padding: 2em;
+        }
+        .wp-block-media-text__media img,
+        .wp-block-media-text__media video {
+          width: unset;
+          max-width: 100%;
+        }
+        .wp-block-media-text.has-background .wp-block-media-text__content {
+          padding: 1em;
+        }
+        .wp-block-media-text .wp-block-media-text__content {
+          padding: 3em 2em;
+        }
+      }
+      @media (max-width: 921px) {
+        #secondary.secondary {
+          padding-top: 0;
+        }
+        .ast-separate-container .ast-article-post,
+        .ast-separate-container .ast-article-single {
+          padding: 1.5em 2.14em;
+        }
+        .ast-separate-container #primary,
+        .ast-separate-container #secondary {
+          padding: 1.5em 0;
+        }
+        .ast-separate-container.ast-right-sidebar #secondary {
+          padding-left: 1em;
+          padding-right: 1em;
+        }
+        .ast-separate-container.ast-two-container #secondary {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .ast-page-builder-template .entry-header #secondary {
+          margin-top: 1.5em;
+        }
+        .ast-page-builder-template #secondary {
+          margin-top: 1.5em;
+        }
+        #primary,
+        #secondary {
+          padding: 1.5em 0;
+          margin: 0;
+        }
+        .ast-left-sidebar #content > .ast-container {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 100%;
+        }
+        .ast-author-box img.avatar {
+          margin: 20px 0 0 0;
+        }
+        .ast-pagination {
+          padding-top: 1.5em;
+          text-align: center;
+        }
+        .ast-pagination .next.page-numbers {
+          display: inherit;
+          float: none;
+        }
+      }
+      @media (max-width: 921px) {
+        .ast-page-builder-template.ast-left-sidebar #secondary {
+          padding-right: 20px;
+        }
+        .ast-page-builder-template.ast-right-sidebar #secondary {
+          padding-left: 20px;
+        }
+        .ast-right-sidebar #primary {
+          padding-right: 0;
+        }
+        .ast-right-sidebar #secondary {
+          padding-left: 0;
+        }
+        .ast-left-sidebar #primary {
+          padding-left: 0;
+        }
+        .ast-left-sidebar #secondary {
+          padding-right: 0;
+        }
+        .ast-pagination .prev.page-numbers {
+          padding-left: 0.5em;
+        }
+        .ast-pagination .next.page-numbers {
+          padding-right: 0.5em;
+        }
+      }
+      @media (min-width: 922px) {
+        .ast-separate-container.ast-right-sidebar #primary,
+        .ast-separate-container.ast-left-sidebar #primary {
+          border: 0;
+        }
+        .ast-separate-container.ast-right-sidebar #secondary,
+        .ast-separate-container.ast-left-sidebar #secondary {
+          border: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .ast-separate-container.ast-two-container
+          #secondary
+          .widget:last-child {
+          margin-bottom: 0;
+        }
+        .ast-separate-container .ast-comment-list li .comment-respond {
+          padding-left: 2.66666em;
+          padding-right: 2.66666em;
+        }
+        .ast-author-box {
+          -js-display: flex;
+          display: flex;
+        }
+        .ast-author-bio {
+          flex: 1;
+        }
+        .error404.ast-separate-container #primary,
+        .search-no-results.ast-separate-container #primary {
+          margin-bottom: 4em;
+        }
+      }
+      @media (min-width: 922px) {
+        .ast-right-sidebar #primary {
+          border-right: 1px solid #eee;
+        }
+        .ast-right-sidebar #secondary {
+          border-left: 1px solid #eee;
+          margin-left: -1px;
+        }
+        .ast-left-sidebar #primary {
+          border-left: 1px solid #eee;
+        }
+        .ast-left-sidebar #secondary {
+          border-right: 1px solid #eee;
+          margin-right: -1px;
+        }
+        .ast-separate-container.ast-two-container.ast-right-sidebar #secondary {
+          padding-left: 30px;
+          padding-right: 0;
+        }
+        .ast-separate-container.ast-two-container.ast-left-sidebar #secondary {
+          padding-right: 30px;
+          padding-left: 0;
+        }
+      }
+      .wp-block-button .wp-block-button__link {
+        color: #ffffff;
+      }
+      .wp-block-button .wp-block-button__link {
+        border-style: solid;
+        border-top-width: 0;
+        border-right-width: 0;
+        border-left-width: 0;
+        border-bottom-width: 0;
+        border-color: #1dd660;
+        background-color: #1dd660;
+        color: #ffffff;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        line-height: 1;
+        border-radius: 2px;
+        padding-top: 10px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+      }
+      .wp-block-button .wp-block-button__link:hover,
+      .wp-block-button .wp-block-button__link:focus {
+        color: #ffffff;
+        background-color: #17ac4d;
+        border-color: #17ac4d;
+      }
+      .menu-toggle,
+      button,
+      .ast-button,
+      .ast-custom-button,
+      .button,
+      input#submit,
+      input[type="button"],
+      input[type="submit"],
+      input[type="reset"] {
+        border-style: solid;
+        border-top-width: 0;
+        border-right-width: 0;
+        border-left-width: 0;
+        border-bottom-width: 0;
+        color: #ffffff;
+        border-color: #1dd660;
+        background-color: #1dd660;
+        border-radius: 2px;
+        padding-top: 10px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        line-height: 1;
+      }
+      button:focus,
+      .menu-toggle:hover,
+      button:hover,
+      .ast-button:hover,
+      .button:hover,
+      input[type="reset"]:hover,
+      input[type="reset"]:focus,
+      input#submit:hover,
+      input#submit:focus,
+      input[type="button"]:hover,
+      input[type="button"]:focus,
+      input[type="submit"]:hover,
+      input[type="submit"]:focus {
+        color: #ffffff;
+        background-color: #17ac4d;
+        border-color: #17ac4d;
+      }
+      @media (min-width: 921px) {
+        .ast-container {
+          max-width: 100%;
+        }
+      }
+      @media (min-width: 544px) {
+        .ast-container {
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 544px) {
+        .ast-separate-container .ast-article-post,
+        .ast-separate-container .ast-article-single {
+          padding: 1.5em 1em;
+        }
+        .ast-separate-container #content .ast-container {
+          padding-left: 0.54em;
+          padding-right: 0.54em;
+        }
+        .ast-separate-container #secondary {
+          padding-top: 0;
+        }
+        .ast-separate-container.ast-two-container #secondary .widget {
+          margin-bottom: 1.5em;
+          padding-left: 1em;
+          padding-right: 1em;
+        }
+        .ast-separate-container .comments-count-wrapper {
+          padding: 1.5em 1em;
+        }
+        .ast-separate-container .ast-comment-list li.depth-1 {
+          padding: 1.5em 1em;
+          margin-bottom: 1.5em;
+        }
+        .ast-separate-container .ast-comment-list .bypostauthor {
+          padding: 0.5em;
+        }
+        .ast-separate-container .ast-archive-description {
+          padding: 1.5em 1em;
+        }
+        .ast-search-menu-icon.ast-dropdown-active .search-field {
+          width: 170px;
+        }
+        .ast-separate-container .comment-respond {
+          padding: 1.5em 1em;
+        }
+      }
+      @media (max-width: 544px) {
+        .ast-comment-list .children {
+          margin-left: 0.66666em;
+        }
+        .ast-separate-container .ast-comment-list .bypostauthor li {
+          padding: 0 0 0 0.5em;
+        }
+      }
+      @media (max-width: 921px) {
+        .ast-mobile-header-stack .main-header-bar .ast-search-menu-icon {
+          display: inline-block;
+        }
+        .ast-header-break-point.ast-header-custom-item-outside
+          .ast-mobile-header-stack
+          .main-header-bar
+          .ast-search-icon {
+          margin: 0;
+        }
+        .ast-comment-avatar-wrap img {
+          max-width: 2.5em;
+        }
+        .comments-area {
+          margin-top: 1.5em;
+        }
+        .ast-separate-container .comments-count-wrapper {
+          padding: 2em 2.14em;
+        }
+        .ast-separate-container .ast-comment-list li.depth-1 {
+          padding: 1.5em 2.14em;
+        }
+        .ast-separate-container .comment-respond {
+          padding: 2em 2.14em;
+        }
+      }
+      @media (max-width: 921px) {
+        .ast-header-break-point
+          .main-header-bar
+          .ast-search-menu-icon.slide-search
+          .search-form {
+          right: 0;
+        }
+        .ast-header-break-point
+          .ast-mobile-header-stack
+          .main-header-bar
+          .ast-search-menu-icon.slide-search
+          .search-form {
+          right: -1em;
+        }
+        .ast-comment-avatar-wrap {
+          margin-right: 0.5em;
+        }
+      }
+      @media (min-width: 545px) {
+        .ast-page-builder-template .comments-area,
+        .single.ast-page-builder-template .entry-header,
+        .single.ast-page-builder-template .post-navigation {
+          max-width: 1240px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      @media (max-width: 921px) {
+        .ast-archive-description .ast-archive-title {
+          font-size: 40px;
+        }
+        .entry-title {
+          font-size: 30px;
+        }
+        h1,
+        .entry-content h1 {
+          font-size: 30px;
+        }
+        h2,
+        .entry-content h2 {
+          font-size: 25px;
+        }
+        h3,
+        .entry-content h3 {
+          font-size: 20px;
+        }
+        .ast-single-post .entry-title,
+        .page-title {
+          font-size: 30px;
+        }
+      }
+      @media (max-width: 544px) {
+        .ast-archive-description .ast-archive-title {
+          font-size: 40px;
+        }
+        .entry-title {
+          font-size: 30px;
+        }
+        h1,
+        .entry-content h1 {
+          font-size: 30px;
+        }
+        h2,
+        .entry-content h2 {
+          font-size: 25px;
+        }
+        h3,
+        .entry-content h3 {
+          font-size: 20px;
+        }
+        .ast-single-post .entry-title,
+        .page-title {
+          font-size: 30px;
+        }
+      }
+      @media (max-width: 921px) {
+        html {
+          font-size: 85.5%;
+        }
+      }
+      @media (max-width: 544px) {
+        html {
+          font-size: 85.5%;
+        }
+      }
+      @media (min-width: 922px) {
+        .ast-container {
+          max-width: 1240px;
+        }
+      }
+      @font-face {
+        font-family: "Astra";
+        src: url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.woff)
+            format("woff"),
+          url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.ttf)
+            format("truetype"),
+          url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.svg#astra)
+            format("svg");
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+      }
+      @media (max-width: 921px) {
+        .main-header-bar .main-header-bar-navigation {
+          display: none;
+        }
+      }
+      .ast-desktop .main-header-menu.submenu-with-border .sub-menu,
+      .ast-desktop
+        .main-header-menu.submenu-with-border
+        .astra-full-megamenu-wrapper {
+        border-color: #1dd660;
+      }
+      .ast-desktop .main-header-menu.submenu-with-border .sub-menu {
+        border-top-width: 2px;
+        border-right-width: 0px;
+        border-left-width: 0px;
+        border-bottom-width: 0px;
+        border-style: solid;
+      }
+      .ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu {
+        top: -2px;
+      }
+      .ast-desktop .main-header-menu.submenu-with-border .sub-menu .menu-link,
+      .ast-desktop .main-header-menu.submenu-with-border .children .menu-link {
+        border-bottom-width: 0px;
+        border-style: solid;
+        border-color: #eaeaea;
+      }
+      @media (min-width: 922px) {
+        .main-header-menu
+          .sub-menu
+          .menu-item.ast-left-align-sub-menu:hover
+          > .sub-menu,
+        .main-header-menu
+          .sub-menu
+          .menu-item.ast-left-align-sub-menu.focus
+          > .sub-menu {
+          margin-left: -0px;
+        }
+      }
+      .ast-small-footer {
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-top-color: #7a7a7a;
+      }
+      .ast-small-footer-wrap {
+        text-align: center;
+      }
+      @media (max-width: 920px) {
+        .ast-404-layout-1 .ast-404-text {
+          font-size: 100px;
+          font-size: 6.6666666666667rem;
+        }
+      }
+      .ast-breadcrumbs .trail-browse,
+      .ast-breadcrumbs .trail-items,
+      .ast-breadcrumbs .trail-items li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: inherit;
+        text-indent: 0;
+      }
+      .ast-breadcrumbs .trail-browse {
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        color: inherit;
+      }
+      .ast-breadcrumbs .trail-items {
+        list-style: none;
+      }
+      .trail-items li::after {
+        padding: 0 0.3em;
+        content: "\00bb";
+      }
+      .trail-items li:last-of-type::after {
+        display: none;
+      }
+      .elementor-widget-heading .elementor-heading-title {
+        margin: 0;
+      }
+      .ast-header-break-point .main-header-bar {
+        border-bottom-width: 1px;
+      }
+      @media (min-width: 922px) {
+        .main-header-bar {
+          border-bottom-width: 1px;
+        }
+      }
+      .ast-safari-browser-less-than-11 .main-header-menu .menu-item,
+      .ast-safari-browser-less-than-11
+        .main-header-bar
+        .ast-masthead-custom-menu-items {
+        display: block;
+      }
+      .main-header-menu .menu-item,
+      .main-header-bar .ast-masthead-custom-menu-items {
+        -js-display: flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      .main-header-menu > .menu-item > .menu-link {
+        height: 100%;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -js-display: flex;
+        display: flex;
+      }
+      .ast-primary-menu-disabled
+        .main-header-bar
+        .ast-masthead-custom-menu-items {
+        flex: unset;
+      }
+    </style>
+    <link rel="stylesheet" id="astra-google-fonts-css" href="//fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C500&amp;display=fallback&amp;ver=2.6.1" media="all">
+    <link rel="stylesheet" id="woolementor-grid-css" href="{% static 'css/menu-animation.min.css' %}?20090712" media="all"/> 
+    <link rel="stylesheet" id="woolementor-grid-css" href="{% static 'css/vendors-style.css' %}?20090712" media="all"/>  
+    <link rel="stylesheet" id="astra-contact-form-7-css" href="{% static 'css/contact-form-7.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="dashicons-css" href="{% static 'css/dashicons.min.css' %}?20090712"  media="all"/>
+    <link rel="stylesheet" id="ewd-urp-style-css" href="{% static 'css/ewd-urp-styles.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="ewd-urp-jquery-ui-css" href="{% static 'css/ewd-urp-jquery-ui.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="woocommerce-layout-css" href="{% static 'css/woocommerce-layout.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="woocommerce-smallscreen-css" href="{% static 'css/woocommerce-smallscreen.min.css' %}?20090712" media="only screen and (max-width: 921px)"/>
+    <link rel="stylesheet" id="woocommerce-general-css" href="{% static 'css/woocommerce.min.css' %}?20090712" media="all"/>
+    <style id="woocommerce-general-inline-css">
+      .woocommerce span.onsale,
+      .wc-block-grid__product .wc-block-grid__product-onsale {
+        background-color: #1dd660;
+        color: #000000;
+      }
+      .woocommerce a.button,
+      .woocommerce button.button,
+      .woocommerce .woocommerce-message a.button,
+      .woocommerce #respond input#submit.alt,
+      .woocommerce a.button.alt,
+      .woocommerce button.button.alt,
+      .woocommerce input.button.alt,
+      .woocommerce input.button,
+      .woocommerce input.button:disabled,
+      .woocommerce input.button:disabled[disabled],
+      .woocommerce input.button:disabled:hover,
+      .woocommerce input.button:disabled[disabled]:hover,
+      .woocommerce #respond input#submit,
+      .woocommerce button.button.alt.disabled,
+      .wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
+      .wc-block-grid__product-onsale {
+        color: #ffffff;
+        border-color: #1dd660;
+        background-color: #1dd660;
+      }
+      .woocommerce a.button:hover,
+      .woocommerce button.button:hover,
+      .woocommerce .woocommerce-message a.button:hover,
+      .woocommerce #respond input#submit:hover,
+      .woocommerce #respond input#submit.alt:hover,
+      .woocommerce a.button.alt:hover,
+      .woocommerce button.button.alt:hover,
+      .woocommerce input.button.alt:hover,
+      .woocommerce input.button:hover,
+      .woocommerce button.button.alt.disabled:hover,
+      .wc-block-grid__products
+        .wc-block-grid__product
+        .wp-block-button__link:hover {
+        color: #ffffff;
+        border-color: #17ac4d;
+        background-color: #17ac4d;
+      }
+      .woocommerce-message,
+      .woocommerce-info {
+        border-top-color: #0274be;
+      }
+      .woocommerce-message::before,
+      .woocommerce-info::before {
+        color: #0274be;
+      }
+      .woocommerce ul.products li.product .price,
+      .woocommerce div.product p.price,
+      .woocommerce div.product span.price,
+      .widget_layered_nav_filters ul li.chosen a,
+      .woocommerce-page ul.products li.product .ast-woo-product-category,
+      .wc-layered-nav-rating a {
+        color: #333333;
+      }
+      .woocommerce nav.woocommerce-pagination ul,
+      .woocommerce nav.woocommerce-pagination ul li {
+        border-color: #0274be;
+      }
+      .woocommerce nav.woocommerce-pagination ul li a:focus,
+      .woocommerce nav.woocommerce-pagination ul li a:hover,
+      .woocommerce nav.woocommerce-pagination ul li span.current {
+        background: #0274be;
+        color: #ffffff;
+      }
+      .woocommerce-MyAccount-navigation-link.is-active a {
+        color: #333333;
+      }
+      .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+      .woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+        background-color: #0274be;
+      }
+      .woocommerce a.button,
+      .woocommerce button.button,
+      .woocommerce .woocommerce-message a.button,
+      .woocommerce #respond input#submit.alt,
+      .woocommerce a.button.alt,
+      .woocommerce button.button.alt,
+      .woocommerce input.button.alt,
+      .woocommerce input.button,
+      .woocommerce-cart table.cart td.actions .button,
+      .woocommerce form.checkout_coupon .button,
+      .woocommerce #respond input#submit,
+      .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+        border-radius: 2px;
+        padding-top: 10px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+      }
+      .woocommerce .star-rating,
+      .woocommerce .comment-form-rating .stars a,
+      .woocommerce .star-rating::before {
+        color: #0274be;
+      }
+      .woocommerce div.product .woocommerce-tabs ul.tabs li.active:before {
+        background: #0274be;
+      }
+      .ast-site-header-cart a {
+        color: #333333;
+      }
+      .ast-site-header-cart a:focus,
+      .ast-site-header-cart a:hover,
+      .ast-site-header-cart .current-menu-item a {
+        color: #0274be;
+      }
+      .ast-cart-menu-wrap .count,
+      .ast-cart-menu-wrap .count:after {
+        border-color: #0274be;
+        color: #0274be;
+      }
+      .ast-cart-menu-wrap:hover .count {
+        color: #ffffff;
+        background-color: #0274be;
+      }
+      .ast-site-header-cart
+        .widget_shopping_cart
+        .total
+        .woocommerce-Price-amount {
+        color: #0274be;
+      }
+      .woocommerce a.remove:hover,
+      .ast-woocommerce-cart-menu
+        .main-header-menu
+        .woocommerce-custom-menu-item
+        .menu-item:hover
+        > .menu-link.remove:hover {
+        color: #0274be;
+        border-color: #0274be;
+        background-color: #ffffff;
+      }
+      .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout,
+      .woocommerce
+        .widget_shopping_cart
+        .woocommerce-mini-cart__buttons
+        .checkout.wc-forward {
+        color: #ffffff;
+        border-color: #17ac4d;
+        background-color: #17ac4d;
+      }
+      .site-header .ast-site-header-cart-data .button.wc-forward,
+      .site-header .ast-site-header-cart-data .button.wc-forward:hover {
+        color: #ffffff;
+      }
+      .below-header-user-select .ast-site-header-cart .widget,
+      .ast-above-header-section .ast-site-header-cart .widget a,
+      .below-header-user-select .ast-site-header-cart .widget_shopping_cart a {
+        color: #333333;
+      }
+      .below-header-user-select
+        .ast-site-header-cart
+        .widget_shopping_cart
+        a:hover,
+      .ast-above-header-section
+        .ast-site-header-cart
+        .widget_shopping_cart
+        a:hover,
+      .below-header-user-select
+        .ast-site-header-cart
+        .widget_shopping_cart
+        a.remove:hover,
+      .ast-above-header-section
+        .ast-site-header-cart
+        .widget_shopping_cart
+        a.remove:hover {
+        color: #0274be;
+      }
+      @media (min-width: 545px) and (max-width: 921px) {
+        .woocommerce.tablet-columns-6 ul.products li.product,
+        .woocommerce-page.tablet-columns-6 ul.products li.product {
+          width: calc(16.66% - 16.66px);
+        }
+        .woocommerce.tablet-columns-5 ul.products li.product,
+        .woocommerce-page.tablet-columns-5 ul.products li.product {
+          width: calc(20% - 16px);
+        }
+        .woocommerce.tablet-columns-4 ul.products li.product,
+        .woocommerce-page.tablet-columns-4 ul.products li.product {
+          width: calc(25% - 15px);
+        }
+        .woocommerce.tablet-columns-3 ul.products li.product,
+        .woocommerce-page.tablet-columns-3 ul.products li.product {
+          width: calc(33.33% - 14px);
+        }
+        .woocommerce.tablet-columns-2 ul.products li.product,
+        .woocommerce-page.tablet-columns-2 ul.products li.product {
+          width: calc(50% - 10px);
+        }
+        .woocommerce.tablet-columns-1 ul.products li.product,
+        .woocommerce-page.tablet-columns-1 ul.products li.product {
+          width: 100%;
+        }
+        .woocommerce div.product .related.products ul.products li.product {
+          width: calc(33.33% - 14px);
+        }
+      }
+      @media (min-width: 545px) and (max-width: 921px) {
+        .woocommerce[class*="columns-"].columns-3 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-4 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-5 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-6 > ul.products li.product {
+          width: calc(33.33% - 14px);
+          margin-right: 20px;
+        }
+        .woocommerce[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(3n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(3n + 1) {
+          clear: left;
+        }
+        .woocommerce[class*="columns-"] ul.products li.product:nth-child(n),
+        .woocommerce-page[class*="columns-"]
+          ul.products
+          li.product:nth-child(n) {
+          margin-right: 20px;
+          clear: none;
+        }
+        .woocommerce.tablet-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce-page.tablet-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce.tablet-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce-page.tablet-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce.tablet-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce-page.tablet-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce.tablet-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce-page.tablet-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce.tablet-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce-page.tablet-columns-6
+          ul.products
+          li.product:nth-child(6n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce.tablet-columns-2 ul.products li.product:nth-child(2n + 1),
+        .woocommerce-page.tablet-columns-2
+          ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce.tablet-columns-3 ul.products li.product:nth-child(3n + 1),
+        .woocommerce-page.tablet-columns-3
+          ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce.tablet-columns-4 ul.products li.product:nth-child(4n + 1),
+        .woocommerce-page.tablet-columns-4
+          ul.products
+          li.product:nth-child(4n + 1),
+        .woocommerce.tablet-columns-5 ul.products li.product:nth-child(5n + 1),
+        .woocommerce-page.tablet-columns-5
+          ul.products
+          li.product:nth-child(5n + 1),
+        .woocommerce.tablet-columns-6 ul.products li.product:nth-child(6n + 1),
+        .woocommerce-page.tablet-columns-6
+          ul.products
+          li.product:nth-child(6n + 1) {
+          clear: left;
+        }
+        .woocommerce
+          div.product
+          .related.products
+          ul.products
+          li.product:nth-child(3n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce
+          div.product
+          .related.products
+          ul.products
+          li.product:nth-child(3n + 1) {
+          clear: left;
+        }
+      }
+      @media (min-width: 922px) {
+        .woocommerce #reviews #comments {
+          width: 55%;
+          float: left;
+        }
+        .woocommerce #reviews #review_form_wrapper {
+          width: 45%;
+          float: right;
+          padding-left: 2em;
+        }
+        .woocommerce form.checkout_coupon {
+          width: 50%;
+        }
+      }
+      @media (max-width: 921px) {
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-1.ast-mobile-header-stack.ast-no-menu-items
+          .ast-site-header-cart,
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-3.ast-mobile-header-stack.ast-no-menu-items
+          .ast-site-header-cart {
+          padding-right: 0;
+          padding-left: 0;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-1.ast-mobile-header-stack
+          .main-header-bar {
+          text-align: center;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-1.ast-mobile-header-stack
+          .ast-site-header-cart,
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-1.ast-mobile-header-stack
+          .ast-mobile-menu-buttons {
+          display: inline-block;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-2.ast-mobile-header-inline
+          .site-branding {
+          flex: auto;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-3.ast-mobile-header-stack
+          .site-branding {
+          flex: 0 0 100%;
+        }
+        .ast-header-break-point.ast-woocommerce-cart-menu
+          .header-main-layout-3.ast-mobile-header-stack
+          .main-header-container {
+          display: flex;
+          justify-content: center;
+        }
+        .woocommerce-cart .woocommerce-shipping-calculator .button {
+          width: 100%;
+        }
+        .woocommerce div.product div.images,
+        .woocommerce div.product div.summary,
+        .woocommerce #content div.product div.images,
+        .woocommerce #content div.product div.summary,
+        .woocommerce-page div.product div.images,
+        .woocommerce-page div.product div.summary,
+        .woocommerce-page #content div.product div.images,
+        .woocommerce-page #content div.product div.summary {
+          float: none;
+          width: 100%;
+        }
+        .woocommerce-cart table.cart td.actions .ast-return-to-shop {
+          display: block;
+          text-align: center;
+          margin-top: 1em;
+        }
+      }
+      @media (max-width: 544px) {
+        .ast-separate-container .ast-woocommerce-container {
+          padding: 0.54em 1em 1.33333em;
+        }
+        .woocommerce-message,
+        .woocommerce-error,
+        .woocommerce-info {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .woocommerce-message a.button,
+        .woocommerce-error a.button,
+        .woocommerce-info a.button {
+          order: 1;
+          margin-top: 0.5em;
+        }
+        .woocommerce.mobile-columns-6 ul.products li.product,
+        .woocommerce-page.mobile-columns-6 ul.products li.product {
+          width: calc(16.66% - 16.66px);
+        }
+        .woocommerce.mobile-columns-5 ul.products li.product,
+        .woocommerce-page.mobile-columns-5 ul.products li.product {
+          width: calc(20% - 16px);
+        }
+        .woocommerce.mobile-columns-4 ul.products li.product,
+        .woocommerce-page.mobile-columns-4 ul.products li.product {
+          width: calc(25% - 15px);
+        }
+        .woocommerce.mobile-columns-3 ul.products li.product,
+        .woocommerce-page.mobile-columns-3 ul.products li.product {
+          width: calc(33.33% - 14px);
+        }
+        .woocommerce.mobile-columns-2 ul.products li.product,
+        .woocommerce-page.mobile-columns-2 ul.products li.product {
+          width: calc(50% - 10px);
+        }
+        .woocommerce.mobile-columns-1 ul.products li.product,
+        .woocommerce-page.mobile-columns-1 ul.products li.product {
+          width: 100%;
+        }
+        .woocommerce .woocommerce-ordering,
+        .woocommerce-page .woocommerce-ordering {
+          float: none;
+          margin-bottom: 2em;
+          width: 100%;
+        }
+        .woocommerce ul.products a.button,
+        .woocommerce-page ul.products a.button {
+          padding: 0.5em 0.75em;
+        }
+        .woocommerce div.product .related.products ul.products li.product {
+          width: calc(50% - 10px);
+        }
+        .woocommerce table.cart td.actions .button,
+        .woocommerce #content table.cart td.actions .button,
+        .woocommerce-page table.cart td.actions .button,
+        .woocommerce-page #content table.cart td.actions .button {
+          padding-left: 1em;
+          padding-right: 1em;
+        }
+        .woocommerce #content table.cart .button,
+        .woocommerce-page #content table.cart .button {
+          width: 100%;
+        }
+        .woocommerce #content table.cart .product-thumbnail,
+        .woocommerce-page #content table.cart .product-thumbnail {
+          display: block;
+          text-align: center !important;
+        }
+        .woocommerce #content table.cart .product-thumbnail::before,
+        .woocommerce-page #content table.cart .product-thumbnail::before {
+          display: none;
+        }
+        .woocommerce #content table.cart td.actions .coupon,
+        .woocommerce-page #content table.cart td.actions .coupon {
+          float: none;
+        }
+        .woocommerce #content table.cart td.actions .coupon .button,
+        .woocommerce-page #content table.cart td.actions .coupon .button {
+          flex: 1;
+        }
+        .woocommerce #content div.product .woocommerce-tabs ul.tabs li a,
+        .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a {
+          display: block;
+        }
+      }
+      @media (max-width: 544px) {
+        .woocommerce[class*="columns-"].columns-3 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-4 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-5 > ul.products li.product,
+        .woocommerce[class*="columns-"].columns-6 > ul.products li.product {
+          width: calc(50% - 10px);
+          margin-right: 20px;
+        }
+        .woocommerce-page[class*="columns-"]
+          ul.products
+          li.product:nth-child(n),
+        .woocommerce[class*="columns-"] ul.products li.product:nth-child(n) {
+          margin-right: 20px;
+          clear: none;
+        }
+        .woocommerce-page[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce-page[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce-page[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce-page[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(2n),
+        .woocommerce[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(2n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce[class*="columns-"].columns-3
+          > ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce[class*="columns-"].columns-4
+          > ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce[class*="columns-"].columns-5
+          > ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce[class*="columns-"].columns-6
+          > ul.products
+          li.product:nth-child(2n + 1) {
+          clear: left;
+        }
+        .woocommerce[class*="columns-"] ul.products li.product:nth-child(n),
+        .woocommerce-page[class*="columns-"]
+          ul.products
+          li.product:nth-child(n) {
+          margin-right: 20px;
+          clear: none;
+        }
+        .woocommerce.mobile-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce-page.mobile-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce.mobile-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce-page.mobile-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce.mobile-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce-page.mobile-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce.mobile-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce-page.mobile-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce.mobile-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce-page.mobile-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce
+          div.product
+          .related.products
+          ul.products
+          li.product:nth-child(2n) {
+          margin-right: 0;
+          clear: right;
+        }
+        .woocommerce.mobile-columns-6 ul.products li.product:nth-child(6n + 1),
+        .woocommerce-page.mobile-columns-6
+          ul.products
+          li.product:nth-child(6n + 1),
+        .woocommerce.mobile-columns-5 ul.products li.product:nth-child(5n + 1),
+        .woocommerce-page.mobile-columns-5
+          ul.products
+          li.product:nth-child(5n + 1),
+        .woocommerce.mobile-columns-4 ul.products li.product:nth-child(4n + 1),
+        .woocommerce-page.mobile-columns-4
+          ul.products
+          li.product:nth-child(4n + 1),
+        .woocommerce.mobile-columns-3 ul.products li.product:nth-child(3n + 1),
+        .woocommerce-page.mobile-columns-3
+          ul.products
+          li.product:nth-child(3n + 1),
+        .woocommerce.mobile-columns-2 ul.products li.product:nth-child(2n + 1),
+        .woocommerce-page.mobile-columns-2
+          ul.products
+          li.product:nth-child(2n + 1),
+        .woocommerce
+          div.product
+          .related.products
+          ul.products
+          li.product:nth-child(2n + 1) {
+          clear: left;
+        }
+        .woocommerce ul.products a.button.loading::after,
+        .woocommerce-page ul.products a.button.loading::after {
+          display: inline-block;
+          margin-left: 5px;
+          position: initial;
+        }
+        .woocommerce.mobile-columns-1 ul.products li.product:nth-child(n),
+        .woocommerce-page.mobile-columns-1 ul.products li.product:nth-child(n) {
+          margin-right: 0;
+        }
+        .woocommerce #content div.product .woocommerce-tabs ul.tabs li,
+        .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+          display: block;
+          margin-right: 0;
+        }
+      }
+      @media (min-width: 922px) {
+        .woocommerce #content .ast-woocommerce-container div.product div.images,
+        .woocommerce .ast-woocommerce-container div.product div.images,
+        .woocommerce-page
+          #content
+          .ast-woocommerce-container
+          div.product
+          div.images,
+        .woocommerce-page .ast-woocommerce-container div.product div.images {
+          width: 50%;
+        }
+        .woocommerce
+          #content
+          .ast-woocommerce-container
+          div.product
+          div.summary,
+        .woocommerce .ast-woocommerce-container div.product div.summary,
+        .woocommerce-page
+          #content
+          .ast-woocommerce-container
+          div.product
+          div.summary,
+        .woocommerce-page .ast-woocommerce-container div.product div.summary {
+          width: 46%;
+        }
+        .woocommerce.woocommerce-checkout
+          form
+          #customer_details.col2-set
+          .col-1,
+        .woocommerce.woocommerce-checkout
+          form
+          #customer_details.col2-set
+          .col-2,
+        .woocommerce-page.woocommerce-checkout
+          form
+          #customer_details.col2-set
+          .col-1,
+        .woocommerce-page.woocommerce-checkout
+          form
+          #customer_details.col2-set
+          .col-2 {
+          float: none;
+          width: auto;
+        }
+      }
+      .woocommerce a.button,
+      .woocommerce button.button.alt,
+      .woocommerce-page table.cart td.actions .button,
+      .woocommerce-page #content table.cart td.actions .button,
+      .woocommerce a.button.alt,
+      .woocommerce .woocommerce-message a.button,
+      .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout,
+      .woocommerce button.button.alt.disabled,
+      .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+        border: solid;
+        border-top-width: 0;
+        border-right-width: 0;
+        border-left-width: 0;
+        border-bottom-width: 0;
+        border-color: #1dd660;
+      }
+      .woocommerce a.button:hover,
+      .woocommerce button.button.alt:hover,
+      .woocommerce-page table.cart td.actions .button:hover,
+      .woocommerce-page #content table.cart td.actions .button:hover,
+      .woocommerce a.button.alt:hover,
+      .woocommerce .woocommerce-message a.button:hover,
+      .ast-site-header-cart
+        .widget_shopping_cart
+        .buttons
+        .button.checkout:hover,
+      .woocommerce button.button.alt.disabled:hover,
+      .wc-block-grid__products
+        .wc-block-grid__product
+        .wp-block-button__link:hover {
+        border-color: #17ac4d;
+      }
+      @media (min-width: 922px) {
+        .woocommerce.woocommerce-checkout form #customer_details.col2-set,
+        .woocommerce-page.woocommerce-checkout form #customer_details.col2-set {
+          width: 55%;
+          float: left;
+          margin-right: 4.347826087%;
+        }
+        .woocommerce.woocommerce-checkout form #order_review,
+        .woocommerce.woocommerce-checkout form #order_review_heading,
+        .woocommerce-page.woocommerce-checkout form #order_review,
+        .woocommerce-page.woocommerce-checkout form #order_review_heading {
+          width: 40%;
+          float: right;
+          margin-right: 0;
+          clear: right;
+        }
+      }
+    </style>
+    <style id="woocommerce-inline-inline-css">
+        .woocommerce form .form-row .required { visibility: visible; }
+    </style>
+    <link rel="stylesheet" id="reviewx-magnific-popup-css" href="{% static 'css/magnific-popup.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="reviewx-css" href="{% static 'css/reviewx-public.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-cw-css" href="{% static 'css/jet-cw.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-cw-frontend-css" href="{% static 'css/jet-cw-frontend-font.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="font-awesome-all-css" href="{% static 'css/all.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="font-awesome-v4-shims-css" href="{% static 'css/v4-shims.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-menu-public-css" href="{% static 'css/public.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-popup-frontend-css" href="{% static 'css/jet-popup-frontend.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-reviews-css" href="{% static 'css/jet-reviews.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-blocks-css" href="{% static 'css/jet-blocks.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-elements-css" href="{% static 'css/jet-elements.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-elements-skin-css" href="{% static 'css/jet-elements-skin.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="elementor-animations-css" href="{% static 'css/animations.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-blog-css" href="{% static 'css/jet-blog.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jquery-chosen-css" href="{% static 'css/chosen.min.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-search-css" href="{% static 'css/jet-search.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-tabs-frontend-css" href="{% static 'css/jet-tabs-frontend.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-tricks-frontend-css" href="{% static 'css/jet-tricks-frontend.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="elementor-global-css" href="{% static 'css/global.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="elementor-global-css" href="{% static 'css/contactostyles/post-694.css' %}?20090712" media="all"/>
+    <style id="jet-woo-builder-inline-css">
+      @font-face {
+        font-family: "WooCommerce";
+        src: url("fonts/WooCommerce.eot");
+        src: url("fonts/WooCommerce.eot?#iefix")
+            format("embedded-opentype"),
+          url("fonts/WooCommerce.woff")
+            format("woff"),
+          url("fonts/WooCommerce.ttf")
+            format("truetype"),
+          url("fonts/WooCommerce.svg#WooCommerce")
+            format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" id="jet-woo-builder-frontend-css" href="{% static 'css/jet-woo-builder.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-woo-builder-frontend-css" href="{% static 'css/jetwoobuilder-frontend-font.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jet-woo-product-gallery-css" href="{% static 'css/jet-woo-product-gallery.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="jetwoo-widgets-for-elementor-css" href="{% static 'css/jet-woo-widgets.css' %}?20090712" media="all"/>
+    <link rel="stylesheet" id="astra-child-theme-css-css" href="{% static 'css/styleastra.css' %}?20090712" media="all"/>
+    <link rel="shortcut icon" href="{% static 'images/checkout/apple-touch-icon.png' %}?20090712">
+    <link rel="shortcut icon" href="{% static 'images/checkout/favicon.ico' %}?20090712">
 {% endblock %}
 
 {% block content %}
@@ -12,70 +1777,43 @@
       <div id="primary" class="content-area primary">
         <main id="main" class="site-main">
           <article
-            class="post-694 page type-page status-publish ast-article-single"
-            id="post-694"
-            itemtype="https://schema.org/CreativeWork"
-            itemscope="itemscope"
-          >
+            class="post-694 page type-page status-publish ast-article-single" id="post-694" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
             <header class="entry-header ast-header-without-markup"></header>
             <!-- .entry-header -->
 
             <div class="entry-content clear" itemprop="text">
-              <div
-                data-elementor-type="wp-page"
-                data-elementor-id="694"
-                class="elementor elementor-694"
-                data-elementor-settings="[]"
-              >
+              <div data-elementor-type="wp-page" data-elementor-id="694" class="elementor elementor-694"data-elementor-settings="[]">
                 <div class="elementor-inner">
                   <div class="elementor-section-wrap">
                     <section
                       class="elementor-section elementor-top-section elementor-element elementor-element-68dfb2ce elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
                       data-id="68dfb2ce"
                       data-element_type="section"
-                      data-settings='{"background_background":"gradient","shape_divider_bottom":"waves"}'
-                    >
+                      data-settings='{"background_background":"gradient","shape_divider_bottom":"waves"}'>
                       <div class="elementor-background-overlay"></div>
-                      <div
-                        class="elementor-shape elementor-shape-bottom"
-                        data-negative="false"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 1000 100"
-                          preserveAspectRatio="none"
-                        >
-                          <path
-                            class="elementor-shape-fill"
-                            d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
-                                              c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
-                                              c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"
-                          ></path>
+                      <div class="elementor-shape elementor-shape-bottom" data-negative="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                          <path class="elementor-shape-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+                                                                c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+                                                                c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z">
+                         </path>
                         </svg>
                       </div>
-                      <div
-                        class="elementor-container elementor-column-gap-default"
-                      >
+                      <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
                           <div
                             class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5844720a"
                             data-id="5844720a"
-                            data-element_type="column"
-                          >
-                            <div
-                              class="elementor-column-wrap elementor-element-populated"
-                            >
+                            data-element_type="column">
+                            <div class="elementor-column-wrap elementor-element-populated">
                               <div class="elementor-widget-wrap">
                                 <div
                                   class="elementor-element elementor-element-10ce10ef elementor-widget elementor-widget-heading is-mac"
                                   data-id="10ce10ef"
                                   data-element_type="widget"
-                                  data-widget_type="heading.default"
-                                >
+                                  data-widget_type="heading.default">
                                   <div class="elementor-widget-container">
-                                    <h1
-                                      class="elementor-heading-title elementor-size-default"
-                                    >
+                                    <h1 class="elementor-heading-title elementor-size-default">
                                       Contáctanos
                                     </h1>
                                   </div>
@@ -84,12 +1822,9 @@
                                   class="elementor-element elementor-element-4428944b elementor-widget elementor-widget-heading is-mac"
                                   data-id="4428944b"
                                   data-element_type="widget"
-                                  data-widget_type="heading.default"
-                                >
+                                  data-widget_type="heading.default">
                                   <div class="elementor-widget-container">
-                                    <h3
-                                      class="elementor-heading-title elementor-size-default"
-                                    >
+                                    <h3 class="elementor-heading-title elementor-size-default">
                                       Estaremos encantados en ayudarte
                                     </h3>
                                   </div>
@@ -104,33 +1839,24 @@
                       class="elementor-section elementor-top-section elementor-element elementor-element-118e38f8 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                       data-id="118e38f8"
                       data-element_type="section"
-                      data-settings='{"background_background":"classic"}'
-                    >
+                      data-settings='{"background_background":"classic"}'>
                       <div class="elementor-background-overlay"></div>
-                      <div
-                        class="elementor-container elementor-column-gap-default"
-                      >
+                      <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
                           <div
                             class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6a65ca33"
                             data-id="6a65ca33"
                             data-element_type="column"
-                            data-settings='{"background_background":"classic","motion_fx_motion_fx_scrolling":"yes","motion_fx_translateY_effect":"yes","motion_fx_translateY_direction":"negative","motion_fx_translateY_speed":{"unit":"px","size":"1","sizes":[]},"motion_fx_devices":["desktop","tablet"],"motion_fx_translateY_affectedRange":{"unit":"%","size":"","sizes":{"start":0,"end":100}}}'
-                          >
-                            <div
-                              class="elementor-column-wrap elementor-element-populated"
-                            >
+                            data-settings='{"background_background":"classic","motion_fx_motion_fx_scrolling":"yes","motion_fx_translateY_effect":"yes","motion_fx_translateY_direction":"negative","motion_fx_translateY_speed":{"unit":"px","size":"1","sizes":[]},"motion_fx_devices":["desktop","tablet"],"motion_fx_translateY_affectedRange":{"unit":"%","size":"","sizes":{"start":0,"end":100}}}'>
+                            <div class="elementor-column-wrap elementor-element-populated">
                               <div class="elementor-widget-wrap">
                                 <div
                                   class="elementor-element elementor-element-5986722 elementor-widget elementor-widget-heading is-mac"
                                   data-id="5986722"
                                   data-element_type="widget"
-                                  data-widget_type="heading.default"
-                                >
+                                  data-widget_type="heading.default">
                                   <div class="elementor-widget-container">
-                                    <h2
-                                      class="elementor-heading-title elementor-size-default"
-                                    >
+                                    <h2 class="elementor-heading-title elementor-size-default">
                                       Formulario de contacto
                                     </h2>
                                   </div>
@@ -140,42 +1866,16 @@
                                   data-id="186aae39"
                                   data-element_type="widget"
                                   data-settings='{"step_next_label":"Volgende","step_previous_label":"Vorige","button_width":"100","step_type":"number_text","step_icon_shape":"circle"}'
-                                  data-widget_type="form.default"
-                                >
+                                  data-widget_type="form.default">
                                   <div class="elementor-widget-container">
-                                    <form
-                                      class="elementor-form"
-                                      method="post"
-                                      name="New Form"
-                                    >
-                                      <input
-                                        type="hidden"
-                                        name="post_id"
-                                        value="694"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="form_id"
-                                        value="186aae39"
-                                      />
-
-                                      <input
-                                        type="hidden"
-                                        name="queried_id"
-                                        value="694"
-                                      />
-
-                                      <div
-                                        class="elementor-form-fields-wrapper elementor-labels-"
-                                      >
-                                        <div
-                                          class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_b0cf6e6 elementor-col-100 elementor-field-required"
-                                        >
-                                          <label
-                                            for="form-field-field_b0cf6e6"
-                                            class="elementor-field-label elementor-screen-only"
-                                            >nombre</label
-                                          ><input
+                                    <form class="elementor-form" method="POST" action="." >
+                                      {% csrf_token %}
+                                      <div class="elementor-form-fields-wrapper elementor-labels-">
+                                        <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_b0cf6e6 elementor-col-100 elementor-field-required">
+                                          {{ form.name.errors }}
+                                          <label for="{{ form.name.id_for_label }}" class="elementor-field-label elementor-screen-only">Nombre</label>
+                                          {{ form.name }}
+                                          <!-- <input
                                             size="1"
                                             type="text"
                                             name="form_fields[field_b0cf6e6]"
@@ -184,16 +1884,13 @@
                                             placeholder="Nombre completo"
                                             required="required"
                                             aria-required="true"
-                                          />
+                                          /> -->
                                         </div>
-                                        <div
-                                          class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-field_1 elementor-col-100 elementor-field-required"
-                                        >
-                                          <label
-                                            for="form-field-field_1"
-                                            class="elementor-field-label elementor-screen-only"
-                                            >email</label
-                                          ><input
+                                        <div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-field_1 elementor-col-100 elementor-field-required">
+                                          {{ form.email.errors }}
+                                          <label for="{{ form.email.id_for_label }}" class="elementor-field-label elementor-screen-only">Email</label>
+                                          {{ form.email }}
+                                          <!-- <input
                                             size="1"
                                             type="email"
                                             name="form_fields[field_1]"
@@ -202,16 +1899,13 @@
                                             placeholder="E-mail"
                                             required="required"
                                             aria-required="true"
-                                          />
+                                          /> -->
                                         </div>
-                                        <div
-                                          class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-email elementor-col-50"
-                                        >
-                                          <label
-                                            for="form-field-email"
-                                            class="elementor-field-label elementor-screen-only"
-                                            >telefono</label
-                                          ><input
+                                        <div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-email elementor-col-50">
+                                          {{ form.phone_number.errors }}
+                                          <label for="{{ form.phone_number.id_for_label }}" class="elementor-field-label elementor-screen-only"> Telefono </label>
+                                          {{ form.phone_number }}
+                                          <!-- <input
                                             size="1"
                                             type="tel"
                                             name="form_fields[email]"
@@ -220,16 +1914,13 @@
                                             placeholder="Número de teléfono móvil"
                                             pattern="[0-9()#&amp;+*-=.]+"
                                             title="Only numbers and phone characters (#, -, *, etc) are accepted."
-                                          />
+                                          /> -->
                                         </div>
-                                        <div
-                                          class="elementor-field-type-number elementor-field-group elementor-column elementor-field-group-name elementor-col-50 elementor-field-required"
-                                        >
-                                          <label
-                                            for="form-field-name"
-                                            class="elementor-field-label elementor-screen-only"
-                                            >orden</label
-                                          ><input
+                                        <div class="elementor-field-type-number elementor-field-group elementor-column elementor-field-group-name elementor-col-50 elementor-field-required">
+                                          {{ form.order_number.errors }}
+                                          <label for="{{ form.order_number.id_for_label }}" class="elementor-field-label elementor-screen-only"> Orden </label>
+                                          {{ form.order_number }}
+                                          <!-- <input
                                             type="number"
                                             name="form_fields[name]"
                                             id="form-field-name"
@@ -239,45 +1930,31 @@
                                             aria-required="true"
                                             min=""
                                             max=""
-                                          />
+                                          /> -->
                                         </div>
-                                        <div
-                                          class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100 elementor-field-required"
-                                        >
-                                          <label
-                                            for="form-field-message"
-                                            class="elementor-field-label elementor-screen-only"
-                                            >Bericht</label
-                                          ><textarea
+                                        <div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100 elementor-field-required">
+                                          {{ form.message.errors }}
+                                          <label for="{{ form.message.id_for_label }}" class="elementor-field-label elementor-screen-only">Mensaje</label>
+                                          {{ form.message }}
+                                          <!-- <textarea
                                             class="elementor-field-textual elementor-field elementor-size-md"
                                             name="form_fields[message]"
                                             id="form-field-message"
                                             rows="4"
                                             placeholder="Mensaje"
                                             required="required"
-                                            aria-required="true"
-                                          ></textarea>
+                                            aria-required="true">
+                                          </textarea> -->
                                         </div>
-                                        <div
-                                          class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons"
-                                        >
-                                          <button
-                                            type="submit"
-                                            class="elementor-button elementor-size-md"
-                                          >
+                                        <div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+                                          <button type="submit" class="elementor-button elementor-size-md">
                                             <span>
-                                              <span
-                                                class="elementor-align-icon-right elementor-button-icon"
-                                              >
-                                                <i
-                                                  aria-hidden="true"
-                                                  class="fas fa-arrow-right"
-                                                ></i>
+                                              <span class="elementor-align-icon-right elementor-button-icon">
+                                                <i aria-hidden="true" class="fas fa-arrow-right"></i>
                                               </span>
-                                              <span
-                                                class="elementor-button-text"
-                                                >Enviar</span
-                                              >
+                                              <span class="elementor-button-text">
+                                               Enviar
+                                              </span>
                                             </span>
                                           </button>
                                         </div>
@@ -291,22 +1968,16 @@
                           <div
                             class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1b150cf4"
                             data-id="1b150cf4"
-                            data-element_type="column"
-                          >
-                            <div
-                              class="elementor-column-wrap elementor-element-populated"
-                            >
+                            data-element_type="column">
+                            <div class="elementor-column-wrap elementor-element-populated">
                               <div class="elementor-widget-wrap">
                                 <div
                                   class="elementor-element elementor-element-d982138 elementor-widget elementor-widget-heading is-mac"
                                   data-id="d982138"
                                   data-element_type="widget"
-                                  data-widget_type="heading.default"
-                                >
+                                  data-widget_type="heading.default">
                                   <div class="elementor-widget-container">
-                                    <h2
-                                      class="elementor-heading-title elementor-size-default"
-                                    >
+                                    <h2 class="elementor-heading-title elementor-size-default">
                                       ¿Tienes alguna pregunta o comentario?
                                       Nos encantaría escucharlo.
                                     </h2>
@@ -316,12 +1987,9 @@
                                   class="elementor-element elementor-element-6ed4be59 elementor-widget elementor-widget-text-editor is-mac"
                                   data-id="6ed4be59"
                                   data-element_type="widget"
-                                  data-widget_type="text-editor.default"
-                                >
+                                  data-widget_type="text-editor.default">
                                   <div class="elementor-widget-container">
-                                    <div
-                                      class="elementor-text-editor elementor-clearfix"
-                                    >
+                                    <div class="elementor-text-editor elementor-clearfix">
                                       <p>
                                         Acchastore está disponible todos los
                                         días. Puedes ponerte en contacto con
@@ -337,12 +2005,9 @@
                                   class="elementor-element elementor-element-1f937c5 elementor-widget elementor-widget-heading is-mac"
                                   data-id="1f937c5"
                                   data-element_type="widget"
-                                  data-widget_type="heading.default"
-                                >
+                                  data-widget_type="heading.default">
                                   <div class="elementor-widget-container">
-                                    <h2
-                                      class="elementor-heading-title elementor-size-default"
-                                    >
+                                    <h2 class="elementor-heading-title elementor-size-default">
                                       Datos de contacto
                                     </h2>
                                   </div>
@@ -351,19 +2016,13 @@
                                   class="elementor-element elementor-element-80259ef elementor-widget elementor-widget-text-editor is-mac"
                                   data-id="80259ef"
                                   data-element_type="widget"
-                                  data-widget_type="text-editor.default"
-                                >
+                                  data-widget_type="text-editor.default">
                                   <div class="elementor-widget-container">
-                                    <div
-                                      class="elementor-text-editor elementor-clearfix"
-                                    >
+                                    <div class="elementor-text-editor elementor-clearfix">
                                       <p>
-                                        012 – 34 56 789<br />uncorreoelectronico@gmail.com<br /><br /><span
-                                          style="font-size: 16px"
-                                          >Casa de Victor Hugo<br /></span
-                                        ><span style="font-size: 16px"
-                                          >Casa de Victor Hugo</span
-                                        >
+                                        012 – 34 56 789<br />uncorreoelectronico@gmail.com<br /><br />
+                                        <span style="font-size: 16px">Casa de Victor Hugo<br /></span>
+                                        <span style="font-size: 16px">Casa de Victor Hugo</span>
                                       </p>
                                       <p>
                                         Contacto alternativo: 0123456789
@@ -375,13 +2034,10 @@
                                   class="elementor-element elementor-element-dbb8cd2 elementor-widget elementor-widget-pp-business-hours is-mac"
                                   data-id="dbb8cd2"
                                   data-element_type="widget"
-                                  data-widget_type="pp-business-hours.default"
-                                >
+                                  data-widget_type="pp-business-hours.default">
                                   <div class="elementor-widget-container">
                                     <div class="pp-business-hours">
-                                      <div
-                                        class="pp-business-hours-row clearfix elementor-repeater-item-44ead0b"
-                                      >
+                                      <div class="pp-business-hours-row clearfix elementor-repeater-item-44ead0b">
                                         <span class="pp-business-day">
                                           Lunes
                                         </span>
@@ -389,9 +2045,7 @@
                                           08:00 - 21:00
                                         </span>
                                       </div>
-                                      <div
-                                        class="pp-business-hours-row clearfix elementor-repeater-item-9142780"
-                                      >
+                                      <div class="pp-business-hours-row clearfix elementor-repeater-item-9142780">
                                         <span class="pp-business-day">
                                           Martes
                                         </span>
@@ -399,9 +2053,7 @@
                                           08:00 - 21:00
                                         </span>
                                       </div>
-                                      <div
-                                        class="pp-business-hours-row clearfix elementor-repeater-item-5b23a04"
-                                      >
+                                      <div class="pp-business-hours-row clearfix elementor-repeater-item-5b23a04">
                                         <span class="pp-business-day">
                                           Miercoles
                                         </span>
@@ -409,19 +2061,13 @@
                                           08:00 - 21:00
                                         </span>
                                       </div>
-                                      <div
-                                        class="pp-business-hours-row clearfix elementor-repeater-item-d51c0e8"
-                                      >
-                                        <span class="pp-business-day"
-                                          >Jueves</span
-                                        >
+                                      <div class="pp-business-hours-row clearfix elementor-repeater-item-d51c0e8">
+                                        <span class="pp-business-day">Jueves</span>
                                         <span class="pp-business-timing">
                                           08:00 - 21:00
                                         </span>
                                       </div>
-                                      <div
-                                        class="pp-business-hours-row clearfix elementor-repeater-item-32626fa"
-                                      >
+                                      <div class="pp-business-hours-row clearfix elementor-repeater-item-32626fa">
                                         <span class="pp-business-day">
                                           Viernes
                                         </span>
@@ -429,9 +2075,7 @@
                                           08:00 - 21:00
                                         </span>
                                       </div>
-                                      <div
-                                        class="pp-business-hours-row clearfix elementor-repeater-item-00b9149"
-                                      >
+                                      <div class="pp-business-hours-row clearfix elementor-repeater-item-00b9149">
                                         <span class="pp-business-day">
                                           Sábado
                                         </span>
@@ -439,9 +2083,7 @@
                                           12:00 - 16:00
                                         </span>
                                       </div>
-                                      <div
-                                        class="pp-business-hours-row clearfix elementor-repeater-item-c7e463c row-closed"
-                                      >
+                                      <div class="pp-business-hours-row clearfix elementor-repeater-item-c7e463c row-closed">
                                         <span class="pp-business-day">
                                           Domingo
                                         </span>

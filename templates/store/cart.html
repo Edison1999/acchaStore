@@ -1,0 +1,1170 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block head_title %}{% trans "Accha Store Checkout" %}{% endblock %}
+{% block extra_links %}
+<link href="{% static 'css/checkout/post-8.css' %}?20090712" rel="stylesheet" type="text/css">
+<link href="{% static 'css/woocommerce.min.css' %}?20090712" rel="stylesheet" type="text/css">
+<link href="{% static 'css/epo.min.css' %}?20090712" rel="stylesheet" type="text/css">
+<link href="{% static 'css/reviewx-public.css' %}?20090712" rel="stylesheet" type="text/css">
+<link href="{% static 'css/front.min.css' %}?20090712" rel="stylesheet" type="text/css">
+<!--No hace nada-->
+<link href="{% static 'css/checkout/styleCheckoutVersion.min.css' %}?20090712" rel="stylesheet" type="text/css">
+<link href="{% static 'css/checkout/styleCheckoutV1-1.min.css' %}?20090712" rel="stylesheet" type="text/css">
+<link href="{% static 'css/checkout/woocommerceNewVersionC.min.css' %}?20090712" rel="stylesheet" type="text/css">
+<link href="{% static 'css/woocommerce-layout.min.css' %}?20090712" rel="stylesheet" type="text/css">
+
+<style id='woocommerce-general-inline-css'>
+    .woocommerce span.onsale,
+    .wc-block-grid__product .wc-block-grid__product-onsale {
+        background-color: #fcea00;
+        color: #000000;
+    }
+
+    .woocommerce a.button,
+    .woocommerce button.button,
+    .woocommerce .woocommerce-message a.button,
+    .woocommerce #respond input#submit.alt,
+    .woocommerce a.button.alt,
+    .woocommerce button.button.alt,
+    .woocommerce input.button.alt,
+    .woocommerce input.button,
+    .woocommerce input.button:disabled,
+    .woocommerce input.button:disabled[disabled],
+    .woocommerce input.button:disabled:hover,
+    .woocommerce input.button:disabled[disabled]:hover,
+    .woocommerce #respond input#submit,
+    .woocommerce button.button.alt.disabled,
+    .wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
+    .wc-block-grid__product-onsale {
+        color: #ffffff;
+        border-color: #1dd660;
+        background-color: #1dd660;
+    }
+
+    .woocommerce a.button:hover,
+    .woocommerce button.button:hover,
+    .woocommerce .woocommerce-message a.button:hover,
+    .woocommerce #respond input#submit:hover,
+    .woocommerce #respond input#submit.alt:hover,
+    .woocommerce a.button.alt:hover,
+    .woocommerce button.button.alt:hover,
+    .woocommerce input.button.alt:hover,
+    .woocommerce input.button:hover,
+    .woocommerce button.button.alt.disabled:hover,
+    .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+        color: #ffffff;
+        border-color: #17ac4d;
+        background-color: #17ac4d;
+    }
+
+    .woocommerce-message,
+    .woocommerce-info {
+        border-top-color: #0274be;
+    }
+
+    .woocommerce-message::before,
+    .woocommerce-info::before {
+        color: #0274be;
+    }
+
+    .woocommerce ul.products li.product .price,
+    .woocommerce div.product p.price,
+    .woocommerce div.product span.price,
+    .widget_layered_nav_filters ul li.chosen a,
+    .woocommerce-page ul.products li.product .ast-woo-product-category,
+    .wc-layered-nav-rating a {
+        color: #333333;
+    }
+
+    .woocommerce nav.woocommerce-pagination ul,
+    .woocommerce nav.woocommerce-pagination ul li {
+        border-color: #0274be;
+    }
+
+    .woocommerce nav.woocommerce-pagination ul li a:focus,
+    .woocommerce nav.woocommerce-pagination ul li a:hover,
+    .woocommerce nav.woocommerce-pagination ul li span.current {
+        background: #0274be;
+        color: #ffffff;
+    }
+
+    .woocommerce-MyAccount-navigation-link.is-active a {
+        color: #333333;
+    }
+
+    .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+    .woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+        background-color: #0274be;
+    }
+
+    .woocommerce a.button,
+    .woocommerce button.button,
+    .woocommerce .woocommerce-message a.button,
+    .woocommerce #respond input#submit.alt,
+    .woocommerce a.button.alt,
+    .woocommerce button.button.alt,
+    .woocommerce input.button.alt,
+    .woocommerce input.button,
+    .woocommerce-cart table.cart td.actions .button,
+    .woocommerce form.checkout_coupon .button,
+    .woocommerce #respond input#submit,
+    .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+        border-radius: 2px;
+        padding-top: 10px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+    }
+
+    .woocommerce .star-rating,
+    .woocommerce .comment-form-rating .stars a,
+    .woocommerce .star-rating::before {
+        color: #0274be;
+    }
+
+    .woocommerce div.product .woocommerce-tabs ul.tabs li.active:before {
+        background: #0274be;
+    }
+
+    .ast-site-header-cart a {
+        color: #333333;
+    }
+
+    .ast-site-header-cart a:focus,
+    .ast-site-header-cart a:hover,
+    .ast-site-header-cart .current-menu-item a {
+        color: #0274be;
+    }
+
+    .ast-cart-menu-wrap .count,
+    .ast-cart-menu-wrap .count:after {
+        border-color: #0274be;
+        color: #0274be;
+    }
+
+    .ast-cart-menu-wrap:hover .count {
+        color: #ffffff;
+        background-color: #0274be;
+    }
+
+    .ast-site-header-cart .widget_shopping_cart .total .woocommerce-Price-amount {
+        color: #0274be;
+    }
+
+    .woocommerce a.remove:hover,
+    .ast-woocommerce-cart-menu .main-header-menu .woocommerce-custom-menu-item .menu-item:hover>.menu-link.remove:hover {
+        color: #0274be;
+        border-color: #0274be;
+        background-color: #ffffff;
+    }
+
+    .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout,
+    .woocommerce .widget_shopping_cart .woocommerce-mini-cart__buttons .checkout.wc-forward {
+        color: #ffffff;
+        border-color: #17ac4d;
+        background-color: #17ac4d;
+    }
+
+    .site-header .ast-site-header-cart-data .button.wc-forward,
+    .site-header .ast-site-header-cart-data .button.wc-forward:hover {
+        color: #ffffff;
+    }
+
+    .below-header-user-select .ast-site-header-cart .widget,
+    .ast-above-header-section .ast-site-header-cart .widget a,
+    .below-header-user-select .ast-site-header-cart .widget_shopping_cart a {
+        color: #333333;
+    }
+
+    .below-header-user-select .ast-site-header-cart .widget_shopping_cart a:hover,
+    .ast-above-header-section .ast-site-header-cart .widget_shopping_cart a:hover,
+    .below-header-user-select .ast-site-header-cart .widget_shopping_cart a.remove:hover,
+    .ast-above-header-section .ast-site-header-cart .widget_shopping_cart a.remove:hover {
+        color: #0274be;
+    }
+
+    @media (min-width:545px) and (max-width:921px) {
+
+        .woocommerce.tablet-columns-6 ul.products li.product,
+        .woocommerce-page.tablet-columns-6 ul.products li.product {
+            width: calc(16.66% - 16.66px);
+        }
+
+        .woocommerce.tablet-columns-5 ul.products li.product,
+        .woocommerce-page.tablet-columns-5 ul.products li.product {
+            width: calc(20% - 16px);
+        }
+
+        .woocommerce.tablet-columns-4 ul.products li.product,
+        .woocommerce-page.tablet-columns-4 ul.products li.product {
+            width: calc(25% - 15px);
+        }
+
+        .woocommerce.tablet-columns-3 ul.products li.product,
+        .woocommerce-page.tablet-columns-3 ul.products li.product {
+            width: calc(33.33% - 14px);
+        }
+
+        .woocommerce.tablet-columns-2 ul.products li.product,
+        .woocommerce-page.tablet-columns-2 ul.products li.product {
+            width: calc(50% - 10px);
+        }
+
+        .woocommerce.tablet-columns-1 ul.products li.product,
+        .woocommerce-page.tablet-columns-1 ul.products li.product {
+            width: 100%;
+        }
+
+        .woocommerce div.product .related.products ul.products li.product {
+            width: calc(33.33% - 14px);
+        }
+    }
+
+    @media (min-width:545px) and (max-width:921px) {
+
+        .woocommerce[class*="columns-"].columns-3>ul.products li.product,
+        .woocommerce[class*="columns-"].columns-4>ul.products li.product,
+        .woocommerce[class*="columns-"].columns-5>ul.products li.product,
+        .woocommerce[class*="columns-"].columns-6>ul.products li.product {
+            width: calc(33.33% - 14px);
+            margin-right: 20px;
+        }
+
+        .woocommerce[class*="columns-"].columns-3>ul.products li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-4>ul.products li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-5>ul.products li.product:nth-child(3n),
+        .woocommerce[class*="columns-"].columns-6>ul.products li.product:nth-child(3n) {
+            margin-right: 0;
+            clear: right;
+        }
+
+        .woocommerce[class*="columns-"].columns-3>ul.products li.product:nth-child(3n+1),
+        .woocommerce[class*="columns-"].columns-4>ul.products li.product:nth-child(3n+1),
+        .woocommerce[class*="columns-"].columns-5>ul.products li.product:nth-child(3n+1),
+        .woocommerce[class*="columns-"].columns-6>ul.products li.product:nth-child(3n+1) {
+            clear: left;
+        }
+
+        .woocommerce[class*="columns-"] ul.products li.product:nth-child(n),
+        .woocommerce-page[class*="columns-"] ul.products li.product:nth-child(n) {
+            margin-right: 20px;
+            clear: none;
+        }
+
+        .woocommerce.tablet-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce-page.tablet-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce.tablet-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce-page.tablet-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce.tablet-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce-page.tablet-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce.tablet-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce-page.tablet-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce.tablet-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce-page.tablet-columns-6 ul.products li.product:nth-child(6n) {
+            margin-right: 0;
+            clear: right;
+        }
+
+        .woocommerce.tablet-columns-2 ul.products li.product:nth-child(2n+1),
+        .woocommerce-page.tablet-columns-2 ul.products li.product:nth-child(2n+1),
+        .woocommerce.tablet-columns-3 ul.products li.product:nth-child(3n+1),
+        .woocommerce-page.tablet-columns-3 ul.products li.product:nth-child(3n+1),
+        .woocommerce.tablet-columns-4 ul.products li.product:nth-child(4n+1),
+        .woocommerce-page.tablet-columns-4 ul.products li.product:nth-child(4n+1),
+        .woocommerce.tablet-columns-5 ul.products li.product:nth-child(5n+1),
+        .woocommerce-page.tablet-columns-5 ul.products li.product:nth-child(5n+1),
+        .woocommerce.tablet-columns-6 ul.products li.product:nth-child(6n+1),
+        .woocommerce-page.tablet-columns-6 ul.products li.product:nth-child(6n+1) {
+            clear: left;
+        }
+
+        .woocommerce div.product .related.products ul.products li.product:nth-child(3n) {
+            margin-right: 0;
+            clear: right;
+        }
+
+        .woocommerce div.product .related.products ul.products li.product:nth-child(3n+1) {
+            clear: left;
+        }
+    }
+
+    @media (min-width:922px) {
+        .woocommerce #reviews #comments {
+            width: 55%;
+            float: left;
+        }
+
+        .woocommerce #reviews #review_form_wrapper {
+            width: 45%;
+            float: right;
+            padding-left: 2em;
+        }
+
+        .woocommerce form.checkout_coupon {
+            width: 50%;
+        }
+    }
+
+    @media (max-width:921px) {
+
+        .ast-header-break-point.ast-woocommerce-cart-menu .header-main-layout-1.ast-mobile-header-stack.ast-no-menu-items .ast-site-header-cart,
+        .ast-header-break-point.ast-woocommerce-cart-menu .header-main-layout-3.ast-mobile-header-stack.ast-no-menu-items .ast-site-header-cart {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .ast-header-break-point.ast-woocommerce-cart-menu .header-main-layout-1.ast-mobile-header-stack .main-header-bar {
+            text-align: center;
+        }
+
+        .ast-header-break-point.ast-woocommerce-cart-menu .header-main-layout-1.ast-mobile-header-stack .ast-site-header-cart,
+        .ast-header-break-point.ast-woocommerce-cart-menu .header-main-layout-1.ast-mobile-header-stack .ast-mobile-menu-buttons {
+            display: inline-block;
+        }
+
+        .ast-header-break-point.ast-woocommerce-cart-menu .header-main-layout-2.ast-mobile-header-inline .site-branding {
+            flex: auto;
+        }
+
+        .ast-header-break-point.ast-woocommerce-cart-menu .header-main-layout-3.ast-mobile-header-stack .site-branding {
+            flex: 0 0 100%;
+        }
+
+        .ast-header-break-point.ast-woocommerce-cart-menu .header-main-layout-3.ast-mobile-header-stack .main-header-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .woocommerce-cart .woocommerce-shipping-calculator .button {
+            width: 100%;
+        }
+
+        .woocommerce div.product div.images,
+        .woocommerce div.product div.summary,
+        .woocommerce #content div.product div.images,
+        .woocommerce #content div.product div.summary,
+        .woocommerce-page div.product div.images,
+        .woocommerce-page div.product div.summary,
+        .woocommerce-page #content div.product div.images,
+        .woocommerce-page #content div.product div.summary {
+            float: none;
+            width: 100%;
+        }
+
+        .woocommerce-cart table.cart td.actions .ast-return-to-shop {
+            display: block;
+            text-align: center;
+            margin-top: 1em;
+        }
+    }
+
+    @media (max-width:544px) {
+        .ast-separate-container .ast-woocommerce-container {
+            padding: .54em 1em 1.33333em;
+        }
+
+        .woocommerce-message,
+        .woocommerce-error,
+        .woocommerce-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .woocommerce-message a.button,
+        .woocommerce-error a.button,
+        .woocommerce-info a.button {
+            order: 1;
+            margin-top: .5em;
+        }
+
+        .woocommerce.mobile-columns-6 ul.products li.product,
+        .woocommerce-page.mobile-columns-6 ul.products li.product {
+            width: calc(16.66% - 16.66px);
+        }
+
+        .woocommerce.mobile-columns-5 ul.products li.product,
+        .woocommerce-page.mobile-columns-5 ul.products li.product {
+            width: calc(20% - 16px);
+        }
+
+        .woocommerce.mobile-columns-4 ul.products li.product,
+        .woocommerce-page.mobile-columns-4 ul.products li.product {
+            width: calc(25% - 15px);
+        }
+
+        .woocommerce.mobile-columns-3 ul.products li.product,
+        .woocommerce-page.mobile-columns-3 ul.products li.product {
+            width: calc(33.33% - 14px);
+        }
+
+        .woocommerce.mobile-columns-2 ul.products li.product,
+        .woocommerce-page.mobile-columns-2 ul.products li.product {
+            width: calc(50% - 10px);
+        }
+
+        .woocommerce.mobile-columns-1 ul.products li.product,
+        .woocommerce-page.mobile-columns-1 ul.products li.product {
+            width: 100%;
+        }
+
+        .woocommerce .woocommerce-ordering,
+        .woocommerce-page .woocommerce-ordering {
+            float: none;
+            margin-bottom: 2em;
+            width: 100%;
+        }
+
+        .woocommerce ul.products a.button,
+        .woocommerce-page ul.products a.button {
+            padding: 0.5em 0.75em;
+        }
+
+        .woocommerce div.product .related.products ul.products li.product {
+            width: calc(50% - 10px);
+        }
+
+        .woocommerce table.cart td.actions .button,
+        .woocommerce #content table.cart td.actions .button,
+        .woocommerce-page table.cart td.actions .button,
+        .woocommerce-page #content table.cart td.actions .button {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .woocommerce #content table.cart .button,
+        .woocommerce-page #content table.cart .button {
+            width: 100%;
+        }
+
+        .woocommerce #content table.cart .product-thumbnail,
+        .woocommerce-page #content table.cart .product-thumbnail {
+            display: block;
+            text-align: center !important;
+        }
+
+        .woocommerce #content table.cart .product-thumbnail::before,
+        .woocommerce-page #content table.cart .product-thumbnail::before {
+            display: none;
+        }
+
+        .woocommerce #content table.cart td.actions .coupon,
+        .woocommerce-page #content table.cart td.actions .coupon {
+            float: none;
+        }
+
+        .woocommerce #content table.cart td.actions .coupon .button,
+        .woocommerce-page #content table.cart td.actions .coupon .button {
+            flex: 1;
+        }
+
+        .woocommerce #content div.product .woocommerce-tabs ul.tabs li a,
+        .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a {
+            display: block;
+        }
+    }
+
+    @media (max-width:544px) {
+
+        .woocommerce[class*="columns-"].columns-3>ul.products li.product,
+        .woocommerce[class*="columns-"].columns-4>ul.products li.product,
+        .woocommerce[class*="columns-"].columns-5>ul.products li.product,
+        .woocommerce[class*="columns-"].columns-6>ul.products li.product {
+            width: calc(50% - 10px);
+            margin-right: 20px;
+        }
+
+        .woocommerce-page[class*=columns-] ul.products li.product:nth-child(n),
+        .woocommerce[class*=columns-] ul.products li.product:nth-child(n) {
+            margin-right: 20px;
+            clear: none;
+        }
+
+        .woocommerce-page[class*=columns-].columns-3>ul.products li.product:nth-child(2n),
+        .woocommerce-page[class*=columns-].columns-4>ul.products li.product:nth-child(2n),
+        .woocommerce-page[class*=columns-].columns-5>ul.products li.product:nth-child(2n),
+        .woocommerce-page[class*=columns-].columns-6>ul.products li.product:nth-child(2n),
+        .woocommerce[class*=columns-].columns-3>ul.products li.product:nth-child(2n),
+        .woocommerce[class*=columns-].columns-4>ul.products li.product:nth-child(2n),
+        .woocommerce[class*=columns-].columns-5>ul.products li.product:nth-child(2n),
+        .woocommerce[class*=columns-].columns-6>ul.products li.product:nth-child(2n) {
+            margin-right: 0;
+            clear: right;
+        }
+
+        .woocommerce[class*="columns-"].columns-3>ul.products li.product:nth-child(2n+1),
+        .woocommerce[class*="columns-"].columns-4>ul.products li.product:nth-child(2n+1),
+        .woocommerce[class*="columns-"].columns-5>ul.products li.product:nth-child(2n+1),
+        .woocommerce[class*="columns-"].columns-6>ul.products li.product:nth-child(2n+1) {
+            clear: left;
+        }
+
+        .woocommerce[class*="columns-"] ul.products li.product:nth-child(n),
+        .woocommerce-page[class*="columns-"] ul.products li.product:nth-child(n) {
+            margin-right: 20px;
+            clear: none;
+        }
+
+        .woocommerce.mobile-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce-page.mobile-columns-6 ul.products li.product:nth-child(6n),
+        .woocommerce.mobile-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce-page.mobile-columns-5 ul.products li.product:nth-child(5n),
+        .woocommerce.mobile-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce-page.mobile-columns-4 ul.products li.product:nth-child(4n),
+        .woocommerce.mobile-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce-page.mobile-columns-3 ul.products li.product:nth-child(3n),
+        .woocommerce.mobile-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce-page.mobile-columns-2 ul.products li.product:nth-child(2n),
+        .woocommerce div.product .related.products ul.products li.product:nth-child(2n) {
+            margin-right: 0;
+            clear: right;
+        }
+
+        .woocommerce.mobile-columns-6 ul.products li.product:nth-child(6n+1),
+        .woocommerce-page.mobile-columns-6 ul.products li.product:nth-child(6n+1),
+        .woocommerce.mobile-columns-5 ul.products li.product:nth-child(5n+1),
+        .woocommerce-page.mobile-columns-5 ul.products li.product:nth-child(5n+1),
+        .woocommerce.mobile-columns-4 ul.products li.product:nth-child(4n+1),
+        .woocommerce-page.mobile-columns-4 ul.products li.product:nth-child(4n+1),
+        .woocommerce.mobile-columns-3 ul.products li.product:nth-child(3n+1),
+        .woocommerce-page.mobile-columns-3 ul.products li.product:nth-child(3n+1),
+        .woocommerce.mobile-columns-2 ul.products li.product:nth-child(2n+1),
+        .woocommerce-page.mobile-columns-2 ul.products li.product:nth-child(2n+1),
+        .woocommerce div.product .related.products ul.products li.product:nth-child(2n+1) {
+            clear: left;
+        }
+
+        .woocommerce ul.products a.button.loading::after,
+        .woocommerce-page ul.products a.button.loading::after {
+            display: inline-block;
+            margin-left: 5px;
+            position: initial;
+        }
+
+        .woocommerce.mobile-columns-1 ul.products li.product:nth-child(n),
+        .woocommerce-page.mobile-columns-1 ul.products li.product:nth-child(n) {
+            margin-right: 0;
+        }
+
+        .woocommerce #content div.product .woocommerce-tabs ul.tabs li,
+        .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+            display: block;
+            margin-right: 0;
+        }
+    }
+
+    @media (min-width:922px) {
+
+        .woocommerce #content .ast-woocommerce-container div.product div.images,
+        .woocommerce .ast-woocommerce-container div.product div.images,
+        .woocommerce-page #content .ast-woocommerce-container div.product div.images,
+        .woocommerce-page .ast-woocommerce-container div.product div.images {
+            width: 50%;
+        }
+
+        .woocommerce #content .ast-woocommerce-container div.product div.summary,
+        .woocommerce .ast-woocommerce-container div.product div.summary,
+        .woocommerce-page #content .ast-woocommerce-container div.product div.summary,
+        .woocommerce-page .ast-woocommerce-container div.product div.summary {
+            width: 46%;
+        }
+
+        .woocommerce.woocommerce-checkout form #customer_details.col2-set .col-1,
+        .woocommerce.woocommerce-checkout form #customer_details.col2-set .col-2,
+        .woocommerce-page.woocommerce-checkout form #customer_details.col2-set .col-1,
+        .woocommerce-page.woocommerce-checkout form #customer_details.col2-set .col-2 {
+            float: none;
+            width: auto;
+        }
+    }
+
+    .woocommerce a.button,
+    .woocommerce button.button.alt,
+    .woocommerce-page table.cart td.actions .button,
+    .woocommerce-page #content table.cart td.actions .button,
+    .woocommerce a.button.alt,
+    .woocommerce .woocommerce-message a.button,
+    .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout,
+    .woocommerce button.button.alt.disabled,
+    .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+        border: solid;
+        border-top-width: 0;
+        border-right-width: 0;
+        border-left-width: 0;
+        border-bottom-width: 0;
+        border-color: #1dd660;
+    }
+
+    .woocommerce a.button:hover,
+    .woocommerce button.button.alt:hover,
+    .woocommerce-page table.cart td.actions .button:hover,
+    .woocommerce-page #content table.cart td.actions .button:hover,
+    .woocommerce a.button.alt:hover,
+    .woocommerce .woocommerce-message a.button:hover,
+    .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout:hover,
+    .woocommerce button.button.alt.disabled:hover,
+    .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+        border-color: #17ac4d;
+    }
+
+    @media (min-width:922px) {
+
+        .woocommerce.woocommerce-checkout form #customer_details.col2-set,
+        .woocommerce-page.woocommerce-checkout form #customer_details.col2-set {
+            width: 55%;
+            float: left;
+            margin-right: 4.347826087%;
+        }
+
+        .woocommerce.woocommerce-checkout form #order_review,
+        .woocommerce.woocommerce-checkout form #order_review_heading,
+        .woocommerce-page.woocommerce-checkout form #order_review,
+        .woocommerce-page.woocommerce-checkout form #order_review_heading {
+            width: 40%;
+            float: right;
+            margin-right: 0;
+            clear: right;
+        }
+    }
+</style>
+{% endblock %}
+{% block content %}
+<!--Previous start-->
+<div id="content" class="site-content">
+    <div class="ast-container">
+        <div id="primary" class="content-area primary">
+            <main id="main" class="site-main">
+                <article class="post-8 page type-page status-publish ast-article-single" id="post-8"
+                    itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+                    <header class="entry-header ast-header-without-markup"> </header>
+                    <div class="entry-content clear" itemprop="text">
+                        <div data-elementor-type="wp-page" data-elementor-id="8" class="elementor elementor-8"
+                            data-elementor-settings="[]">
+                            <div class="elementor-inner">
+                                <div class="elementor-section-wrap">
+                                    <section
+                                        class="elementor-section elementor-top-section elementor-element elementor-element-182814da elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                        data-id="182814da" data-element_type="section">
+                                        <div class="elementor-container elementor-column-gap-default">
+                                            <div class="elementor-row">
+                                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-201a8bb1"
+                                                    data-id="201a8bb1" data-element_type="column">
+                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-widget-wrap">
+                                                            <div class="elementor-element elementor-element-d639bd6 elementor-widget elementor-widget-heading"
+                                                                data-id="d639bd6" data-element_type="widget"
+                                                                data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <h2
+                                                                        class="elementor-heading-title elementor-size-default">
+                                                                        <font style="vertical-align: inherit;">
+                                                                            <font style="vertical-align: inherit;">Your
+                                                                                shopping cart </font>
+                                                                        </font>
+                                                                    </h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-71e06a2 wl-product-image-show-yes wl-product-image-show-tablet-yes wl-product-image-show-mobile-yes wl-product-name-show-yes wl-product-name-show-tablet-yes wl-product-name-show-mobile-yes wl-product-category-show-tablet-yes wl-product-category-show-mobile-no wl-product-price-show-yes wl-product-price-show-tablet-yes wl-product-price-show-mobile-yes wl-product-quantity-show-yes wl-product-quantity-show-tablet-yes wl-product-quantity-show-mobile-yes wl-product-subtotal-show-yes wl-product-subtotal-show-tablet-yes wl-product-subtotal-show-mobile-yes wl-product-remove-show-yes wl-product-remove-show-tablet-yes wl-product-remove-show-mobile-yes elementor-widget elementor-widget-cart-items"
+                                                                data-id="71e06a2" data-element_type="widget"
+                                                                data-widget_type="cart-items.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="woocommerce-notices-wrapper"></div>
+                                                                    <div class="wl-ci">
+                                                                        <div class="wl-ci-product-style">
+                                                                            <div class="cx-container">
+                                                                                <div class="cx-row">
+                                                                                    <div
+                                                                                        class="cx-col-md-12 cx-col-sm-12">
+                                                                                        <div class="woocommerce">
+                                                                                            <form
+                                                                                                class="woocommerce-cart-form wl-ci-cart-form"
+                                                                                                action="https://spotiglass.nl/cart/"
+                                                                                                method="post">
+                                                                                                <table
+                                                                                                    class="shop_table cart woocommerce-cart-form__contents wl-ci-cart-table"
+                                                                                                    cellspacing="0">
+                                                                                                    <thead class="">
+                                                                                                        <tr
+                                                                                                            class="wl-ci-heading-nav">
+                                                                                                            <th
+                                                                                                                class="product-thumbnail wl-product-thumbnail wl-ci-heading">
+                                                                                                            </th>
+                                                                                                            <th
+                                                                                                                class="product-name wl-product-name wl-ci-heading">
+                                                                                                                <font
+                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                    <font
+                                                                                                                        style="vertical-align: inherit;">
+                                                                                                                        Order
+                                                                                                                    </font>
+                                                                                                                </font>
+                                                                                                            </th>
+                                                                                                            <th
+                                                                                                                class="product-price wl-product-price wl-ci-heading">
+                                                                                                                <font
+                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                    <font
+                                                                                                                        style="vertical-align: inherit;">
+                                                                                                                        price
+                                                                                                                    </font>
+                                                                                                                </font>
+                                                                                                            </th>
+
+                                                                                                            <th
+                                                                                                                class="product-quantity wl-product-quantity wl-ci-heading">
+                                                                                                                <font
+                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                    <font
+                                                                                                                        style="vertical-align: inherit;">
+                                                                                                                        Quantity
+                                                                                                                    </font>
+                                                                                                                </font>
+                                                                                                            </th>
+                                                                                                            <th
+                                                                                                                class="product-subtotal wl-product-subtotal wl-ci-heading">
+                                                                                                                <font
+                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                    <font
+                                                                                                                        style="vertical-align: inherit;">
+                                                                                                                        Subtotal
+                                                                                                                    </font>
+                                                                                                                </font>
+                                                                                                            </th>
+                                                                                                            <th
+                                                                                                                class="product-remove wl-product-remove wl-ci-heading">
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                    </thead>
+                                                                                                    <tbody>
+                                                                                                        <tr
+                                                                                                            class="woocommerce-cart-form__cart-item cart_item tm-epo-cart-row-product-noepo">
+                                                                                                            <td class="product-thumbnail wl-ci-product-thumbnail"
+                                                                                                                data-title="Thumbnail">
+                                                                                                                <img width="300"
+                                                                                                                    height="300"
+                                                                                                                    src="https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-300x300.jpg"
+                                                                                                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                                                    alt=""
+                                                                                                                    loading="lazy"
+                                                                                                                    srcset="https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-300x300.jpg 300w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-1024x1024.jpg 1024w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-150x150.jpg 150w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-768x768.jpg 768w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-1536x1536.jpg 1536w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-400x400.jpg 400w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-600x600.jpg 600w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-100x100.jpg 100w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6-60x60.jpg 60w, https://spotiglass.nl/wp-content/uploads/2020/11/sg-fb-im6.jpg 1600w"
+                                                                                                                    sizes="(max-width: 300px) 100vw, 300px">
+                                                                                                            </td>
+                                                                                                            <td class="product-name wl-ci-product-name"
+                                                                                                                data-title="Product">
+                                                                                                                <a
+                                                                                                                    href="https://spotiglass.nl/product/spotiglass-artwork/">
+                                                                                                                    <font
+                                                                                                                        style="vertical-align: inherit;">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            Make
+                                                                                                                            my
+                                                                                                                            Spotiglass
+                                                                                                                        </font>
+                                                                                                                    </font>
+                                                                                                                </a>
+                                                                                                                <a href="https://spotiglass.nl/product/spotiglass-artwork/?tm_cart_item_key=1344c72c3b692524cd04f71742225873&amp;cart_item_key=1344c72c3b692524cd04f71742225873&amp;_wpnonce=24b48cc8a3"
+                                                                                                                    class="tm-cart-edit-options">
+                                                                                                                    <font
+                                                                                                                        style="vertical-align: inherit;">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            Edit
+                                                                                                                            options
+                                                                                                                        </font>
+                                                                                                                    </font>
+                                                                                                                </a>
+                                                                                                                <dl
+                                                                                                                    class="tc-epo-metadata variation">
+                                                                                                                    <dt
+                                                                                                                        class="tc-name variation-1Uploadcoverfotovierkant11">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                1.
+                                                                                                                                Upload
+                                                                                                                                cover
+                                                                                                                                /
+                                                                                                                                photo
+                                                                                                                                (square
+                                                                                                                                1:
+                                                                                                                                1):
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </dt>
+                                                                                                                    <dd
+                                                                                                                        class="tc-value variation-1Uploadcoverfotovierkant11">
+                                                                                                                        <p>
+                                                                                                                            <span
+                                                                                                                                class="cpf-img-on-cart">
+                                                                                                                                <img alt="1. Upload cover / photo (square 1: 1)"
+                                                                                                                                    class="attachment-shop_thumbnail wp-post-image epo-option-image epo-upload-image"
+                                                                                                                                    src="https://spotiglass.nl/wp-content/uploads/extra_product_options/d6323ec03a12dbf767146a227633a34d/140707597_1106947423091586_2800284265149811398_n.jpg">
+                                                                                                                            </span>
+                                                                                                                        </p>
+                                                                                                                    </dd>
+                                                                                                                    <dt
+                                                                                                                        class="tc-name variation-Titel">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                Title:
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </dt>
+                                                                                                                    <dd
+                                                                                                                        class="tc-value variation-Titel">
+                                                                                                                        <p>
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                <font
+                                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                                    dfdf
+                                                                                                                                </font>
+                                                                                                                            </font>
+                                                                                                                        </p>
+                                                                                                                    </dd>
+                                                                                                                    <dt
+                                                                                                                        class="tc-name variation-Artiestennaam">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                Artist
+                                                                                                                                name:
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </dt>
+                                                                                                                    <dd
+                                                                                                                        class="tc-value variation-Artiestennaam">
+                                                                                                                        <p>
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                <font
+                                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                                    faffaf
+                                                                                                                                </font>
+                                                                                                                            </font>
+                                                                                                                        </p>
+                                                                                                                    </dd>
+                                                                                                                </dl>
+                                                                                                                <div
+                                                                                                                    class="product-category wl-ci-cart-category">
+                                                                                                                    <span>
+                                                                                                                    </span>
+                                                                                                                    <a href="https://spotiglass.nl/product-category/custom/"
+                                                                                                                        rel="tag">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                Custom
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </a>
+                                                                                                                </div>
+                                                                                                            </td>
+                                                                                                            <td class="product-price wl-ci-product-price"
+                                                                                                                data-title="Prijs">
+                                                                                                                <span
+                                                                                                                    class="woocommerce-Price-amount amount">
+                                                                                                                    <bdi>
+                                                                                                                        <span
+                                                                                                                            class="woocommerce-Price-currencySymbol">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                <font
+                                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                                    USD
+                                                                                                                                </font>
+                                                                                                                            </font>
+                                                                                                                        </span>
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                39.95
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </bdi>
+                                                                                                                </span>
+                                                                                                            </td>
+                                                                                                            <td class="product-quantity wl-ci-product-quantity"
+                                                                                                                data-title="Aantal">
+                                                                                                                <div
+                                                                                                                    class="quantity buttons_added">
+                                                                                                                    <font
+                                                                                                                        style="vertical-align: inherit;">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <input
+                                                                                                                                type="button"
+                                                                                                                                value="-"
+                                                                                                                                class="minus">
+                                                                                                                        </font>
+                                                                                                                    </font>
+                                                                                                                    <label
+                                                                                                                        class="screen-reader-text"
+                                                                                                                        for="quantity_602afb55af7ab">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                Make
+                                                                                                                                my
+                                                                                                                                Spotiglass
+                                                                                                                                number
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </label>
+                                                                                                                    <input
+                                                                                                                        type="number"
+                                                                                                                        id="quantity_602afb55af7ab"
+                                                                                                                        class="input-text qty text"
+                                                                                                                        step="1"
+                                                                                                                        min="0"
+                                                                                                                        max=""
+                                                                                                                        name="cart[1344c72c3b692524cd04f71742225873][qty]"
+                                                                                                                        value="2"
+                                                                                                                        title="Number"
+                                                                                                                        size="4"
+                                                                                                                        placeholder=""
+                                                                                                                        inputmode="numeric">
+                                                                                                                    <font
+                                                                                                                        style="vertical-align: inherit;">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <input
+                                                                                                                                type="button"
+                                                                                                                                value="+"
+                                                                                                                                class="plus">
+                                                                                                                        </font>
+                                                                                                                    </font>
+                                                                                                                </div>
+                                                                                                            </td>
+                                                                                                            <td class="product-subtotal wl-ci-product-subtotal"
+                                                                                                                data-title="Subtotaal">
+                                                                                                                <span
+                                                                                                                    class="woocommerce-Price-amount amount">
+                                                                                                                    <bdi>
+                                                                                                                        <span
+                                                                                                                            class="woocommerce-Price-currencySymbol">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                <font
+                                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                                    €
+                                                                                                                                </font>
+                                                                                                                            </font>
+                                                                                                                        </span>
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                79.90
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </bdi>
+                                                                                                                </span>
+                                                                                                            </td>
+                                                                                                            <td
+                                                                                                                class="product-remove wl-ci-product-remove">
+                                                                                                                <a href="https://spotiglass.nl/cart/?remove_item=1344c72c3b692524cd04f71742225873&amp;_wpnonce=f3a8e92c77"
+                                                                                                                    class="remove"
+                                                                                                                    aria-label="Remove this item"
+                                                                                                                    data-product_id="296"
+                                                                                                                    data-product_sku="">
+                                                                                                                    <i
+                                                                                                                        class="fas fa-trash"></i>
+                                                                                                                </a>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td colspan="6"
+                                                                                                                class="actions wl-bottom-actions">
+                                                                                                                <div
+                                                                                                                    class="coupon wl-ci-coupon">
+                                                                                                                    <label
+                                                                                                                        for="coupon_code">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                Discount
+                                                                                                                                coupon:
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </label>
+                                                                                                                    <input
+                                                                                                                        type="text"
+                                                                                                                        name="coupon_code"
+                                                                                                                        class="wl-ci-coupon-field"
+                                                                                                                        id="coupon_code"
+                                                                                                                        value=""
+                                                                                                                        placeholder="Coupon code">
+
+                                                                                                                    <button
+                                                                                                                        class="button wl-ci-coupon-button"
+                                                                                                                        type="submit"
+                                                                                                                        name="apply_coupon"
+                                                                                                                        value="Toepassen">
+                                                                                                                        <font
+                                                                                                                            style="vertical-align: inherit;">
+                                                                                                                            <font
+                                                                                                                                style="vertical-align: inherit;">
+                                                                                                                                To
+                                                                                                                                apply
+                                                                                                                            </font>
+                                                                                                                        </font>
+                                                                                                                    </button>
+                                                                                                                </div>
+
+                                                                                                                <div
+                                                                                                                    class="wl-ci-btns">
+                                                                                                                </div>
+                                                                                                                <input
+                                                                                                                    type="hidden"
+                                                                                                                    id="woocommerce-cart-nonce"
+                                                                                                                    name="woocommerce-cart-nonce"
+                                                                                                                    value="f3a8e92c77">
+                                                                                                                <input
+                                                                                                                    type="hidden"
+                                                                                                                    name="_wp_http_referer"
+                                                                                                                    value="/cart/?removed_item=1">
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-874fc43"
+                                                    data-id="874fc43" data-element_type="column">
+                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-widget-wrap">
+                                                            <div class="elementor-element elementor-element-d120ed7 elementor-widget elementor-widget-cart-overview"
+                                                                data-id="d120ed7" data-element_type="widget"
+                                                                data-widget_type="cart-overview.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="wl-cart-overview">
+                                                                        <div class="cart_totals calculated_shipping">
+
+                                                                            <h2 class="wl-co-title">
+                                                                                <font style="vertical-align: inherit;">
+                                                                                    <font
+                                                                                        style="vertical-align: inherit;">
+                                                                                        Shopping cart Total</font>
+                                                                                </font>
+                                                                            </h2>
+                                                                            <table cellspacing="0"
+                                                                                class="shop_table shop_table_responsive">
+
+                                                                                <tbody>
+                                                                                    <tr class="cart-subtotal">
+                                                                                        <th>
+                                                                                            <font
+                                                                                                style="vertical-align: inherit;">
+                                                                                                <font
+                                                                                                    style="vertical-align: inherit;">
+                                                                                                    Subtotal</font>
+                                                                                            </font>
+                                                                                        </th>
+                                                                                        <td data-title="Subtotaal"><span
+                                                                                                class="woocommerce-Price-amount amount"><bdi><span
+                                                                                                        class="woocommerce-Price-currencySymbol">
+                                                                                                        <font
+                                                                                                            style="vertical-align: inherit;">
+                                                                                                            <font
+                                                                                                                style="vertical-align: inherit;">
+                                                                                                                €</font>
+                                                                                                        </font>
+                                                                                                    </span>
+                                                                                                    <font
+                                                                                                        style="vertical-align: inherit;">
+                                                                                                        <font
+                                                                                                            style="vertical-align: inherit;">
+                                                                                                            79.90</font>
+                                                                                                    </font>
+                                                                                                </bdi></span></td>
+                                                                                    </tr>
+                                                                                    <tr class="order-total">
+                                                                                        <th>
+                                                                                            <font
+                                                                                                style="vertical-align: inherit;">
+                                                                                                <font
+                                                                                                    style="vertical-align: inherit;">
+                                                                                                    Total</font>
+                                                                                            </font>
+                                                                                        </th>
+                                                                                        <td data-title="Totaal">
+                                                                                            <strong>
+                                                                                                <span
+                                                                                                    class="woocommerce-Price-amount amount">
+                                                                                                    <bdi>
+                                                                                                        <span
+                                                                                                            class="woocommerce-Price-currencySymbol">
+                                                                                                            <font
+                                                                                                                style="vertical-align: inherit;">
+                                                                                                                <font
+                                                                                                                    style="vertical-align: inherit;">
+                                                                                                                    €
+                                                                                                                </font>
+                                                                                                            </font>
+                                                                                                        </span>
+                                                                                                        <font
+                                                                                                            style="vertical-align: inherit;">
+                                                                                                            <font
+                                                                                                                style="vertical-align: inherit;">
+                                                                                                                79.90
+                                                                                                            </font>
+                                                                                                        </font>
+                                                                                                    </bdi>
+                                                                                                </span>
+                                                                                            </strong>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <div class="wc-proceed-to-checkout">
+                                                                                <a href="https://spotiglass.nl/checkout/"
+                                                                                    class="checkout-button button alt wc-forward">
+                                                                                    <font
+                                                                                        style="vertical-align: inherit;">
+                                                                                        <font
+                                                                                            style="vertical-align: inherit;">
+                                                                                            Continue to checkout</font>
+                                                                                    </font>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .entry-content .clear -->
+                </article><!-- #post-## -->
+            </main><!-- #main -->
+        </div><!-- #primary -->
+    </div> <!-- ast-container -->
+</div>
+<!--Enddd-->
+{% endblock %}

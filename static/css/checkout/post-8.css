@@ -1,0 +1,262 @@
+.elementor-8
+  .elementor-element.elementor-element-182814da
+  > .elementor-container {
+  max-width: 1200px;
+}
+.elementor-8
+  .elementor-element.elementor-element-201a8bb1
+  > .elementor-element-populated {
+  margin: 0% 4% 0% 0%;
+}
+.elementor-8
+  .elementor-element.elementor-element-d639bd6
+  .elementor-heading-title {
+  font-family: "Work Sans", Sans-serif;
+  font-weight: 500;
+}
+.elementor-8
+  .elementor-element.elementor-element-d639bd6
+  > .tippy-popper
+  .tippy-tooltip
+  .tippy-content {
+  text-align: center;
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .wl-ci-product-style
+  table
+  thead
+  tr
+  th.wl-product-thumbnail {
+  display: yes;
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .wl-ci-product-style
+  table
+  tbody
+  tr
+  td.wl-ci-product-thumbnail {
+  display: yes;
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  thead
+  tr.wl-ci-heading-nav
+  th.wl-ci-heading {
+  color: var(--e-global-color-primary);
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .product-thumbnail.wl-ci-product-thumbnail
+  img {
+  width: 100px;
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .wl-ci-product-name.product-name
+  > a {
+  color: var(--e-global-color-primary);
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .wl-ci-cart-category
+  span {
+  color: var(--e-global-color-primary);
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .product-price.wl-ci-product-price
+  .woocommerce-Price-amount.amount {
+  color: var(--e-global-color-primary);
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .product-quantity.wl-ci-product-quantity
+  .input-text.qty.text {
+  color: var(--e-global-color-primary);
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .product-subtotal.wl-ci-product-subtotal
+  .woocommerce-Price-amount.amount {
+  color: var(--e-global-color-primary);
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .button.wl-ci-coupon-button {
+  border-radius: 50px 50px 50px 50px;
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .button.wl-ci-update-cart-button {
+  font-family: "Work Sans", Sans-serif;
+  font-weight: 400;
+  border-radius: 50px 50px 50px 50px;
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  .wl-ci-proceed-to-checkout
+  .button.checkout-button {
+  font-family: "Work Sans", Sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  color: var(--e-global-color-85a6da8);
+  background: #1dd660;
+}
+.elementor-8
+  .elementor-element.elementor-element-71e06a2
+  > .tippy-popper
+  .tippy-tooltip
+  .tippy-content {
+  text-align: center;
+}
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  .wc-proceed-to-checkout
+  a.checkout-button {
+  display: block;
+  padding: 013px 0px 13px 0px;
+  border-radius: 50px 50px 50px 50px;
+}
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  .wl-cart-overview
+  .cart_totals
+  .wl-co-title {
+  text-align: center;
+}
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  .wl-cart-overview
+  .cart_totals
+  .elementor-inline-editing {
+  text-align: center;
+}
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  .wl-cart-overview
+  .cart_totals
+  .wl-co-title,
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  .wl-cart-overview
+  .cart_totals
+  .elementor-inline-editing {
+  font-family: "Work Sans", Sans-serif;
+  font-weight: 600;
+  color: var(--e-global-color-primary);
+}
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  .wl-cart-overview
+  table
+  tr
+  td {
+  text-align: left;
+}
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  .wl-cart-overview
+  table
+  tr
+  th {
+  text-align: left;
+  color: var(--e-global-color-primary);
+}
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  .wl-cart-overview
+  .wc-proceed-to-checkout
+  a.checkout-button {
+  font-family: "Work Sans", Sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #1dd660;
+}
+.elementor-8
+  .elementor-element.elementor-element-d120ed7
+  > .tippy-popper
+  .tippy-tooltip
+  .tippy-content {
+  text-align: center;
+}
+.elementor-8 .elementor-element.elementor-element-182814da {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+@media (max-width: 1024px) {
+  .elementor-8
+    .elementor-element.elementor-element-71e06a2
+    .wl-ci-product-style
+    table
+    thead
+    tr
+    th.wl-product-thumbnail {
+    display: yes;
+  }
+  .elementor-8
+    .elementor-element.elementor-element-71e06a2
+    .wl-ci-product-style
+    table
+    tbody
+    tr
+    td.wl-ci-product-thumbnail {
+    display: yes;
+  }
+  .elementor-8 .elementor-element.elementor-element-182814da {
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+}
+@media (min-width: 768px) {
+  .elementor-8 .elementor-element.elementor-element-201a8bb1 {
+    width: 70%;
+  }
+  .elementor-8 .elementor-element.elementor-element-874fc43 {
+    width: 30%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .elementor-8 .elementor-element.elementor-element-201a8bb1 {
+    width: 100%;
+  }
+  .elementor-8 .elementor-element.elementor-element-874fc43 {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-8
+    .elementor-element.elementor-element-201a8bb1
+    > .elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+  }
+  .elementor-8 .elementor-element.elementor-element-d639bd6 {
+    text-align: center;
+  }
+  .elementor-8
+    .elementor-element.elementor-element-71e06a2
+    .wl-ci-product-style
+    table
+    thead
+    tr
+    th.wl-product-thumbnail {
+    display: yes;
+  }
+  .elementor-8
+    .elementor-element.elementor-element-71e06a2
+    .wl-ci-product-style
+    table
+    tbody
+    tr
+    td.wl-ci-product-thumbnail {
+    display: yes;
+  }
+  .elementor-8
+    .elementor-element.elementor-element-d120ed7
+    > .elementor-widget-container {
+    margin: 1px 0px 0px 0px;
+  }
+}

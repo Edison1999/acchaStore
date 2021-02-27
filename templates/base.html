@@ -12,7 +12,7 @@
     <!--Agregado desde index-->
     <link rel="stylesheet" id="astra-theme-css-css" href="{% static 'css/style.min.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="astra-theme-css-css" href="{% static 'css/style.min2.css' %}?20090712" media="all"/>
-    <link id="astra-theme-css-inline-css"href="{% static 'css/astra-theme-css-inline.css' %}?20090712" media="all">
+   <!-- <link id="astra-theme-css-inline-css"href="{% static 'css/astra-theme-css-inline.css' %}?20090712" media="all"> -->
     <link rel="stylesheet" id="elementor-icons-shared-0-css" href="{% static 'css/fontawesome.min.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="{% static 'css/solid.min.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="elementor-icons-fa-regular-css" href="{% static 'css/regular.min.css' %}?20090712" media="all" />
@@ -28,15 +28,17 @@
     <link rel="stylesheet" id="elementor-post-21-css" href="{% static 'css/post-21.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CKarla%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.5.3" media="all"/>
     <link rel="stylesheet" id="elementor-icons-fa-brands-css" href="{% static 'css/brands.min.css' %}?20090712" media="all"/>
-    <title>Acchastore</title>
   
+    
   {% block extra_links %}
   {% endblock %}
 
   <title>{% block head_title %}{% endblock %}</title>
+
+  
 </head>
 
-<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="home page-template-default page page-id-31 wp-custom-logo woolementor wl theme-astra woocommerce-js ast-desktop ast-page-builder-template ast-no-sidebar astra-2.6.1 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent jet-desktop-menu-active elementor-default elementor-kit-5 elementor-page elementor-page-31" style="" data-elementor-device-mode="desktop">
+<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="home page-template-default page page-id-31 wp-custom-logo woolementor wl theme-astra woocommerce-js ast-desktop ast-page-builder-template ast-no-sidebar astra-2.6.1 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent jet-desktop-menu-active elementor-default elementor-kit-5 elementor-page elementor-page-31 woocommerce-page woocommerce-cart" style="" data-elementor-device-mode="desktop">
     <div class="hfeed site" id="page">
       <a class="skip-link screen-reader-text" href="#content">Ir al contenido</a>
   <!-- Page Header-->
@@ -187,19 +189,19 @@
                                     data-widget_type="theme-site-logo.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-image">
-                                        <a href="#">
+                                        <a href="{% url 'core:home' %}">
                                           <img
                                             width="654"
                                             height="110"
-                                            src="{% static 'images/Bilder/SpotiGlass-logo.png' %}" 
+                                            src="{% static 'images/logoweb.png' %}" 
                                             class="attachment-full size-full"
                                             alt=""
                                             loading="lazy"
                                             srcset="
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo.png         654w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-300x50.png  300w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-600x101.png 600w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-60x10.png    60w
+                                              {% static 'images/logoweb.png' %} 654w,
+                                              {% static 'images/logoweb.png' %} 300w,
+                                              {% static 'images/logoweb.png' %} 600w,
+                                              {% static 'images/logoweb.png' %} 60w
                                             "
                                             sizes="(max-width: 654px) 100vw, 654px"
                                           />
@@ -351,7 +353,7 @@
                                           <li
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-326">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:home' %}"
                                               class="menu-link elementor-item"
                                               >Acchastore</a>
                                           </li>
@@ -366,14 +368,14 @@
                                           <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:nosotros_page' %}"
                                               class="menu-link elementor-item"
                                               >Sobre Nosotros</a>
                                           </li>
                                           <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:contacto_page' %}"
                                               class="menu-link elementor-item"
                                               >Contacto</a>
                                           </li>
@@ -468,19 +470,19 @@
                                     data-widget_type="theme-site-logo.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-image">
-                                        <a href="#">
+                                        <a href="{% url 'core:home' %}">
                                           <img
                                             width="654"
                                             height="110"
-                                            src="https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo.png"
+                                            src="{% static 'images/logoweb.png' %}"
                                             class="attachment-full size-full"
                                             alt=""
                                             loading="lazy"
                                             srcset="
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo.png         654w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-300x50.png  300w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-600x101.png 600w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-60x10.png    60w
+                                              {% static 'images/logoweb.png' %} 654w,
+                                              {% static 'images/logoweb.png' %} 300w,
+                                              {% static 'images/logoweb.png' %} 600w,
+                                              {% static 'images/logoweb.png' %} 60w
                                             "
                                             sizes="(max-width: 654px) 100vw, 654px"
                                           />
@@ -667,19 +669,19 @@
                                     data-widget_type="theme-site-logo.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-image">
-                                        <a href="#">
+                                        <a href="{% url 'core:home' %}">
                                           <img
                                             width="654"
                                             height="110"
-                                            src="https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo.png"
+                                            src="{% static 'images/logoweb.png' %}"
                                             class="attachment-full size-full"
                                             alt=""
                                             loading="lazy"
                                             srcset="
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo.png         654w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-300x50.png  300w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-600x101.png 600w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/SpotiGlass-logo-60x10.png    60w
+                                              {% static 'images/logoweb.png' %}         654w,
+                                              {% static 'images/logoweb.png' %}  300w,
+                                              {% static 'images/logoweb.png' %} 600w,
+                                              {% static 'images/logoweb.png' %}    60w
                                             "
                                             sizes="(max-width: 654px) 100vw, 654px"
                                           />
@@ -713,21 +715,21 @@
                                           <li
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-326">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:home' %}"
                                               class="menu-link elementor-item"
                                               >Acchastore</a>
                                           </li>
                                           <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:nosotros_page' %}"
                                               class="menu-link elementor-item"
                                               >Sobre Nosotros</a>
                                           </li>
                                           <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:contacto_page' %}"
                                               class="menu-link elementor-item"
                                               >Contacto</a>
                                           </li>
@@ -758,28 +760,21 @@
                                           <li
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-326">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:home' %}"
                                               class="menu-link elementor-item"
                                               >Acchastore</a>
                                           </li>
                                           <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1039">
-                                            <a
-                                              href="#"
-                                              class="menu-link elementor-item"
-                                              >Seguimiento &#038; Rastreo</a>
-                                          </li>
-                                          <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:nosotros_page' %}"
                                               class="menu-link elementor-item"
                                               >Sobre Nosotros</a>
                                           </li>
                                           <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734">
                                             <a
-                                              href="#"
+                                              href="{% url 'core:contacto_page' %}"
                                               class="menu-link elementor-item"
                                               >Contacto</a>
                                           </li>
