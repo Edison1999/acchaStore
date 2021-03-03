@@ -702,8 +702,7 @@
             }
         }
 
-        .wp-block-button .wp-block-button__link,
-            {
+        .wp-block-button .wp-block-button__link{
             color: #ffffff;
         }
 
@@ -2042,14 +2041,26 @@
                                             data-id="1cd82c7c" data-element_type="widget"
                                             data-widget_type="woocommerce-product-price.default">
                                             <div class="elementor-widget-container">
-                                                <p class="price"><del><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">$</span>19.95</bdi></span></del>
-                                                    <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol"></span>13.95</bdi></span></ins>
+                                                
+                                                <p class="price">
+                                                    <del>
+                                                        <span class="woocommerce-Price-amount amount">
+                                                            <bdi>
+                                                                <span class="woocommerce-Price-currencySymbol">$</span>
+                                                                {{ items.price }}
+                                                            </bdi>
+                                                        </span>
+                                                    </del>
+                                                    <ins>
+                                                        <span class="woocommerce-Price-amount amount">
+                                                            <bdi><span class="woocommerce-Price-currencySymbol"></span>{{items.discount_price}}</bdi>
+                                                        </span>
+                                                    </ins>
                                                 </p>
+                                                
                                             </div>
                                         </div>
+                                       
                                         <div class="elementor-element elementor-element-7dab2d8e elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list is-mac"
                                             data-id="7dab2d8e" data-element_type="widget"
                                             data-widget_type="icon-list.default">
@@ -2093,17 +2104,8 @@
                                                                             class="elementor-add-to-cart elementor-product-simple tc-init">
 
 
-                                                                            <form class="cart"
-                                                                                action="https://spotiglass.nl/product/spotiglass-artwork/"
-                                                                                method="post"
-                                                                                enctype="multipart/form-data"
-                                                                                novalidate="novalidate">
-                                                                                <input type="hidden"
-                                                                                    class="tm-epo-counter"
-                                                                                    name="tm-epo-counter"
-                                                                                    value="1"><input type="hidden"
-                                                                                    class="tc-add-to-cart"
-                                                                                    name="tcaddtocart" value="296">
+                                                                            <form class="cart" enctype="multipart/form-data" method="POST"  action="{{ items.get_add_to_cart_url }}">
+                                                                                {% csrf_token %} 
                                                                                 <div data-epo-id="1" data-cart-id="main"
                                                                                     data-product-id="296"
                                                                                     class="tc-extra-product-options tm-extra-product-options tm-custom-prices tc-clearfix tm-product-id-296 tm-cart-main tc-show"
@@ -2145,37 +2147,16 @@
                                                                                                                                 </h5>
                                                                                                                                 <div
                                                                                                                                     class="tc-cell tc-col tm-extra-product-options-container">
-                                                                                                                                    <ul data-rules="[[&quot;&quot;]]"
-                                                                                                                                        data-original-rules="[[&quot;&quot;]]"
-                                                                                                                                        data-rulestype="[[&quot;&quot;]]"
-                                                                                                                                        data-tm-validation="{&quot;required&quot;:true}"
-                                                                                                                                        class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-upload tm-element-ul-upload element_0">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label cpf-upload-container"
-                                                                                                                                                for="tmcp_upload_1602b06ae35cd9">
-                                                                                                                                                <span>Seleccionar
-                                                                                                                                                    archivo</span>
-                                                                                                                                                <input
-                                                                                                                                                    type="file"
-                                                                                                                                                    class="tmcp-field tm-epo-field tmcp-upload tcenabled tc-nodt"
-                                                                                                                                                    accept=".jpg, .jpeg, .jpe, .gif, .png, .bmp, .tiff, .tif, .ico, .heic, .asf, .asx, .wmv, .wmx, .wm, .avi, .divx, .flv, .mov, .qt, .mpeg, .mpg, .mpe, .mp4, .m4v, .ogv, .webm, .mkv, .3gp, .3gpp, .3g2, .3gp2, .txt, .asc, .c, .cc, .h, .srt, .csv, .tsv, .ics, .rtx, .css, .htm, .html, .vtt, .dfxp, .mp3, .m4a, .m4b, .aac, .ra, .ram, .wav, .ogg, .oga, .flac, .mid, .midi, .wma, .wax, .mka, .rtf, .js, .pdf, .swf, .class, .tar, .zip, .gz, .gzip, .rar, .7z, .exe, .psd, .xcf, .doc, .pot, .pps, .ppt, .wri, .xla, .xls, .xlt, .xlw, .mdb, .mpp, .docx, .docm, .dotx, .dotm, .xlsx, .xlsm, .xlsb, .xltx, .xltm, .xlam, .pptx, .pptm, .ppsx, .ppsm, .potx, .potm, .ppam, .sldx, .sldm, .onetoc, .onetoc2, .onetmp, .onepkg, .oxps, .xps, .odt, .odp, .ods, .odg, .odc, .odb, .odf, .wp, .wpd, .key, .numbers, .pages"
-                                                                                                                                                    data-file=""
-                                                                                                                                                    data-filename=""
-                                                                                                                                                    data-price=""
-                                                                                                                                                    data-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-original-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-rulestype="[[&quot;&quot;]]"
-                                                                                                                                                    id="tmcp_upload_1602b06ae35cd9"
-                                                                                                                                                    name="tmcp_upload_0"
-                                                                                                                                                    required="">
+                                                                                                                                    <ul class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-upload tm-element-ul-upload element_0">
+                                                                                                                                        <li class="tmcp-field-wrap">
+                                                                                                                                            {{ form.image_upload.errors }}
+                                                                                                                                            <label class="tm-epo-field-label cpf-upload-container" for="{{ form.image_upload.id_for_label }}">
+                                                                                                                                                <span>Seleccionar archivo</span>
+                                                                                                                                                {{ form.image_upload }}
                                                                                                                                             </label>
                                                                                                                                             <small>(tamaño max. del archivo: 6 GB)</small>
-                                                                                                                                            <span
-                                                                                                                                                class="tc-price-wrap">
-                                                                                                                                                <span
-                                                                                                                                                    class="price tc-price "></span>
+                                                                                                                                            <span class="tc-price-wrap">
+                                                                                                                                                <span class="price tc-price "></span>
                                                                                                                                             </span>
                                                                                                                                         </li>
                                                                                                                                     </ul>
@@ -2193,10 +2174,8 @@
                                                                                                                             class="tc-element-inner-wrap">
                                                                                                                             <div
                                                                                                                                 class="tc-row">
-                                                                                                                                <h5
-                                                                                                                                    class="tc-cell tm-epo-element-label tm-has-required tcwidth-100 color-000000">
-                                                                                                                                    <span
-                                                                                                                                        class="tm-epo-required">*</span>Título
+                                                                                                                                <h5 class="tc-cell tm-epo-element-label tm-has-required tcwidth-100 color-000000">
+                                                                                                                                    <span class="tm-epo-required">*</span>Título
                                                                                                                                 </h5>
                                                                                                                                 <div
                                                                                                                                     class="tc-cell tc-col tm-extra-product-options-container">
@@ -2205,28 +2184,13 @@
                                                                                                                                         data-rulestype="[[&quot;&quot;]]"
                                                                                                                                         data-tm-validation="{&quot;required&quot;:true}"
                                                                                                                                         class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-textfield tm-element-ul-textfield element_1">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label"
-                                                                                                                                                for="tmcp_textfield_2602b06ae36287">
-                                                                                                                                                <input
-                                                                                                                                                    placeholder="Escribe aquí tu título"
-                                                                                                                                                    required=""
-                                                                                                                                                    class="tmcp-field tm-epo-field tmcp-textfield tcenabled"
-                                                                                                                                                    name="tmcp_textfield_1"
-                                                                                                                                                    data-price=""
-                                                                                                                                                    data-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-original-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-rulestype="[[&quot;&quot;]]"
-                                                                                                                                                    data-freechars=""
-                                                                                                                                                    value=""
-                                                                                                                                                    id="tmcp_textfield_2602b06ae36287"
-                                                                                                                                                    type="text"></label>
-                                                                                                                                            <span
-                                                                                                                                                class="tc-price-wrap">
-                                                                                                                                                <span
-                                                                                                                                                    class="price tc-price "></span>
+                                                                                                                                        <li class="tmcp-field-wrap">
+                                                                                                                                            {{ form.label_title.errors }}
+                                                                                                                                            <label class="tm-epo-field-label" for="{{ form.label_title.id_for_label }}">
+                                                                                                                                                {{ form.label_title }}
+                                                                                                                                            </label>
+                                                                                                                                            <span class="tc-price-wrap">
+                                                                                                                                                <span class="price tc-price "></span> 
                                                                                                                                             </span>
                                                                                                                                         </li>
                                                                                                                                     </ul>
@@ -2256,24 +2220,11 @@
                                                                                                                                         data-rulestype="[[&quot;&quot;]]"
                                                                                                                                         data-tm-validation="{&quot;required&quot;:true}"
                                                                                                                                         class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-textfield tm-element-ul-textfield element_2">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label"
-                                                                                                                                                for="tmcp_textfield_3602b06ae36632">
-                                                                                                                                                <input
-                                                                                                                                                    placeholder="Escribe aquí el nombre del artista"
-                                                                                                                                                    required=""
-                                                                                                                                                    class="tmcp-field tm-epo-field tmcp-textfield tcenabled"
-                                                                                                                                                    name="tmcp_textfield_2"
-                                                                                                                                                    data-price=""
-                                                                                                                                                    data-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-original-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-rulestype="[[&quot;&quot;]]"
-                                                                                                                                                    data-freechars=""
-                                                                                                                                                    value=""
-                                                                                                                                                    id="tmcp_textfield_3602b06ae36632"
-                                                                                                                                                    type="text"></label>
+                                                                                                                                        <li class="tmcp-field-wrap">
+                                                                                                                                            {{ form.label_artist.errors }}
+                                                                                                                                            <label class="tm-epo-field-label" for="{{ form.label_artist.id_for_label }}">
+                                                                                                                                                {{ form.label_artist }}
+                                                                                                                                            </label>
                                                                                                                                             <span
                                                                                                                                                 class="tc-price-wrap">
                                                                                                                                                 <span
@@ -2323,27 +2274,13 @@
                                                                                                                                         data-rulestype="[[&quot;&quot;]]"
                                                                                                                                         data-tm-validation="[]"
                                                                                                                                         class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-textfield tm-element-ul-textfield element_3">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label"
-                                                                                                                                                for="tmcp_textfield_4602b06ae36b7c">
-                                                                                                                                                <input
-                                                                                                                                                    placeholder="1:28"
-                                                                                                                                                    class="tmcp-field tm-epo-field tmcp-textfield tcenabled"
-                                                                                                                                                    name="tmcp_textfield_3"
-                                                                                                                                                    data-price=""
-                                                                                                                                                    data-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-original-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-rulestype="[[&quot;&quot;]]"
-                                                                                                                                                    data-freechars=""
-                                                                                                                                                    value=""
-                                                                                                                                                    id="tmcp_textfield_4602b06ae36b7c"
-                                                                                                                                                    type="text"></label>
-                                                                                                                                            <span
-                                                                                                                                                class="tc-price-wrap">
-                                                                                                                                                <span
-                                                                                                                                                    class="price tc-price "></span>
+                                                                                                                                        <li class="tmcp-field-wrap">
+                                                                                                                                            {{ form.minutes_start.errors }}
+                                                                                                                                            <label class="tm-epo-field-label" for="{{ form.minutes_start.id_for_label }}">
+                                                                                                                                                {{ form.minutes_start }}
+                                                                                                                                            </label>
+                                                                                                                                            <span class="tc-price-wrap">
+                                                                                                                                                <span class="price tc-price "></span>
                                                                                                                                             </span>
                                                                                                                                         </li>
                                                                                                                                     </ul>
@@ -2371,27 +2308,11 @@
                                                                                                                                         data-rulestype="[[&quot;&quot;]]"
                                                                                                                                         data-tm-validation="[]"
                                                                                                                                         class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-textfield tm-element-ul-textfield element_4">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label"
-                                                                                                                                                for="tmcp_textfield_5602b06ae36ecb">
-                                                                                                                                                <input
-                                                                                                                                                    placeholder="-3:06"
-                                                                                                                                                    class="tmcp-field tm-epo-field tmcp-textfield tcenabled"
-                                                                                                                                                    name="tmcp_textfield_4"
-                                                                                                                                                    data-price=""
-                                                                                                                                                    data-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-original-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-rulestype="[[&quot;&quot;]]"
-                                                                                                                                                    data-freechars=""
-                                                                                                                                                    value=""
-                                                                                                                                                    id="tmcp_textfield_5602b06ae36ecb"
-                                                                                                                                                    type="text"></label>
-                                                                                                                                            <span
-                                                                                                                                                class="tc-price-wrap">
-                                                                                                                                                <span
-                                                                                                                                                    class="price tc-price "></span>
+                                                                                                                                        <li class="tmcp-field-wrap">
+                                                                                                                                            {{ form.minutes_end.errors }}
+                                                                                                                                            <label class="tm-epo-field-label" for="{{ form.minutes_end.id_for_label }}">{{ form.minutes_end }} </label>
+                                                                                                                                            <span class="tc-price-wrap">
+                                                                                                                                                <span class="price tc-price "></span>
                                                                                                                                             </span>
                                                                                                                                         </li>
                                                                                                                                     </ul>
@@ -2399,260 +2320,33 @@
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </div>
-                                                                                                                    <div data-uniqid="5fccd7535d5107.73708616"
-                                                                                                                        data-logic=""
-                                                                                                                        data-haslogic=""
-                                                                                                                        data-fblabelshow=""
-                                                                                                                        data-fbvalueshow=""
-                                                                                                                        class="tc-container cpf_hide_element tc-cell tcwidth-100 cpf-type-checkbox tc-container-enabled">
-                                                                                                                        <div
-                                                                                                                            class="tc-element-inner-wrap">
-                                                                                                                            <div
-                                                                                                                                class="tc-row">
-                                                                                                                                <h5
-                                                                                                                                    class="tc-cell tm-epo-element-label tcwidth-100">
+                                                                                                                    <div class="tc-container cpf_hide_element tc-cell tcwidth-100 cpf-type-checkbox tc-container-enabled">
+                                                                                                                        <div class="tc-element-inner-wrap">
+                                                                                                                            <div class="tc-row">
+                                                                                                                                <h5 class="tc-cell tm-epo-element-label tcwidth-100">
                                                                                                                                     Extras
                                                                                                                                 </h5>
-                                                                                                                                <div
-                                                                                                                                    class="tc-cell tc-col tm-extra-product-options-container">
-                                                                                                                                    <ul data-rules="{&quot;Met Audio Code_0&quot;:[&quot;1&quot;]}"
-                                                                                                                                        data-original-rules="{&quot;Met Audio Code_0&quot;:[&quot;1&quot;]}"
-                                                                                                                                        data-rulestype="{&quot;Met Audio Code_0&quot;:[&quot;&quot;]}"
-                                                                                                                                        data-tm-validation="[]"
-                                                                                                                                        class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-checkbox tm-element-ul-checkbox element_5">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label"
-                                                                                                                                                for="tmcp_choice_5_0_6602b06ae375d2">
-                                                                                                                                                <span
-                                                                                                                                                    class="tm-epo-style-wrapper square2">
-                                                                                                                                                    <input
-                                                                                                                                                        class="tmcp-field tm-epo-field tmcp-checkbox tcenabled"
-                                                                                                                                                        name="tmcp_checkbox_5_0"
-                                                                                                                                                        data-limit=""
-                                                                                                                                                        data-exactlimit=""
-                                                                                                                                                        data-minimumlimit=""
-                                                                                                                                                        data-image=""
-                                                                                                                                                        data-imagec=""
-                                                                                                                                                        data-imagep=""
-                                                                                                                                                        data-imagel=""
-                                                                                                                                                        data-image-variations="[]"
-                                                                                                                                                        data-price=""
-                                                                                                                                                        data-rules="[&quot;1&quot;]"
-                                                                                                                                                        data-original-rules="[&quot;1&quot;]"
-                                                                                                                                                        data-rulestype="[&quot;&quot;]"
-                                                                                                                                                        value="Met Audio Code_0"
-                                                                                                                                                        id="tmcp_choice_5_0_6602b06ae375d2"
-                                                                                                                                                        type="checkbox">
-                                                                                                                                                    <span
-                                                                                                                                                        class="tc-label tm-epo-style square2"
-                                                                                                                                                        data-for="tmcp_choice_5_0_6602b06ae375d2"></span></span><span
-                                                                                                                                                    class="tc-label-wrap"><span
-                                                                                                                                                        class="tc-label tm-label">Placa con código de audio</span></span>
-                                                                                                                                            </label>
-                                                                                                                                            <span
-                                                                                                                                                class="tc-price-wrap">
-                                                                                                                                                <span
-                                                                                                                                                    class="price tc-price ">
-                                                                                                                                                    <span
-                                                                                                                                                        class="amount">$1.00</span>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    
+                                                                                                                    <div class="tc-container cpf_hide_element tc-cell tcwidth-100 cpf-type-checkbox tc-container-enabled">
+                                                                                                                        <div class="tc-element-inner-wrap">
+                                                                                                                            <div class="tc-row">
+                                                                                                                                <div class="tc-cell tc-col tm-extra-product-options-container">
+                                                                                                                                    <ul class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-checkbox tm-element-ul-checkbox element_8">
+                                                                                                                                        <li class="tmcp-field-wrap">
+                                                                                                                                            {{ form.glass_base.errors }}
+                                                                                                                                            <label  class="tm-epo-field-label" for="{{ form.glass_base.id_for_label }}">
+                                                                                                                                                <span class="tm-epo-style-wrapper square2">
+                                                                                                                                                    {{ form.glass_base }} 
+                                                                                                                                                    <span class="tc-label tm-epo-style square2"></span>
                                                                                                                                                 </span>
-                                                                                                                                            </span>
-                                                                                                                                        </li>
-                                                                                                                                    </ul>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div data-uniqid="5fccd8285d5114.65017003"
-                                                                                                                        data-logic="{&quot;element&quot;:&quot;5fccd8285d5114.65017003&quot;,&quot;toggle&quot;:&quot;show&quot;,&quot;what&quot;:&quot;any&quot;,&quot;rules&quot;:[{&quot;section&quot;:&quot;5fabe5e965dab8.19490867&quot;,&quot;element&quot;:&quot;6&quot;,&quot;operator&quot;:null,&quot;value&quot;:&quot;Met%20Audio%20Code&quot;}]}"
-                                                                                                                        data-haslogic="1"
-                                                                                                                        data-fblabelshow=""
-                                                                                                                        data-fbvalueshow=""
-                                                                                                                        class="tc-container cpf_hide_element tc-cell tcwidth-100 cpf-type-textfield tc-hidden iscpfdependson is-epo-depend tc-container-disabled">
-                                                                                                                        <div
-                                                                                                                            class="tc-element-inner-wrap">
-                                                                                                                            <div
-                                                                                                                                class="tc-row">
-                                                                                                                                <label
-                                                                                                                                    class="tc-cell tm-epo-element-label tcwidth-100 color-000000">Link
-                                                                                                                                    naar
-                                                                                                                                    het
-                                                                                                                                    Spotify
-                                                                                                                                    nummer</label>
-                                                                                                                                <div
-                                                                                                                                    class="tc-cell tc-width100 tm-description">
-                                                                                                                                    <p>Plaats
-                                                                                                                                        hier
-                                                                                                                                        de
-                                                                                                                                        link
-                                                                                                                                        naar
-                                                                                                                                        het
-                                                                                                                                        Spotify
-                                                                                                                                        nummer
-                                                                                                                                    </p>
-                                                                                                                                </div>
-                                                                                                                                <div
-                                                                                                                                    class="tc-cell tc-col tm-extra-product-options-container">
-                                                                                                                                    <ul data-rules="[[&quot;&quot;]]"
-                                                                                                                                        data-original-rules="[[&quot;&quot;]]"
-                                                                                                                                        data-rulestype="[[&quot;&quot;]]"
-                                                                                                                                        data-tm-validation="[]"
-                                                                                                                                        class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-textfield tm-element-ul-textfield element_6">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label"
-                                                                                                                                                for="tmcp_textfield_7602b06ae37d5b">
-                                                                                                                                                <input
-                                                                                                                                                    placeholder="https://"
-                                                                                                                                                    class="tmcp-field tm-epo-field tmcp-textfield tcdisabled"
-                                                                                                                                                    name="tmcp_textfield_6"
-                                                                                                                                                    data-price=""
-                                                                                                                                                    data-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-original-rules="[[&quot;&quot;]]"
-                                                                                                                                                    data-rulestype="[[&quot;&quot;]]"
-                                                                                                                                                    data-freechars=""
-                                                                                                                                                    value=""
-                                                                                                                                                    id="tmcp_textfield_7602b06ae37d5b"
-                                                                                                                                                    type="text"
-                                                                                                                                                    disabled=""></label>
-                                                                                                                                            <span
-                                                                                                                                                class="tc-price-wrap">
-                                                                                                                                                <span
-                                                                                                                                                    class="price tc-price "></span>
-                                                                                                                                            </span>
-                                                                                                                                        </li>
-                                                                                                                                    </ul>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div data-uniqid="5fb825d31c1201.27265258"
-                                                                                                                        data-logic=""
-                                                                                                                        data-haslogic=""
-                                                                                                                        data-fblabelshow=""
-                                                                                                                        data-fbvalueshow=""
-                                                                                                                        class="tc-container cpf_hide_element tc-cell tcwidth-100 cpf-type-checkbox tc-container-enabled">
-                                                                                                                        <div
-                                                                                                                            class="tc-element-inner-wrap">
-                                                                                                                            <div
-                                                                                                                                class="tc-row">
-                                                                                                                                <div
-                                                                                                                                    class="tc-cell tc-col tm-extra-product-options-container">
-                                                                                                                                    <ul data-rules="{&quot;Controlar mi expediente_0&quot;:[&quot;4.95&quot;]}"
-                                                                                                                                        data-original-rules="{&quot;Controlar mi expediente_0&quot;:[&quot;4.95&quot;]}"
-                                                                                                                                        data-rulestype="{&quot;Controlar mi expediente_0&quot;:[&quot;&quot;]}"
-                                                                                                                                        data-tm-validation="[]"
-                                                                                                                                        class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-checkbox tm-element-ul-checkbox element_7">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label"
-                                                                                                                                                for="tmcp_choice_7_0_8602b06ae380bd">
-                                                                                                                                                <span
-                                                                                                                                                    class="tm-epo-style-wrapper square2">
-                                                                                                                                                    <input
-                                                                                                                                                        class="tmcp-fee-field tm-epo-field tmcp-checkbox tcenabled"
-                                                                                                                                                        name="tmcp_tmcartfee_checkbox_7_0"
-                                                                                                                                                        data-limit=""
-                                                                                                                                                        data-exactlimit=""
-                                                                                                                                                        data-minimumlimit=""
-                                                                                                                                                        data-image=""
-                                                                                                                                                        data-imagec=""
-                                                                                                                                                        data-imagep=""
-                                                                                                                                                        data-imagel=""
-                                                                                                                                                        data-image-variations="[]"
-                                                                                                                                                        data-price=""
-                                                                                                                                                        data-rules="[&quot;3.95&quot;]"
-                                                                                                                                                        data-original-rules="[&quot;3.95&quot;]"
-                                                                                                                                                        data-rulestype="[&quot;&quot;]"
-                                                                                                                                                        value="Controlar mi expediente_0"
-                                                                                                                                                        id="tmcp_choice_7_0_8602b06ae380bd"
-                                                                                                                                                        type="checkbox"
-                                                                                                                                                        data-tax-obj="{&quot;is_fee&quot;:true,&quot;has_fee&quot;:&quot;&quot;,&quot;tax_class&quot;:&quot;&quot;,&quot;tax_rate&quot;:0}">
-                                                                                                                                                    <span
-                                                                                                                                                        class="tc-label tm-epo-style square2"
-                                                                                                                                                        data-for="tmcp_choice_7_0_8602b06ae380bd"></span></span><span
-                                                                                                                                                    class="tc-label-wrap"><span
-                                                                                                                                                        class="tc-label tm-label">Controlar
-                                                                                                                                                        mi
-                                                                                                                                                        expediente</span></span>
-                                                                                                                                            </label>
-                                                                                                                                            <span
-                                                                                                                                                class="tc-price-wrap">
-                                                                                                                                                <span
-                                                                                                                                                    class="price tc-price ">
-                                                                                                                                                    <span
-                                                                                                                                                        class="amount">$3.95</span>
-                                                                                                                                                </span>
-                                                                                                                                            </span>
-                                                                                                                                        </li>
-                                                                                                                                    </ul>
-                                                                                                                                </div>
-                                                                                                                                <div
-                                                                                                                                    class="tc-cell tc-width100 tm-description">
-                                                                                                                                    <p>Nos hacemos cargo de los textos/archivos 1:1 entregados.
-                                                                                                                                       ¿Desea que comprobemos si su archivo tiene errores antes 
-                                                                                                                                       de la impresión? Seleccione esta opción.
-                                                                                                                                    </p>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div data-uniqid="5fcfdc9f664740.80187674"
-                                                                                                                        data-logic=""
-                                                                                                                        data-haslogic=""
-                                                                                                                        data-fblabelshow=""
-                                                                                                                        data-fbvalueshow=""
-                                                                                                                        class="tc-container cpf_hide_element tc-cell tcwidth-100 cpf-type-checkbox tc-container-enabled">
-                                                                                                                        <div
-                                                                                                                            class="tc-element-inner-wrap">
-                                                                                                                            <div
-                                                                                                                                class="tc-row">
-                                                                                                                                <div
-                                                                                                                                    class="tc-cell tc-col tm-extra-product-options-container">
-                                                                                                                                    <ul data-rules="{&quot;Soporte de madera_0&quot;:[&quot;8.95&quot;]}"
-                                                                                                                                        data-original-rules="{&quot;Soporte de madera_0&quot;:[&quot;8.95&quot;]}"
-                                                                                                                                        data-rulestype="{&quot;Soporte de madera_0&quot;:[&quot;&quot;]}"
-                                                                                                                                        data-tm-validation="[]"
-                                                                                                                                        class="tmcp-ul-wrap tmcp-elements tm-extra-product-options-checkbox tm-element-ul-checkbox element_8">
-                                                                                                                                        <li
-                                                                                                                                            class="tmcp-field-wrap">
-                                                                                                                                            <label
-                                                                                                                                                class="tm-epo-field-label"
-                                                                                                                                                for="tmcp_choice_8_0_9602b06ae38a17">
-                                                                                                                                                <span
-                                                                                                                                                    class="tm-epo-style-wrapper square2">
-                                                                                                                                                    <input
-                                                                                                                                                        class="tmcp-fee-field tm-epo-field tmcp-checkbox tcenabled"
-                                                                                                                                                        name="tmcp_tmcartfee_checkbox_8_0"
-                                                                                                                                                        data-limit=""
-                                                                                                                                                        data-exactlimit=""
-                                                                                                                                                        data-minimumlimit=""
-                                                                                                                                                        data-image=""
-                                                                                                                                                        data-imagec=""
-                                                                                                                                                        data-imagep=""
-                                                                                                                                                        data-imagel=""
-                                                                                                                                                        data-image-variations="[]"
-                                                                                                                                                        data-price=""
-                                                                                                                                                        data-rules="[&quot;8.95&quot;]"
-                                                                                                                                                        data-original-rules="[&quot;8.95&quot;]"
-                                                                                                                                                        data-rulestype="[&quot;&quot;]"
-                                                                                                                                                        value="Meranti houten houder_0"
-                                                                                                                                                        id="tmcp_choice_8_0_9602b06ae38a17"
-                                                                                                                                                        type="checkbox"
-                                                                                                                                                        data-tax-obj="{&quot;is_fee&quot;:true,&quot;has_fee&quot;:&quot;&quot;,&quot;tax_class&quot;:&quot;&quot;,&quot;tax_rate&quot;:0}">
-                                                                                                                                                    <span
-                                                                                                                                                        class="tc-label tm-epo-style square2"
-                                                                                                                                                        data-for="tmcp_choice_8_0_9602b06ae38a17"></span></span><span
-                                                                                                                                                        class="tc-label-wrap">
-                                                                                                                                                        <span
-                                                                                                                                                         class="tc-label tm-label">
+                                                                                                                                                <span class="tc-label-wrap">
+                                                                                                                                                        <span class="tc-label tm-label">
                                                                                                                                                           Placa con soporte de madera
                                                                                                                                                         </span>
-                                                                                                                                                     </span>
+                                                                                                                                                </span>
                                                                                                                                             </label>
                                                                                                                                             <span
                                                                                                                                                 class="tc-price-wrap">
@@ -2677,64 +2371,9 @@
                                                                                         </ul>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="tc-totals-form tm-product-id-296 tm-totals-form-main"
-                                                                                    data-epo-id="1"
-                                                                                    data-product-id="296">
-                                                                                    <input type="hidden" value="39.95"
-                                                                                        name="cpf_product_price"
-                                                                                        class="cpf-product-price">
-                                                                                    <input type="hidden" value=""
-                                                                                        name="tc_form_prefix"
-                                                                                        class="tc_form_prefix">
-                                                                                    <div id="tm-epo-totals"
-                                                                                        class="tc-epo-totals tm-product-id-296 tm-epo-totals tm-custom-prices-total tm-cart-main"
-                                                                                        data-epo-id="1"
-                                                                                        data-tm-epo-final-total-box="disable"
-                                                                                        data-theme-name="Astra Child"
-                                                                                        data-cart-id="main"
-                                                                                        data-is-sold-individually=""
-                                                                                        data-type="simple"
-                                                                                        data-price="39.95"
-                                                                                        data-regular-price="69.95"
-                                                                                        data-is-on-sale="1"
-                                                                                        data-product-price-rules="[]"
-                                                                                        data-fields-price-rules="0"
-                                                                                        data-force-quantity="0"
-                                                                                        data-price-override="0"
-                                                                                        data-is-vat-exempt="0"
-                                                                                        data-non-base-location-prices="0"
-                                                                                        data-taxable=""
-                                                                                        data-tax-rate="0"
-                                                                                        data-base-tax-rate="0"
-                                                                                        data-taxes-of-one="0"
-                                                                                        data-base-taxes-of-one="0"
-                                                                                        data-modded-taxes-of-one="0"
-                                                                                        data-tax-string=""
-                                                                                        data-tax-display-mode="excl"
-                                                                                        data-prices-include-tax=""
-                                                                                        data-variations="[]"></div>
-                                                                                </div>
-
-                                                                                <div class="quantity">
-                                                                                    <label class="screen-reader-text"
-                                                                                        for="quantity_602b06ae3989a">Elabora de tu Spotiglass</label>
-                                                                                    <input type="number"
-                                                                                        id="quantity_602b06ae3989a"
-                                                                                        class="input-text qty text"
-                                                                                        step="1" min="1" max=""
-                                                                                        name="quantity" value="1"
-                                                                                        title="Aantal" size="4"
-                                                                                        placeholder=""
-                                                                                        inputmode="numeric">
-                                                                                </div>
-
-                                                                                <button type="submit" name="add-to-cart"
-                                                                                    value="296"
-                                                                                    class="single_add_to_cart_button button alt">PASAR A LA CAJA</button>
-
+                                                                                
+                                                                                <button type="submit" name="add-to-cart" value="296" class="single_add_to_cart_button button alt">PASAR A LA CAJA</button>
                                                                             </form>
-
-
                                                                         </div>
 
                                                                     </div>

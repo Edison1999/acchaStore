@@ -1,68 +1,98 @@
 from django.contrib import messages                       
 from django.shortcuts import render, get_object_or_404, redirect                      
-from django.views.generic import ListView, DetailView                      
+from django.views.generic import ListView, DetailView, View                     
 from django.utils import timezone                       
 from .models import Item, OrderItem, Order
 import json
 import datetime
 from django.http import JsonResponse
+from .forms import OrderItemForm
+from django.core.exceptions import ObjectDoesNotExist
 
 
-
-class ProductView(DetailView):
-    model = Item
-    template_name = "compras.html"
+def productView(request,pk):  
+    form = OrderItemForm()
+    items = Item.objects.get(pk=1)
+    context ={
+        'items':items,
+        'form':form
+    }
+    return render(request, 'compras.html', context)
 
 def add_to_cart(request, pk):
+    form = OrderItemForm(request.POST, request.FILES)
     item = get_object_or_404(Item, pk = pk )
-    order_item, created = OrderItem.objects.get_or_create(
-        item=item,
-        user = request.user,
-        ordered = False
-    )
-    order_qs = Order.objects.filter(user=request.user, ordered= False)
-
-    if order_qs.exists() :
-        order = order_qs[0]
-        
-        if order.items.filter(item__pk = item.pk).exists() :
-            order_item.quantity += 1
-            order_item.save()
-            messages.info(request, "Added quantity Item")
-            return redirect("core:product", pk = pk)
+    print("-----------------------------------------------")
+    print(item)
+    order_qs = Order.objects.filter(customer=request.user, complete=False)
+    if form.is_valid():
+        data = form.cleaned_data
+        print(data)
+        order_item = OrderItem.objects.create(
+            product=item,
+            label_title = data["label_title"],
+            label_artist = data["label_artist"],
+            minutes_start = data["minutes_start"],
+            minutes_end = data["minutes_end"],
+            image_upload =data['image_upload'],
+            glass_base= data["glass_base"],
+        )
+        order_item.save()
+        if order_qs.exists():   
+            order = order_qs[0]
+            order.itemsOrdered.add(order_item)
+            order.save()
+            messages.info(request, "This item was added to your cart.")
+            return redirect(item)  
         else:
-            order.items.add(order_item)
-            messages.info(request, "Item added to your cart")
-            return redirect("core:product", pk = pk)
+            ordered_date = timezone.now()
+            order = Order.objects.create( customer=request.user, start_date=ordered_date)
+            order.itemsOrdered.add(order_item)
+            order.save()
+            messages.info(request, "This item was added to your cart.")
+            return redirect(item)
     else:
-        ordered_date = timezone.now()
-        order = Order.objects.create(user=request.user, ordered_date = ordered_date)
-        order.items.add(order_item)
-        messages.info(request, "Item added to your cart")
-        return redirect("core:product", pk = pk)
+        context ={}
+        return render(request, 'error/error.html', context)
+  
+
+def orderSummaryView(request):
+    try:
+        order = Order.objects.get(customer =request.user, complete= False)   
+        context ={
+            'order': order,
+        }
+        return render(request, 'store/cart.html', context)
+
+    except ObjectDoesNotExist:
+        context ={}
+        return render(request, 'store/cart.html', context)
 
 
 def remove_from_cart(request, pk):
-    item = get_object_or_404(Item, pk=pk )
-    order_qs = Order.objects.filter(
-        user=request.user, 
-        ordered=False
-    )
+    # item = get_object_or_404(Item, pk=pk)
+    order_qs = Order.objects.filter(customer=request.user, complete=False)
+    
     if order_qs.exists():
         order = order_qs[0]
-        if order.items.filter(item__pk=item.pk).exists():
+        print(order)
+        if order.itemsOrdered.filter(pk=pk).exists():
+            print(order.itemsOrdered.filter(pk=pk))
             order_item = OrderItem.objects.filter(
-                item=item,
-                user=request.user,
-                ordered=False
+                pk=pk,
             )[0]
+            order.itemsOrdered.remove(order_item)
+            order.save()
             order_item.delete()
-            messages.info(request, "Item \""+order_item.item.item_name+"\" remove from your cart")
-            return redirect("core:product")
+            print(order.itemsOrdered.all())
+            if not order.itemsOrdered.all():
+                order.delete()
+            messages.info(request, "Item \""+order_item.label_title+"\" remove from your cart")
+            return redirect("store:order-summary")
         else:
-            messages.info(request, "This Item not in your cart")
-            return redirect("core:product", pk=pk)
+            messages.info(request, "This Item is not in your cart")
+            return redirect("store:order-summary")
     else:
         #add message doesnt have order
         messages.info(request, "You do not have an Order")
-        return redirect("core:product", pk = pk)
+        return redirect("store:order-summary")

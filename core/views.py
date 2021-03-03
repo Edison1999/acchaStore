@@ -3,11 +3,16 @@ from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.shortcuts import render
 from .models import Contact
 from .forms import ContactForm
+from store.models import Item
 
 from django.http import JsonResponse
 
 def HomeView(request):
-    context = {}
+    items = Item.objects.get(pk=1)
+    context ={
+        'items':items,
+    }
+    print(request.COOKIES)
     return render(request,'index.html',context)
 
 def ContactView(request):
@@ -16,7 +21,6 @@ def ContactView(request):
         form = ContactForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
-            print(form.cleaned_data)
             Contact.objects.create(**form.cleaned_data)
     # if a GET (or any other method) we'll create a blank form
     form = ContactForm()
