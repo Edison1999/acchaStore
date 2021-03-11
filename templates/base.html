@@ -38,7 +38,15 @@
   
 </head>
 
-<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="home page-template-default page page-id-31 wp-custom-logo woolementor wl theme-astra woocommerce-js ast-desktop ast-page-builder-template ast-no-sidebar astra-2.6.1 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent jet-desktop-menu-active elementor-default elementor-kit-5 elementor-page elementor-page-31 woocommerce-page woocommerce-cart" style="" data-elementor-device-mode="desktop">
+<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="home page-template-default page page-id-31 
+                wp-custom-logo woocommerce woolementor wl theme-astra woocommerce-js ast-desktop ast-page-builder-template 
+                ast-no-sidebar astra-2.6.1 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent 
+                jet-desktop-menu-active elementor-default elementor-kit-5 elementor-page elementor-page-31 product-template-default
+                single single-product postid-296 woocommerce-page ast-blog-single-style-1 ast-custom-post-type elementor-page-277 
+                elementor-template-full-width e--ua-blink e--ua-edge e--ua-mac e--ua-webkit ast-mouse-clicked dialog-body dialog-lightbox-body 
+                dialog-container dialog-lightbox-container" 
+                style="" data-elementor-device-mode="desktop">
+                
     <div class="hfeed site" id="page">
       <a class="skip-link screen-reader-text" href="#content">Ir al contenido</a>
   <!-- Page Header-->
@@ -353,17 +361,9 @@
                                           <li
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-326">
                                             <a
-                                              href="{% url 'core:home' %}"
+                                              href="{{ items.get_absolute_url }}"
                                               class="menu-link elementor-item"
                                               >Acchastore</a>
-                                          </li>
-                                          <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1039">
-                                            <a
-                                              href="#"
-                                              class="menu-link elementor-item"
-                                              >Seguimiento &#038;
-                                              Localizacion</a>
                                           </li>
                                           <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580">
@@ -624,16 +624,31 @@
                                     data-settings='{"pp_display_conditions_enable":"yes"}'
                                     data-widget_type="icon-list.default">
                                     <div class="elementor-widget-container">
-                                      <ul
-                                        class="elementor-icon-list-items elementor-inline-items">
-                                        <li
-                                          class="elementor-icon-list-item elementor-inline-item">
+                                      <ul class="elementor-icon-list-items elementor-inline-items">
+                                        <li class="elementor-icon-list-item elementor-inline-item">
                                           <a href="#">
-                                            <span
-                                              class="elementor-icon-list-text"
-                                              >Servicio al cliente</span>
+                                            <span  class="elementor-icon-list-text" >Servicio al cliente</span>
                                           </a>
                                         </li>
+                                        {% if user.is_authenticated %}
+                                        <li class="elementor-icon-list-item elementor-inline-item">
+                                           <a href="{% url 'account:logout' %}">
+                                            <span  class="elementor-icon-list-text">Salir</span>
+                                          </a>
+                                        </li>
+
+                                        {% else %}
+                                        <li class="elementor-icon-list-item elementor-inline-item">
+                                           <a href="{% url 'account:login' %}">
+                                            <span  class="elementor-icon-list-text">Ingresar</span>
+                                          </a>
+                                        </li>
+                                        <li class="elementor-icon-list-item elementor-inline-item">
+                                          <a href="{% url 'account:register' %}">
+                                            <span  class="elementor-icon-list-text"> Registrarse</span>
+                                          </a>
+                                        </li>
+                                        {% endif %}
                                       </ul>
                                     </div>
                                   </div>

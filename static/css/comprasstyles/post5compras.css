@@ -1,0 +1,51 @@
+.elementor-kit-5 {
+    --e-global-color-primary: #000000;
+    --e-global-color-secondary: #54595f;
+    --e-global-color-text: #7a7a7a;
+    --e-global-color-accent: #61ce70;
+    --e-global-color-85a6da8: #ffffff;
+    --e-global-typography-primary-font-family: "Work Sans";
+    --e-global-typography-primary-font-weight: 600;
+    --e-global-typography-secondary-font-family: "Work Sans";
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "Work Sans";
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-accent-font-family: "Roboto";
+    --e-global-typography-accent-font-weight: 500;
+  }
+  .elementor-kit-5 h5 {
+    color: #222222;
+    font-family: "Poppins", Sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 2em;
+    letter-spacing: 1px;
+  }
+  .elementor-kit-5 button,
+  .elementor-kit-5 input[type="button"],
+  .elementor-kit-5 input[type="submit"],
+  .elementor-kit-5 .elementor-button {
+    border-radius: 50px 50px 50px 50px;
+  }
+  .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 1140px;
+  }
+  .elementor-widget:not(:last-child) {
+    margin-bottom: 20px;
+  }
+   {
+  }
+  h1.entry-title {
+    display: var(--page-title-display);
+  }
+  @media (max-width: 1024px) {
+    .elementor-section.elementor-section-boxed > .elementor-container {
+      max-width: 1025px;
+    }
+  }
+  @media (max-width: 767px) {
+    .elementor-section.elementor-section-boxed > .elementor-container {
+      max-width: 768px;
+    }
+  }
+  

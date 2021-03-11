@@ -30,6 +30,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 DEBUG = env.bool("DEBUG", default=False)
 
 ALLOWED_HOSTS = ['edison-lozano-p-c.herokuapp.com', 'localhost', '127.0.0.1']
+AUTH_USER_MODEL = "account.Account"
 
 
 # Application definition
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
     'core',
     'store',
+    'account',
 
 ]
 

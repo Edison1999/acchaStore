@@ -950,12 +950,10 @@
       }
       @font-face {
         font-family: "Astra";
-        src: url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.woff)
+        src: url(https:/../static/fonts/astra.woff)
             format("woff"),
-          url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.ttf)
-            format("truetype"),
-          url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.svg#astra)
-            format("svg");
+          url(https:/../static/fonts/astra.ttf)
+            format("truetype");
         font-weight: normal;
         font-style: normal;
         font-display: fallback;
@@ -1797,14 +1795,14 @@
     <style id="jet-woo-builder-inline-css">
       @font-face {
         font-family: "WooCommerce";
-        src: url("fonts/WooCommerce.eot");
-        src: url("fonts/WooCommerce.eot?#iefix")
+        src: url("static/fonts/WooCommerce.eot");
+        src: url("static/fonts/WooCommerce.eot?#iefix")
             format("embedded-opentype"),
-          url("fonts/WooCommerce.woff")
+          url("static/fonts/WooCommerce.woff")
             format("woff"),
-          url("fonts/WooCommerce.ttf")
+          url("static/fonts/WooCommerce.ttf")
             format("truetype"),
-          url("fonts/WooCommerce.svg#WooCommerce")
+          url("static/fonts/WooCommerce.svg#WooCommerce")
             format("svg");
         font-weight: normal;
         font-style: normal;
@@ -1819,35 +1817,24 @@
     <style id="jetwoo-widgets-for-elementor-inline-css">
       @font-face {
         font-family: "WooCommerce";
-        src: url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot");
-        src: url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix")
+        src: url("static/fonts/WooCommerce.eot")
+        src: url("static/fonts/Woocommerce.eot?#iefix")
             format("embedded-opentype"),
-          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff")
+          url("static/fonts/WooCommerce.woff")
             format("woff"),
-          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf")
+          url("static/fonts/WooCommerce.ttf")
             format("truetype"),
-          url("https://spotiglass.nl/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce")
-            format("svg");
+          url("fonts/WooCommerce.svg#WooCommerce")
+              format("svg");
+
         font-weight: normal;
         font-style: normal;
       }
     </style>
     <link rel="stylesheet" id="astra-child-theme-css-css" href="{% static 'css/styleastra.css' %}?20090712" media="all"/>
-    <!-- <script id="jquery-core-js-extra">
-      var pp = {
-        ajax_url: "https:\/\/spotiglass.nl\/wp-admin\/admin-ajax.php",
-      };
-    </script> -->
+    
     <script src="{% static 'js/Skripts/jquery.js' %}" id="jquery-core-js"></script>
-    <!--[if IE]>
-      <script
-        src="https://spotiglass.nl/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=2.6.1"
-        id="astra-flexibility-js"
-      ></script>
-      <script id="astra-flexibility-js-after">
-        flexibility(document.documentElement);
-      </script>
-    <![endif]-->
+    
     <script src="{% static 'js/Skripts/core.min.js' %}" id="jquery-ui-core-js"></script>
     <script src="{% static 'js/Skripts/widget.min.js' %}" id="jquery-ui-widget-js"></script>
     <script src="{% static 'js/Skripts/position.min.js' %}" id="jquery-ui-position-js"></script>
@@ -3951,20 +3938,20 @@
                                           <img
                                             width="1020"
                                             height="1020"
-                                            src="https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover.jpg"
+                                            src="{% static 'images/imagesindex/accha_cover.jpg' %}"
                                             class="attachment-large size-large"
                                             alt=""
                                             loading="lazy"
                                             srcset="
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover.jpg         1020w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-300x300.jpg  300w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-150x150.jpg  150w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-768x768.jpg  768w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-400x400.jpg  400w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-600x600.jpg  600w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-100x100.jpg  100w,
-                                              https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_cover-60x60.jpg     60w
-                                            "
+                                            {% static 'images/imagesindex/accha_cover.jpg' %}             1020w,
+                                              {% static 'images/imagesindex/accha_cover-300x300.jpg' %}     300w,
+                                              {% static 'images/imagesindex/accha_cover-150x150.jpg' %}     150w,
+                                              {% static 'images/imagesindex/accha_cover-768x768.jpg' %}     768w,
+                                              {% static 'images/imagesindex/accha_cover-400x400.jpg' %}     400w,
+                                              {% static 'images/imagesindex/accha_cover-600x600.jpg' %}     600w,
+                                              {% static 'images/imagesindex/accha_cover-100x100.jpg' %}     100w,
+                                              {% static 'images/imagesindex/accha_cover-60x60.jpg' %}     60w
+                                               "
                                             sizes="(max-width: 1020px) 100vw, 1020px"
                                           />
                                         </div>
@@ -4004,7 +3991,7 @@
                                         <h2
                                           class="elementor-heading-title elementor-size-default"
                                         >
-                                          SpotiGlass™ Artworks
+                                           AcchaStore™ Artworks
                                         </h2>
                                       </div>
                                     </div>
@@ -4027,13 +4014,13 @@
                                       class="elementor-element elementor-element-ee4125e pp-insta-title-middle elementor-widget elementor-widget-pp-instafeed"
                                       data-id="ee4125e"
                                       data-element_type="widget"
-                                      data-settings='{"username":"spotiglass.nl","insta_likes":"yes","feed_layout":"grid","insta_comments":"no","icons_style":"solid"}'
+                                     
                                       data-widget_type="pp-instafeed.default"
                                     >
                                       <div class="elementor-widget-container">
                                         <div
                                           class="pp-instagram-feed clearfix pp-instagram-feed-grid pp-instagram-feed-always pp-instagram-feed-grid-4 pp-if-square-images"
-                                          data-settings='{"user_id":"spotiglass.nl","access_token":"","sort_by":"none","images_count":8,"target":"pp-instafeed-ee4125e","resolution":"thumbnail","popup":"1","img_link":"0"}'
+                                          
                                         >
                                           <div class="pp-insta-feed-inner">
                                             <div class="pp-instafeed">
@@ -4041,7 +4028,7 @@
                                                 class="pp-instagram-feed-title-wrap"
                                               >
                                                 <a
-                                                  href="https://www.instagram.com/spotiglass.nl/"
+                                                 href="#"  <!--linkLozano de instagram-->
                                                 >
                                                   <span
                                                     class="pp-instagram-feed-title"
@@ -4055,7 +4042,7 @@
                                                       ></i>
                                                     </span>
 
-                                                    Sígue Spotiglass.nl @
+                                                    Sígue Accha.ec @
                                                     Instagram
                                                   </span>
                                                 </a>
@@ -4541,12 +4528,3 @@
 
      {% endblock %}
       
-
-      
-      
-
-    
-    
-
-    
- 

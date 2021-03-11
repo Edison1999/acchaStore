@@ -35,4 +35,8 @@ def NosotrosView(request):
     context = {}
     return render(request,'nosotros.html',context)
 
+def TermsConditionView(request):
+    context = {}
+    return render(request,'core/termsConditions.html',context)
+
 

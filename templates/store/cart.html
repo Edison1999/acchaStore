@@ -807,7 +807,7 @@
                                                                                                                             style="vertical-align: inherit;">
                                                                                                                             <div
                                                                                                                                 style="vertical-align: inherit;">
-                                                                                                                                {{ order.product.price }}
+                                                                                                                                {{ order.get_total_item_price }}
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                     </bdi>
@@ -840,11 +840,7 @@
                                                                                                                             style="vertical-align: inherit;">
                                                                                                                             <div
                                                                                                                                 style="vertical-align: inherit;">
-                                                                                                                                {% if order.product.discount_price %}
-                                                                                                                                  {{ order.product.discount_price }}  
-                                                                                                                                {% else %}
-                                                                                                                                    {{ order.product.price }}  
-                                                                                                                                {% endif %}
+                                                                                                                                {{ order.get_final_price }} 
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                     </bdi>
@@ -947,11 +943,11 @@
                                                                         <div class="cart_totals calculated_shipping">
 
                                                                             <h2 class="wl-co-title">
-                                                                                <font style="vertical-align: inherit;">
-                                                                                    <font
+                                                                                <div style="vertical-align: inherit;">
+                                                                                    <div
                                                                                         style="vertical-align: inherit;">
-                                                                                        Shopping cart Total</font>
-                                                                                </font>
+                                                                                        Shopping cart Total</div>
+                                                                                </div>
                                                                             </h2>
                                                                             <table cellspacing="0"
                                                                                 class="shop_table shop_table_responsive">
@@ -959,39 +955,38 @@
                                                                                 <tbody>
                                                                                     <tr class="cart-subtotal">
                                                                                         <th>
-                                                                                            <font
+                                                                                            <div
                                                                                                 style="vertical-align: inherit;">
-                                                                                                <font
+                                                                                                <div
                                                                                                     style="vertical-align: inherit;">
-                                                                                                    Subtotal</font>
-                                                                                            </font>
+                                                                                                    Subtotal</div>
+                                                                                            </div>
                                                                                         </th>
-                                                                                        <td data-title="Subtotaal"><span
-                                                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                        class="woocommerce-Price-currencySymbol">
-                                                                                                        <font
-                                                                                                            style="vertical-align: inherit;">
-                                                                                                            <font
-                                                                                                                style="vertical-align: inherit;">
-                                                                                                                €</font>
-                                                                                                        </font>
+                                                                                        <td data-title="Subtotaal">
+                                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                                <bdi>
+                                                                                                    <span class="woocommerce-Price-currencySymbol">
+                                                                                                        <div style="vertical-align: inherit;">
+                                                                                                            <div style="vertical-align: inherit;"> €</div>
+                                                                                                        </div>
                                                                                                     </span>
-                                                                                                    <font
-                                                                                                        style="vertical-align: inherit;">
-                                                                                                        <font
-                                                                                                            style="vertical-align: inherit;">
-                                                                                                            79.90</font>
-                                                                                                    </font>
-                                                                                                </bdi></span></td>
+                                                                                                    <div style="vertical-align: inherit;">
+                                                                                                        <div style="vertical-align: inherit;">
+                                                                                                            {{order.get_total}}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </bdi>
+                                                                                            </span>
+                                                                                        </td>
                                                                                     </tr>
                                                                                     <tr class="order-total">
                                                                                         <th>
-                                                                                            <font
+                                                                                            <div
                                                                                                 style="vertical-align: inherit;">
-                                                                                                <font
+                                                                                                <div
                                                                                                     style="vertical-align: inherit;">
-                                                                                                    Total</font>
-                                                                                            </font>
+                                                                                                    Total</div>
+                                                                                            </div>
                                                                                         </th>
                                                                                         <td data-title="Totaal">
                                                                                             <strong>
@@ -1000,21 +995,21 @@
                                                                                                     <bdi>
                                                                                                         <span
                                                                                                             class="woocommerce-Price-currencySymbol">
-                                                                                                            <font
+                                                                                                            <div
                                                                                                                 style="vertical-align: inherit;">
-                                                                                                                <font
+                                                                                                                <div
                                                                                                                     style="vertical-align: inherit;">
                                                                                                                     €
-                                                                                                                </font>
-                                                                                                            </font>
+                                                                                                                </div>
+                                                                                                            </div>
                                                                                                         </span>
-                                                                                                        <font
+                                                                                                        <div
                                                                                                             style="vertical-align: inherit;">
-                                                                                                            <font
+                                                                                                            <div
                                                                                                                 style="vertical-align: inherit;">
-                                                                                                                79.90
-                                                                                                            </font>
-                                                                                                        </font>
+                                                                                                                {{order.get_total_with_discount}}
+                                                                                                            </div>
+                                                                                                        </div>
                                                                                                     </bdi>
                                                                                                 </span>
                                                                                             </strong>
@@ -1025,12 +1020,12 @@
                                                                             <div class="wc-proceed-to-checkout">
                                                                                 <a href="https://spotiglass.nl/checkout/"
                                                                                     class="checkout-button button alt wc-forward">
-                                                                                    <font
+                                                                                    <div
                                                                                         style="vertical-align: inherit;">
-                                                                                        <font
+                                                                                        <div
                                                                                             style="vertical-align: inherit;">
-                                                                                            Continue to checkout</font>
-                                                                                    </font>
+                                                                                            Continue to checkout</div>
+                                                                                    </div>
                                                                                 </a>
                                                                             </div>
                                                                         </div>
