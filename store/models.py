@@ -75,13 +75,13 @@ class OrderItem(models.Model) :
             return self.get_discount_item_price()
         return self.get_total_item_price()
 
-    # @property
-    # def imageURL(self):
-    #     try:
-    #         url = self.image.url
-    #     except:
-    #         url = ''
-    #     return url
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
 
 class Order(models.Model) :
     customer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, blank=True, null=True)

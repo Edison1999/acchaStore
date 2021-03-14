@@ -8,7 +8,7 @@ import datetime
 from django.http import JsonResponse
 from .forms import OrderItemForm
 from django.core.exceptions import ObjectDoesNotExist
-
+from django.contrib.auth.decorators import login_required
 
 def productView(request,pk):  
     form = OrderItemForm()
@@ -19,6 +19,8 @@ def productView(request,pk):
     }
     return render(request, 'compras.html', context)
 
+
+@login_required(login_url="/account/login/")
 def add_to_cart(request, pk):
     form = OrderItemForm(request.POST, request.FILES)
     item = get_object_or_404(Item, pk = pk )
@@ -55,7 +57,7 @@ def add_to_cart(request, pk):
         context ={}
         return render(request, 'error/error.html', context)
   
-
+@login_required(login_url="/account/login/")
 def orderSummaryView(request):
     try:
         order = Order.objects.get(customer =request.user, complete= False)   
@@ -65,10 +67,13 @@ def orderSummaryView(request):
         return render(request, 'store/cart.html', context)
 
     except ObjectDoesNotExist:
-        context ={}
+        items = Item.objects.get(pk=1)
+        context ={
+            'items':items,
+        }
         return render(request, 'store/cart.html', context)
 
-
+@login_required(login_url="/account/login/")
 def remove_from_cart(request, pk):
     # item = get_object_or_404(Item, pk=pk)
     order_qs = Order.objects.filter(customer=request.user, complete=False)
@@ -96,3 +101,9 @@ def remove_from_cart(request, pk):
         #add message doesnt have order
         messages.info(request, "You do not have an Order")
         return redirect("store:order-summary")
+
+def checkoutView(request):  
+    context ={
+        
+    }
+    return render(request, 'store/checkout/checkout.html', context)
