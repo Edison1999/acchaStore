@@ -267,6 +267,121 @@ body.rtl
   border-color: var(--e-global-color-primary);
   transition: all 0.2s;
 }
+/*-------------5----------------------*/
+
+.elementor-277 .elementor-element .elementor-element-41311d6f .cart.form-selector{ 
+  display:block;
+  margin-top: 0px;
+  margin-bottom:20px;
+}
+
+.elementor-277 .elementor-element .elementor-element-41311d6f .cart .form-element{
+  position:relative;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 6.23529rem;
+  padding: 10.588px 10px 10.558px 10px;
+  text-align: center;
+  border: 1.5px solid #d6d6d6;
+  box-sizing: border-box;
+  border-spacing: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: hsla(0,0%,100%,.8);
+  flex-direction: column;
+  margin-right: 60px;
+  margin-left:40px;
+  margin-bottom:20px;
+}
+
+.elementor-277 .elementor-element .elementor-element-41311d6f .cart .form-element:hover{
+  position:relative;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center
+  width: 100%;
+  min-height: 6.23529rem;
+  padding: 10.588px 10px 10.558px 10px;
+  text-align: center;
+  border: 1.5px solid #d6d6d6;
+  border-color: rgb(130, 155, 238);
+  box-sizing: border-box;
+  border-spacing: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: hsla(0,0%,100%,.8);
+  flex-direction: column;
+  margin-right: 60px;
+  margin-left:40px;
+  margin-bottom:20px;
+}
+
+.elementor-277 .elementor-element .elementor-element-41311d6f .cart .form-label-transparente{
+  display:block;
+  font-size: 12px;
+  line-height: 1.33341;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  font-family: "Poppins", Sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333;
+  text-indent: 0;
+  cursor: pointer;
+
+}
+
+.elementor-277 .elementor-element .elementor-element-41311d6f .cart .form-label-negro{
+  display:block;
+  font-size: 12px;
+  line-height: 1.33341;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  font-family: "Poppins", Sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333;
+  text-indent: 0;
+  cursor: pointer;
+
+}
+
+.elementor-277 .elementor-element .elementor-element-41311d6f .cart .form-label-transparente img {
+  height: 40px;
+  width: 40px;
+}
+
+.elementor-277 .elementor-element .elementor-element-41311d6f .cart .form-label-negro img {
+  height: 32px;
+  width: 32px;
+}
+
+.innen{
+  margin-left:20px;
+}
+
+.elementor-277 .elementor-element.elementor-element-41311d6f .cart .falso-boton button {
+  font-family: "Poppins", Sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-radius: 8px 8px 8px 8px;
+  padding: 14px 65px 14px 65px;
+  color: #ffffff;
+  background-color: black;
+  border-color: black;
+  transition: all 0.2s;
+}
+
+
+/*-----------------------------------*/
 .elementor-277
   .elementor-element.elementor-element-41311d6f
   .cart
@@ -321,6 +436,7 @@ body.rtl
   > .elementor-element-populated {
   margin: 0% 0% 0% 0%;
   padding: 3% 2% 2% 2%;
+  left:-10px;
 }
 .elementor-277
   .elementor-element.elementor-element-6be5650

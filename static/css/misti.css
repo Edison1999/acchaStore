@@ -1,0 +1,313 @@
+
+/* Estilos básicos */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+.wrapper{  
+    position: relative;
+    height: 100%;
+    max-width: 1200px;
+    margin:0 auto;
+}
+.title{ 
+    font-family: 'montserratbold';
+    text-align: center;
+    margin:0 auto;
+}
+.title--2{ 
+    font-size: 22px;
+    line-height: 24px;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.title--3{ 
+    font-size: 12px;
+    line-height: 14px;
+}
+.left-alignment{
+    text-align: left;
+}
+.colour-dark-grey{
+    color:#4b4b4b;
+}
+.colour-white{
+     color:#ffffff;
+}
+.paragraph{
+    font-family: 'montserratregular';
+    color:#4b4b4b;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+/* Hero Banner */
+
+.herobanner{
+    height: auto;
+    width: 100%;
+    background: url('../img/hero-bg-xs.png') no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+.herobanner__title{
+    max-width: 320px;
+    padding-top: 22%;
+}
+.herobanner__video-container video{
+    width: 100%;
+    max-width: 450px;
+    padding-top:30px;
+    padding-bottom: 70px;
+}
+.herobanner__arrow{
+    margin:0 auto;
+    bottom: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);  
+}
+
+/* Features */
+
+.features__list-container{
+    vertical-align: middle;
+}
+.features__list-container .features__container-element{
+    display: block;
+    width: 100%;
+}
+.features__list{
+    margin-top: 50px;
+}
+.features__list li{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.features__list-element div{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.features__title{ 
+    font-family: 'montserratbold';
+    text-align: left;
+    margin-bottom: 5px;
+}
+.features__text{
+    max-width:262px ;
+}
+.features__icon{
+    padding-right: 15px;
+}
+.features__img{
+    margin:0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* header */
+
+.header{
+    position:relative;
+    width: 100%;
+    width: 100%;
+    margin: 0 auto;  
+}
+
+.header__wrapper{
+    position: fixed;
+    background: transparent;
+    z-index: 5;
+    padding-top: 0;  
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Menú */
+
+/* menu icon */
+
+.logo{
+    z-index: 4;
+    padding: 25px 20px;
+    position: absolute;
+}
+
+.header .menu__icon {
+    cursor: pointer;
+    position: absolute;
+    user-select: none;
+    z-index: 10000000;
+    display: block;
+}
+  
+.header .menu__icon .navicon {
+    background: #000000;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+  
+.header .menu__icon .navicon:before,
+.header .menu__icon .navicon:after {
+    background: #000000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.header .menu__icon .navicon:before {
+    top: 5px;
+}
+.header .menu__icon .navicon:after {
+    top: -5px;
+}
+  
+/* menu btn */
+.header .menu__btn {
+    display: none;
+    z-index: 1000;
+}
+.header .menu__btn:checked ~ .menu {
+    transform: translateX(0);
+    transition: all .6s ease-out; 
+    z-index: -2; 
+
+}
+.header .menu__btn:checked ~ .menu__icon .navicon {
+    background: transparent;
+    z-index: 1000;
+}
+.header .menu__btn:checked ~ .menu__icon .navicon:before {
+    transform: rotate(-45deg);
+    z-index: 1000;
+}
+.header .menu__btn:checked ~ .menu__icon .navicon:after {
+    transform: rotate(45deg);
+    z-index: 1000;
+}
+.header .menu__btn:checked ~ .menu__icon:not(.steps) .navicon:before,
+.header .menu__btn:checked ~ .menu__icon:not(.steps) .navicon:after {
+    top: 0;
+    z-index: 1000;
+}
+.menu{  
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height:100vh;
+    position:fixed;
+    background-color: #191a28f2;
+    transform: translateX(-1000px);
+    transition: all .6s ease-out;
+    z-index: 1000000;
+}
+.menu__item{
+    font-family: "Karla",sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+.menu__item:hover{
+    color: #ebcb80;
+}
+
+@media screen and (min-width:769px){
+     /* header */
+     .header{
+        position:relative;
+        width: 90%;
+        margin: 0 auto;  
+    }
+    .header .menu__icon {
+        display: none;
+    }
+    .header__wrapper{
+        position: absolute;
+        background: transparent;
+        z-index: 5;
+        padding-top: 40px;  
+        width: 100%;
+    }
+
+    /* Menú */
+    .logo{      
+        position: relative;
+        padding:0;
+    }
+    .menu{
+        transform: translateX(0);
+        flex-direction: row;
+        width: 70%;
+        position: relative;
+        background-color: transparent;
+        height: auto;
+        z-index: 10000;
+    }
+    .menu__item{
+        font-family: 'montserratbold';
+        font-size: 18px;
+        color: #ffffff;
+        z-index: 10000;
+    }
+}
+
+@media screen and (min-width:640px){
+
+    /* Estilos básicos*/
+    .title--2{ 
+        font-size: 44px;
+        line-height: 46px;
+    }
+    .title--3{ 
+        font-size: 18px;
+        line-height: 20px;
+    }
+    /* Hero Banner*/
+    .herobanner{
+        height: auto;
+        width: 100%;
+        background: url('../img/hero-bg.png') no-repeat center;
+        background-size: cover;
+    }
+    .herobanner__title{        
+        max-width: 620px;   
+        padding-top: 10%;   
+    }
+    .paragraph{
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    /* Features */
+
+    .features__list{
+        margin-top: 100px;
+    }
+    .features__list-container{
+        letter-spacing: -5px;
+    }
+    .features__list-container .features__container-element {
+        display: inline-block;
+        width: 50%;
+        letter-spacing: normal;
+    }
+
+}
+
+
+
