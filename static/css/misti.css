@@ -1,0 +1,105 @@
+.cabezon *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"sans-serif";
+}
+
+.cabezon{
+    height: auto;
+    display: flex;
+    background: #c3ab8e;
+    color:#c31010;
+    top:200px;
+    width: 100%;
+    z-index:25;
+    
+}
+
+.control{
+    position:absolute;
+    left:0px;
+    z-index: 25;
+}
+
+#btn-menu{
+    display:block;
+    z-index:25;
+}
+
+.cabezon label{
+    position:absolute;
+    font-size:23px;
+    left:6px;
+    cursor:pointer;
+    top: 61px;
+    z-index:25;
+}
+
+.cabezon label:hover{
+    position:inherit;
+    font-size:23px;
+    color:blueviolet;
+    cursor:pointer;
+    top: 61px;
+    z-index:25;
+}
+
+
+.menu {
+    display:block;
+    position: absolute;
+    top: 112px;
+    width: 100%;
+    left:0px;
+    list-style: none;
+    z-index: 1000000;
+
+}
+.menu ul{
+    background:#3c5690 80%;
+    display:flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    justify-content: center !important;
+   
+}
+
+.menu a{
+    display:block;
+   text-align: center;
+    font-family:"Work Sans", Sans-serif;
+    font-weight: 600;
+    padding: 15px 20px;
+    width:100%;
+    color:#ffffffe6;
+    font-size:16.4px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    z-index:1000000;
+}
+
+.menu a:hover{
+    background: rgba(0, 0, 0, 0.3);
+    color:#ffffff;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    text-decoration:none;
+}
+
+.menu ul li {
+    font-size: 16px;
+    border-top:0.5px solid #FFAD19;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#btn-menu:checked ~ .cabezon{
+    transform:translateX(-1000px);
+
+}
+
+
+

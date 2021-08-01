@@ -886,11 +886,11 @@ input[type="submit"]:focus {
 }
 @font-face {
   font-family: "Astra";
-  src: url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.woff)
+  src: url(../../fonts/astra.woff)
       format("woff"),
-    url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.ttf)
+    url(../../fonts/astra.ttf)
       format("truetype"),
-    url(https://spotiglass.nl/wp-content/themes/astra/assets/fonts/astra.svg#astra)
+    url(../../fonts/astra.svg#astra)
       format("svg");
   font-weight: normal;
   font-style: normal;

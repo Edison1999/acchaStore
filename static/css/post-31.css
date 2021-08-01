@@ -241,14 +241,6 @@
   margin-bottom: 0%;
 }
 
-.elementor-31 .elementor-element.elementor-element-b20c8e2:not(.elementor-motion-effects-element-type-background), .elementor-31 .elementor-element.elementor-element-b20c8e2 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-  background-color: #90574E;
-  background-image: url("https://spotiglass.nl/wp-content/uploads/2020/11/glassartwork_hero.jpg");
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .elementor-31 .elementor-element.elementor-element-b20c8e2 > .elementor-background-overlay {
   background-color: #000000;
   opacity: 0.6;
@@ -499,7 +491,7 @@
 
 .elementor-31 .elementor-element.elementor-element-2ac497d:not(.elementor-motion-effects-element-type-background), .elementor-31 .elementor-element.elementor-element-2ac497d > .elementor-motion-effects-container > .elementor-motion-effects-layer {
   background-color: #90574E;
-  background-image: url("https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_hero.jpg");
+  background-image: url(../../images/spotiglass_hero.jpg);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1192,7 +1184,7 @@
   font-family: "Work Sans", Sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  background-color: var(--e-global-color-primary);
+  background-color: #0b2660;
   border-radius: 50px 50px 50px 50px;
   padding: 17px 40px 17px 40px;
 }
@@ -1712,7 +1704,7 @@
   }
 
   .elementor-31 .elementor-element.elementor-element-b20c8e2:not(.elementor-motion-effects-element-type-background), .elementor-31 .elementor-element.elementor-element-b20c8e2 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-      background-image: url("https://spotiglass.nl/wp-content/uploads/2020/11/spotiglass_hero.jpg");
+      background-image: url(../../images/spotiglass_hero.jpg);
   }
 
   .elementor-31 .elementor-element.elementor-element-42fa98d.elementor-column > .elementor-column-wrap > .elementor-widget-wrap {

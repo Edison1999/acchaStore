@@ -773,7 +773,7 @@ h1.entry-title {
 .elementor-widget:not(:last-child).elementor-absolute,
 .elementor-widget:not(:last-child).elementor-widget__width-auto,
 .elementor-widget:not(:last-child).elementor-widget__width-initial {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 .elementor-column {
   min-height: 1px;

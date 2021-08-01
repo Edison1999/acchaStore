@@ -51,7 +51,7 @@
 
 .elementor-694 .elementor-element.elementor-element-68dfb2ce:not(.elementor-motion-effects-element-type-background), .elementor-694 .elementor-element.elementor-element-68dfb2ce > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: transparent;
-    background-image: linear-gradient(130deg, #00A249 0%, #00D45F 89%);
+    background-image: linear-gradient(130deg, #0A2661 0%, #0A2661 80%);
 }
 
 .elementor-694 .elementor-element.elementor-element-68dfb2ce > .elementor-background-overlay {
@@ -190,12 +190,12 @@ body .elementor-694 .elementor-element.elementor-element-186aae39 .elementor-lab
 }
 
 .elementor-694 .elementor-element.elementor-element-186aae39 .e-form__buttons__wrapper__button-next {
-    background-color: var(--e-global-color-accent);
+    background-color: #0A2661;
     color: #ffffff;
 }
 
 .elementor-694 .elementor-element.elementor-element-186aae39 .elementor-button[type="submit"] {
-    background-color: var(--e-global-color-accent);
+    background-color: #0A2661;
     color: #ffffff;
 }
 

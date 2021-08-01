@@ -102,6 +102,7 @@
 }
 .eicon-menu-bar:before {
   content: "\e816";
+  color:white;
 }
 .eicon-apps:before {
   content: "\e817";

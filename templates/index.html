@@ -4,21 +4,6 @@
 {% block head_title %}Acchastore{% endblock %}
     
   {% block extra_links %}
-    <!--
-    <script data-cfasync="false">
-      window.$crisp = [];
-      CRISP_RUNTIME_CONFIG = {
-        locale: "es",
-      };
-      CRISP_WEBSITE_ID = "6520fb92-8dd1-489a-bce0-03b1fb6b37fa";
-      (function () {
-        d = document;
-        s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
-      })();
-    </script> --> <!--Función de Crisp adicional-->
     
     <link rel="dns-prefetch" href="//js.jilt.com" />
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
@@ -53,7 +38,6 @@
     <link rel="stylesheet" id="wc-block-style-css" href="{% static 'css/style.wc-block.css' %}?20090712"  media="all"/>
     
     <link rel="stylesheet" id="contact-form-7-css" href="{% static 'css/styles.css' %}?20090712" media="all"/>
-    <link rel="stylesheet" id="astra-contact-form-7-css" href="{% static 'css/contact-form-7.min.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="dashicons-css" href="{% static 'css/dashicons.min.css' %}?20090712"  media="all"/>
     <link rel="stylesheet" id="ewd-urp-style-css" href="{% static 'css/ewd-urp-styles.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="ewd-urp-jquery-ui-css" href="{% static 'css/ewd-urp-jquery-ui.css' %}?20090712" media="all"/>
@@ -1770,7 +1754,6 @@
       }
     </style>
     <link rel="stylesheet" id="reviewx-magnific-popup-css" href="{% static 'css/magnific-popup.css' %}?20090712" media="all"/>
-    <link rel="stylesheet" id="reviewx-css" href="{% static 'css/reviewx-public.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="jet-cw-css" href="{% static 'css/jet-cw.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="jet-cw-frontend-css" href="{% static 'css/jet-cw-frontend-font.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="font-awesome-all-css" href="{% static 'css/all.min.css' %}?20090712" media="all"/>
@@ -1808,11 +1791,9 @@
         font-style: normal;
       }
     </style>
-
     <link rel="stylesheet" id="jet-woo-builder-frontend-css" href="{% static 'css/jetwoobuilder-frontend-font.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="jet-woo-product-gallery-css" href="{% static 'css/jet-woo-product-gallery.css' %}?20090712" media="all"/>
     <link rel="stylesheet" id="jetwoo-widgets-for-elementor-css" href="{% static 'css/jet-woo-widgets.css' %}?20090712" media="all"/>
-    
     <!--Estilo dentro de cabecera-->
     <style id="jetwoo-widgets-for-elementor-inline-css">
       @font-face {
@@ -1832,115 +1813,6 @@
       }
     </style>
     <link rel="stylesheet" id="astra-child-theme-css-css" href="{% static 'css/styleastra.css' %}?20090712" media="all"/>
-    
-    <script src="{% static 'js/Skripts/jquery.js' %}" id="jquery-core-js"></script>
-    
-    <script src="{% static 'js/Skripts/core.min.js' %}" id="jquery-ui-core-js"></script>
-    <script src="{% static 'js/Skripts/widget.min.js' %}" id="jquery-ui-widget-js"></script>
-    <script src="{% static 'js/Skripts/position.min.js' %}" id="jquery-ui-position-js"></script>
-    <script src="{% static 'js/Skripts/menu.min.js' %}" id="jquery-ui-menu-js"></script>
-    <script src="{% static 'js/Skripts/wp-polyfill.min.js' %}" id="wp-polyfill-js"></script>
-    <script id="wp-polyfill-js-after">
-      "fetch" in window ||
-        document.write(
-          '<script src="{% static 'js/Skripts/wp-polyfill-fetch.min.js' %}">></scr' +
-            "ipt>"
-        );
-      document.contains || 
-        document.write(
-          '<script src="{% static 'js/Skripts/wp-polyfill-node-contains.min.js' %}"></scr' +
-            "ipt>"
-        );
-      window.DOMRect ||  
-        document.write(
-          '<script src="{% static 'js/Skripts/wp-polyfill-dom-rect.min.js' %}"></scr' +
-            "ipt>"
-        );
-      (window.URL && window.URL.prototype && window.URLSearchParams) ||
-        document.write( 
-          '<script src="{% static 'js/Skripts/wp-polyfill-url.min.js' %}"></scr' +
-            "ipt>"
-        );
-      (window.FormData && window.FormData.prototype.keys) ||
-        document.write(
-          '<script src="{% static 'js/Skripts/wp-polyfill-formdata.min.js' %}"></scr' + 
-            "ipt>"
-        );
-      (Element.prototype.matches && Element.prototype.closest) ||
-        document.write(
-          '<script src="{% static 'js/Skripts/wp-polyfill-element-closest.min.js' %}"></scr' + 
-            "ipt>"
-        );
-    </script>
-    <script src="{% static 'js/Skripts/dom-ready.min.js' %}" id="wp-dom-ready-js"></script>
-    <script src="{% static 'js/Skripts/i18n.min.js' %}" id="wp-i18n-js"></script>
-    <script id="wp-a11y-js-translations">
-      (function (domain, translations) {
-        var localeData =
-          translations.locale_data[domain] || translations.locale_data.messages;
-        localeData[""].domain = domain;
-        wp.i18n.setLocaleData(localeData, domain);
-      })("default", {
-        "translation-revision-date": "2020-11-22 23:35:28+0000",
-        generator: "GlotPress\/3.0.0-alpha.2",
-        domain: "messages",
-        locale_data: {
-          messages: {
-            "": {
-              domain: "messages",
-              "plural-forms": "nplurals=2; plural=n != 1;",
-              lang: "nl",
-            },
-            Notifications: ["Meldingen"],
-          },
-        },
-        comment: { reference: "wp-includes\/js\/dist\/a11y.js" },
-      });
-    </script>
-    <script src="{% static 'js/Skripts/a11y.min.js' %}" id="wp-a11y-js"></script>
-    <script id="jquery-ui-autocomplete-js-extra">
-      var uiAutocompleteL10n = {
-        noResults: "Niets gevonden.",
-        oneResult:
-          "1 Resultado encontrado. Utilice las flechas de arriba y abajo para navegar.",
-        manyResults:
-          "%d Resultados encontrados. Utilice las flechas de arriba y abajo para navegar.",
-        itemSelected: "Item seleccionado.",
-      };
-    </script>
-    <script src="{% static 'js/Skripts/autocomplete.min.js' %}"> id="jquery-ui-autocomplete-js"</script>
-    <script src="{% static 'js/Skripts/mouse.min.js' %}" id="jquery-ui-mouse-js"></script>
-    <script src="{% static 'js/Skripts/slider.min.js' %}" id="jquery-ui-slider-js"></script>
-    <script src="{% static 'js/Skripts/masonry.pkgd.min.js' %}" id="ewd-urp-masonry-js-js"></script>
-    <!-- <script id="ewd-urp-js-js-extra">
-      var ewd_urp_php_data = {
-        maximum_score: "5",
-        review_character_limit: "",
-        flag_inappropriate_enabled: "Yes",
-      };
-    </script> -->
-    <script src="{% static 'js/Skripts/ewd-urp-js.js' %}" id="ewd-urp-js-js"></script>
-    <!-- <script id="ewd-urp-pie-graph-js-js-extra">
-      var ewd_urp_pie_data = {
-        maximum_score: "5",
-        circle_graph_background_color: "",
-        circle_graph_fill_color: "",
-      };
-    </script> -->
-    <script src="{% static 'js/Skripts/ewd-urp-pie-graph.js' %}" id="ewd-urp-pie-graph-js-js"></script>
-    <script src="{% static 'js/Skripts/ewd-urp-datepicker.js' %}"id="ewd-urp-jquery-datepicker-js"></script>
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-183798982-1" id="google_gtagjs-js"></script>
-    <script id="google_gtagjs-js-after">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("set", "developer_id.dZTNiMT", true);
-      gtag("config", "UA-183798982-1", { anonymize_ip: true });
-    </script>
-    <meta name="generator" content="Site Kit by Google 1.21.0" />
-
     <!--Estilo en cabecera-->
     <style type="text/css">
       .rx-temp-rating .rx-temp-rating-number p {
@@ -2352,7 +2224,6 @@
         border-radius: px !important;
       }
     </style>
-  
     <noscript>
       <style>
         .woocommerce-product-gallery {
@@ -2367,67 +2238,8 @@
         margin: 0 !important;
       }
     </style>
-
-    <script type="text/javascript">
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-    </script>
-    <!-- WooCommerce Facebook Integration Begin -->
-    <script type="text/javascript">
-      fbq(
-        "init",
-        "368486284386964",
-        {},
-        {
-          agent: "woocommerce-4.7.1-2.2.0",
-        }
-      );
-
-      fbq("track", "PageView", {
-        source: "woocommerce",
-        version: "4.7.1",
-        pluginVersion: "2.2.0",
-      });
-
-      document.addEventListener(
-        "DOMContentLoaded",
-        function () {
-          jQuery &&
-            jQuery(function ($) {
-              // insert placeholder for events injected when a product is added to the cart through AJAX
-              $(document.body).append(
-                '<div class="wc-facebook-pixel-event-placeholder"></div>'
-              );
-            });
-        },
-        false
-      );
-    </script>
-    <!-- WooCommerce Facebook Integration End -->
-    <link rel="shortcut icon" href="{% static 'images/checkout/apple-touch-icon.png' %}?20090712">
-    <link rel="shortcut icon" href="{% static 'images/checkout/favicon.ico' %}?20090712">
-
+    <link rel="shortcut icon" href="{% static 'images/accha_tab.png' %}?20090712">
+    <link rel="shortcut icon" href="{% static 'images/accha_tab.png' %}?20090712">
     <style id="custom-style">
       .rx_review_shorting_2 .box .rx-selection-arrow {
         background-color: #1dd660 !important;
@@ -2718,17 +2530,14 @@
                                       class="elementor-section elementor-inner-section elementor-element elementor-element-6ce3bde elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                       data-id="6ce3bde"
                                       data-element_type="section">
-                                      <div
-                                        class="elementor-container elementor-column-gap-no">
+                                      <div class="elementor-container elementor-column-gap-no">
                                         <div class="elementor-row">
                                           <div
                                             class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-f3cb3e1"
                                             data-id="f3cb3e1"
                                             data-element_type="column">
-                                            <div
-                                              class="elementor-column-wrap elementor-element-populated">
-                                              <div
-                                                class="elementor-widget-wrap">
+                                            <div class="elementor-column-wrap elementor-element-populated">
+                                              <div class="elementor-widget-wrap">
                                                 <div
                                                   class="elementor-element elementor-element-f67d2bc elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                   data-id="f67d2bc"
@@ -2736,10 +2545,8 @@
                                                   data-widget_type="icon-list.default">
                                                   <div
                                                     class="elementor-widget-container">
-                                                    <ul
-                                                      class="elementor-icon-list-items">
-                                                      <li
-                                                        class="elementor-icon-list-item">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item">
                                                         <span class="elementor-icon-list-icon">
                                                           <i aria-hidden="true" class="fas fa-star"></i>
                                                         </span>
@@ -2753,18 +2560,12 @@
                                                   data-id="36275c0"
                                                   data-element_type="widget"
                                                   data-widget_type="icon-list.default">
-                                                  <div
-                                                    class="elementor-widget-container">
-                                                    <ul
-                                                      class="elementor-icon-list-items">
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
                                                       <li
                                                         class="elementor-icon-list-item">
-                                                        <span
-                                                          class="elementor-icon-list-icon">
-                                                          <i
-                                                            aria-hidden="true"
-                                                            class="fas fa-star">
-                                                          </i>
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true" class="fas fa-star"> </i>
                                                         </span>
                                                         <span class="elementor-icon-list-text"></span>
                                                       </li>
@@ -2776,19 +2577,13 @@
                                                   data-id="8f8f235"
                                                   data-element_type="widget"
                                                   data-widget_type="icon-list.default">
-                                                  <div
-                                                    class="elementor-widget-container">
-                                                    <ul
-                                                      class="elementor-icon-list-items">
-                                                      <li
-                                                        class="elementor-icon-list-item">
-                                                        <span
-                                                          class="elementor-icon-list-icon">
-                                                          <i aria-hidden="true" class="fas fa-star">
-                                                          </i>
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true" class="fas fa-star"></i>
                                                         </span>
-                                                        <span
-                                                          class="elementor-icon-list-text">
+                                                        <span class="elementor-icon-list-text">
                                                         </span>
                                                       </li>
                                                     </ul>
@@ -2799,18 +2594,11 @@
                                                   data-id="fad8075"
                                                   data-element_type="widget"
                                                   data-widget_type="icon-list.default">
-                                                  <div
-                                                    class="elementor-widget-container">
-                                                    <ul
-                                                      class="elementor-icon-list-items">
-                                                      <li
-                                                        class="elementor-icon-list-item">
-                                                        <span
-                                                          class="elementor-icon-list-icon">
-                                                          <i
-                                                            aria-hidden="true"
-                                                            class="fas fa-star">
-                                                          </i>
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true"class="fas fa-star"></i>
                                                         </span>
                                                         <span class="elementor-icon-list-text">
                                                         </span>
@@ -2823,23 +2611,16 @@
                                                   data-id="ee134bf"
                                                   data-element_type="widget"
                                                   data-widget_type="icon-list.default">
-                                                  <div
-                                                    class="elementor-widget-container">
-                                                    <ul
-                                                      class="elementor-icon-list-items">
-                                                      <li
-                                                        class="elementor-icon-list-item">
-                                                        <span
-                                                          class="elementor-icon-list-icon">
-                                                          <i
-                                                            aria-hidden="true"
-                                                            class="fas fa-star">
-                                                          </i>
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true" class="fas fa-star"></i>
                                                         </span>
                                                         <span class="elementor-icon-list-text">
                                                           4.7 | Más de 100 clientes
-                                                          satisfechos</span
-                                                        >
+                                                          satisfechos
+                                                        </span>
                                                       </li>
                                                     </ul>
                                                   </div>
@@ -2860,31 +2641,22 @@
                           class="elementor-section elementor-top-section elementor-element elementor-element-2ac497d elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-middle elementor-hidden-phone elementor-section-boxed elementor-section-height-default"
                           data-id="2ac497d"
                           data-element_type="section"
-                          data-settings='{"background_background":"classic"}'
-                        >
-                          <div
-                            class="elementor-container elementor-column-gap-default"
-                          >
+                          data-settings='{"background_background":"classic"}'>
+                          <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                               <div
                                 class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b72bca3"
                                 data-id="b72bca3"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-998be20 elementor-widget elementor-widget-heading"
                                       data-id="998be20"
                                       data-element_type="widget"
-                                      data-widget_type="heading.default"
-                                    >
+                                      data-widget_type="heading.default">
                                       <div class="elementor-widget-container">
-                                        <h2
-                                          class="elementor-heading-title elementor-size-large"
-                                        >
+                                        <h2 class="elementor-heading-title elementor-size-large">
                                           Tu canción favorita o tu propia foto y texto 
                                           en tu SpotiGlass!
                                         </h2>
@@ -2894,12 +2666,9 @@
                                       class="elementor-element elementor-element-56fd9af elementor-widget elementor-widget-heading"
                                       data-id="56fd9af"
                                       data-element_type="widget"
-                                      data-widget_type="heading.default"
-                                    >
+                                      data-widget_type="heading.default">
                                       <div class="elementor-widget-container">
-                                        <h2
-                                          class="elementor-heading-title elementor-size-default"
-                                        >
+                                        <h2 class="elementor-heading-title elementor-size-default" >
                                           ¡Escoge una canción, un álbum o un artista e
                                           imprímelo con tu tema preferido!
                                         </h2>
@@ -2909,22 +2678,15 @@
                                       class="elementor-element elementor-element-57a22d3 elementor-align-center elementor-widget elementor-widget-button"
                                       data-id="57a22d3"
                                       data-element_type="widget"
-                                      data-widget_type="button.default"
-                                    >
+                                      data-widget_type="button.default">
                                       <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
                                           <a
                                             href="{{ items.get_absolute_url }}"
                                             class="elementor-button-link elementor-button elementor-size-md"
-                                            role="button"
-                                          >
-                                            <span
-                                              class="elementor-button-content-wrapper"
-                                            >
-                                              <span
-                                                class="elementor-button-text"
-                                                >Personalizar ahora</span
-                                              >
+                                            role="button" >
+                                            <span class="elementor-button-content-wrapper">
+                                              <span class="elementor-button-text">Personalizar ahora</span>
                                             </span>
                                           </a>
                                         </div>
@@ -2933,49 +2695,27 @@
                                     <section
                                       class="elementor-section elementor-inner-section elementor-element elementor-element-e6bdfbc elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                       data-id="e6bdfbc"
-                                      data-element_type="section"
-                                    >
-                                      <div
-                                        class="elementor-container elementor-column-gap-no"
-                                      >
+                                      data-element_type="section">
+                                      <div class="elementor-container elementor-column-gap-no">
                                         <div class="elementor-row">
                                           <div
                                             class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-40b21de"
                                             data-id="40b21de"
-                                            data-element_type="column"
-                                          >
-                                            <div
-                                              class="elementor-column-wrap elementor-element-populated"
-                                            >
-                                              <div
-                                                class="elementor-widget-wrap"
-                                              >
+                                            data-element_type="column">
+                                            <div class="elementor-column-wrap elementor-element-populated">
+                                              <div class="elementor-widget-wrap">
                                                 <div
                                                   class="elementor-element elementor-element-0767e74 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                   data-id="0767e74"
                                                   data-element_type="widget"
-                                                  data-widget_type="icon-list.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <ul
-                                                      class="elementor-icon-list-items"
-                                                    >
-                                                      <li
-                                                        class="elementor-icon-list-item"
-                                                      >
-                                                        <span
-                                                          class="elementor-icon-list-icon"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            class="fas fa-star"
-                                                          ></i>
+                                                  data-widget_type="icon-list.default">
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true"class="fas fa-star"></i>
                                                         </span>
-                                                        <span
-                                                          class="elementor-icon-list-text"
-                                                        ></span>
+                                                        <span class="elementor-icon-list-text"></span>
                                                       </li>
                                                     </ul>
                                                   </div>
@@ -2984,24 +2724,12 @@
                                                   class="elementor-element elementor-element-4bf3595 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                   data-id="4bf3595"
                                                   data-element_type="widget"
-                                                  data-widget_type="icon-list.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <ul
-                                                      class="elementor-icon-list-items"
-                                                    >
-                                                      <li
-                                                        class="elementor-icon-list-item"
-                                                      >
-                                                        <span
-                                                          class="elementor-icon-list-icon"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            class="fas fa-star"
-                                                          ></i>
+                                                  data-widget_type="icon-list.default">
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true"class="fas fa-star"></i>
                                                         </span>
                                                         <span
                                                           class="elementor-icon-list-text"
@@ -3014,28 +2742,14 @@
                                                   class="elementor-element elementor-element-cd01b74 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                   data-id="cd01b74"
                                                   data-element_type="widget"
-                                                  data-widget_type="icon-list.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <ul
-                                                      class="elementor-icon-list-items"
-                                                    >
-                                                      <li
-                                                        class="elementor-icon-list-item"
-                                                      >
-                                                        <span
-                                                          class="elementor-icon-list-icon"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            class="fas fa-star"
-                                                          ></i>
+                                                  data-widget_type="icon-list.default">
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true"class="fas fa-star"></i>
                                                         </span>
-                                                        <span
-                                                          class="elementor-icon-list-text"
-                                                        ></span>
+                                                        <span class="elementor-icon-list-text"></span>
                                                       </li>
                                                     </ul>
                                                   </div>
@@ -3044,28 +2758,14 @@
                                                   class="elementor-element elementor-element-efaac0d elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                   data-id="efaac0d"
                                                   data-element_type="widget"
-                                                  data-widget_type="icon-list.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <ul
-                                                      class="elementor-icon-list-items"
-                                                    >
-                                                      <li
-                                                        class="elementor-icon-list-item"
-                                                      >
-                                                        <span
-                                                          class="elementor-icon-list-icon"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            class="fas fa-star"
-                                                          ></i>
+                                                  data-widget_type="icon-list.default">
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item" >
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true"class="fas fa-star"></i>
                                                         </span>
-                                                        <span
-                                                          class="elementor-icon-list-text"
-                                                        ></span>
+                                                        <span class="elementor-icon-list-text"></span>
                                                       </li>
                                                     </ul>
                                                   </div>
@@ -3074,31 +2774,16 @@
                                                   class="elementor-element elementor-element-b4f5352 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                   data-id="b4f5352"
                                                   data-element_type="widget"
-                                                  data-widget_type="icon-list.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <ul
-                                                      class="elementor-icon-list-items"
-                                                    >
-                                                      <li
-                                                        class="elementor-icon-list-item"
-                                                      >
-                                                        <span
-                                                          class="elementor-icon-list-icon"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            class="fas fa-star"
-                                                          ></i>
+                                                  data-widget_type="icon-list.default">
+                                                  <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                      <li class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-icon">
+                                                          <i aria-hidden="true"class="fas fa-star"></i>
                                                         </span>
-                                                        <span
-                                                          class="elementor-icon-list-text"
-                                                        >
-                                                          4.7 | Más de 100 clientes satisfechos
-                                                          </span
-                                                        >
+                                                        <span class="elementor-icon-list-text"> 
+                                                          47 | Más de 100 clientes satisfechos
+                                                        </span>
                                                       </li>
                                                     </ul>
                                                   </div>
@@ -3115,8 +2800,7 @@
                               <div
                                 class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-87229fb"
                                 data-id="87229fb"
-                                data-element_type="column"
-                              >
+                                data-element_type="column">
                                 <div class="elementor-column-wrap">
                                   <div class="elementor-widget-wrap"></div>
                                 </div>
@@ -3127,36 +2811,28 @@
                         <section
                           class="elementor-section elementor-top-section elementor-element elementor-element-40ddae6 elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                           data-id="40ddae6"
-                          data-element_type="section"
-                        >
-                          <div
-                            class="elementor-container elementor-column-gap-default"
-                          >
+                          data-element_type="section">
+                          <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d96dd66"
                                 data-id="d96dd66"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column" >
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-72615c2 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="72615c2"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
                                             <span class="elementor-icon-list-icon">
-                                              <i aria-hidden="true"class="far fa-check-circle">
-                                              </i>
+                                              <i aria-hidden="true"class="far fa-check-circle"></i>
                                             </span>
                                             <span class="elementor-icon-list-text">
-                                              Pago seguro con iDeal y Paypal
+                                              Pago seguro con transferencia y Paypal
                                             </span>
                                           </li>
                                         </ul>
@@ -3168,32 +2844,21 @@
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-42fa98d"
                                 data-id="42fa98d"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column" >
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-b52fe65 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="b52fe65"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3202,22 +2867,14 @@
                                       class="elementor-element elementor-element-2331e42 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="2331e42"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3226,22 +2883,14 @@
                                       class="elementor-element elementor-element-3375518 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="3375518"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true"class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3250,22 +2899,14 @@
                                       class="elementor-element elementor-element-e129799 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="e129799"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3274,25 +2915,14 @@
                                       class="elementor-element elementor-element-b5d0f34 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="b5d0f34"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                            <i aria-hidden="true"class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            >
-                                              4.7 | Más de 100 clientes
-                                              satisfechos</span
-                                            >
+                                            <span class="elementor-icon-list-text">4.7 | Más de 100 clientes satisfechos</span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3303,34 +2933,23 @@
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c92be20"
                                 data-id="c92be20"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-5eae536 elementor-align-right elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="5eae536"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-truck"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-truck"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                              >Entrega gratis dentro de 5
-                                              días</span
-                                            >
+                                            <span class="elementor-icon-list-text">
+                                                Entrega gratis dentro de 5 días
+                                            </span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3344,42 +2963,29 @@
                         <section
                           class="elementor-section elementor-top-section elementor-element elementor-element-999b369 elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                           data-id="999b369"
-                          data-element_type="section"
-                        >
-                          <div
-                            class="elementor-container elementor-column-gap-default"
-                          >
+                          data-element_type="section">
+                          <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-fbcd207"
                                 data-id="fbcd207"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-e61ecb0 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="e61ecb0"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="far fa-check-circle"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="far fa-check-circle"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                              >Pago seguro con iDeal y Paypal</span
-                                            >
+                                            <span class="elementor-icon-list-text">
+                                                Pago seguro con transferencia y Paypal
+                                            </span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3390,131 +2996,67 @@
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-22edf27"
                                 data-id="22edf27"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
-                                    <div
-                                      class="elementor-element elementor-element-0d871f9 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                      data-id="0d871f9"
-                                      data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                    <div class="elementor-element elementor-element-be49102 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="be49102" data-element_type="widget" data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
                                     </div>
-                                    <div
-                                      class="elementor-element elementor-element-0f119c4 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                      data-id="0f119c4"
-                                      data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                    <div class="elementor-element elementor-element-fcaef3c elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="fcaef3c" data-element_type="widget" data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
                                     </div>
-                                    <div
-                                      class="elementor-element elementor-element-9f0f353 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                      data-id="9f0f353"
-                                      data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                    <div class="elementor-element elementor-element-0c9bc29 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0c9bc29" data-element_type="widget" data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
                                     </div>
-                                    <div
-                                      class="elementor-element elementor-element-d925029 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                      data-id="d925029"
-                                      data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                    <div class="elementor-element elementor-element-9e6c3ed elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="9e6c3ed" data-element_type="widget" data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
                                     </div>
-                                    <div
-                                      class="elementor-element elementor-element-5aaf823 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                      data-id="5aaf823"
-                                      data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                    <div class="elementor-element elementor-element-a405826 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="a405826" data-element_type="widget" data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            >
-                                              4.7 | Más de 100 clientes
-                                              satisfechos</span
-                                            >
+                                            <span class="elementor-icon-list-text">
+                                              4.7 | Más de 100 clientes satisfechos
+                                            </span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3525,34 +3067,23 @@
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b3b19a6"
                                 data-id="b3b19a6"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-b35c2cb elementor-align-right elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="b35c2cb"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-truck"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-truck"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                              >Entrega gratis dentro de 5
-                                              días</span
-                                            >
+                                            <span class="elementor-icon-list-text">
+                                              Entrega gratis dentro de 5 días
+                                            </span>
                                           </li>
                                         </ul>
                                       </div>
@@ -3566,74 +3097,45 @@
                         <section
                           class="elementor-section elementor-top-section elementor-element elementor-element-c7e111d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                           data-id="c7e111d"
-                          data-element_type="section"
-                        >
-                          <div
-                            class="elementor-container elementor-column-gap-default"
-                          >
+                          data-element_type="section">
+                          <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                               <div
                                 class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-81af111"
                                 data-id="81af111"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-df44b6d elementor-widget elementor-widget-heading"
                                       data-id="df44b6d"
                                       data-element_type="widget"
-                                      data-widget_type="heading.default"
-                                    >
+                                      data-widget_type="heading.default">
                                       <div class="elementor-widget-container">
-                                        <h2
-                                          class="elementor-heading-title elementor-size-default"
-                                        >
-                                          Crea tu Spotiglass en 3 pasos!
-                                        </h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">Crea tu Spotiglass en 3 pasos!</h2>
                                       </div>
                                     </div>
                                     <section
                                       class="elementor-section elementor-inner-section elementor-element elementor-element-3c277e2 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                       data-id="3c277e2"
-                                      data-element_type="section"
-                                    >
-                                      <div
-                                        class="elementor-container elementor-column-gap-default"
-                                      >
+                                      data-element_type="section">
+                                      <div class="elementor-container elementor-column-gap-default">
                                         <div class="elementor-row">
                                           <div
                                             class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2d19156"
                                             data-id="2d19156"
-                                            data-element_type="column"
-                                          >
-                                            <div
-                                              class="elementor-column-wrap elementor-element-populated"
-                                            >
-                                              <div
-                                                class="elementor-widget-wrap"
-                                              >
+                                            data-element_type="column">
+                                            <div class="elementor-column-wrap elementor-element-populated">
+                                              <div class="elementor-widget-wrap">
                                                 <div
                                                   class="elementor-element elementor-element-5f73c69 elementor-view-default elementor-widget elementor-widget-icon"
                                                   data-id="5f73c69"
                                                   data-element_type="widget"
-                                                  data-widget_type="icon.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <div
-                                                      class="elementor-icon-wrapper"
-                                                    >
-                                                      <div
-                                                        class="elementor-icon"
-                                                      >
-                                                        <i
-                                                          aria-hidden="true"
-                                                          class="fas fa-camera-retro"
-                                                        ></i>
+                                                  data-widget_type="icon.default">
+                                                  <div class="elementor-widget-container">
+                                                    <div class="elementor-icon-wrapper">
+                                                      <div class="elementor-icon">
+                                                        <i aria-hidden="true"class="fas fa-camera-retro"></i>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -3642,30 +3144,18 @@
                                                   class="elementor-element elementor-element-dc0808d elementor-widget elementor-widget-heading"
                                                   data-id="dc0808d"
                                                   data-element_type="widget"
-                                                  data-widget_type="heading.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <h2
-                                                      class="elementor-heading-title elementor-size-default"
-                                                    >
-                                                      Sube una foto 
-                                                    </h2>
+                                                  data-widget_type="heading.default">
+                                                  <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Sube una foto</h2>
                                                   </div>
                                                 </div>
                                                 <div
                                                   class="elementor-element elementor-element-1f850b6 elementor-widget elementor-widget-text-editor"
                                                   data-id="1f850b6"
                                                   data-element_type="widget"
-                                                  data-widget_type="text-editor.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <div
-                                                      class="elementor-text-editor elementor-clearfix"
-                                                    >
+                                                  data-widget_type="text-editor.default">
+                                                  <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
                                                       <p>
                                                         Toma una foto de
                                                         alta calidad con 
@@ -3680,33 +3170,18 @@
                                           <div
                                             class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7a163cd"
                                             data-id="7a163cd"
-                                            data-element_type="column"
-                                          >
-                                            <div
-                                              class="elementor-column-wrap elementor-element-populated"
-                                            >
-                                              <div
-                                                class="elementor-widget-wrap"
-                                              >
+                                            data-element_type="column">
+                                            <div class="elementor-column-wrap elementor-element-populated">
+                                              <div class="elementor-widget-wrap">
                                                 <div
                                                   class="elementor-element elementor-element-1e4e320 elementor-view-default elementor-widget elementor-widget-icon"
                                                   data-id="1e4e320"
                                                   data-element_type="widget"
-                                                  data-widget_type="icon.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <div
-                                                      class="elementor-icon-wrapper"
-                                                    >
-                                                      <div
-                                                        class="elementor-icon"
-                                                      >
-                                                        <i
-                                                          aria-hidden="true"
-                                                          class="fas fa-music"
-                                                        ></i>
+                                                  data-widget_type="icon.default">
+                                                  <div class="elementor-widget-container">
+                                                    <div class="elementor-icon-wrapper">
+                                                      <div class="elementor-icon">
+                                                        <i aria-hidden="true" class="fas fa-music"></i>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -3715,14 +3190,9 @@
                                                   class="elementor-element elementor-element-e7af6d4 elementor-widget elementor-widget-heading"
                                                   data-id="e7af6d4"
                                                   data-element_type="widget"
-                                                  data-widget_type="heading.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <h2
-                                                      class="elementor-heading-title elementor-size-default"
-                                                    >
+                                                  data-widget_type="heading.default">
+                                                  <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">
                                                       El título de la canción
                                                     </h2>
                                                   </div>
@@ -3731,14 +3201,9 @@
                                                   class="elementor-element elementor-element-ccb6476 elementor-widget elementor-widget-text-editor"
                                                   data-id="ccb6476"
                                                   data-element_type="widget"
-                                                  data-widget_type="text-editor.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <div
-                                                      class="elementor-text-editor elementor-clearfix"
-                                                    >
+                                                  data-widget_type="text-editor.default">
+                                                  <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
                                                       <p>
                                                         Elije tu canción favorita
                                                         o ponle un título a tu foto
@@ -3752,33 +3217,18 @@
                                           <div
                                             class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2aa1b54"
                                             data-id="2aa1b54"
-                                            data-element_type="column"
-                                          >
-                                            <div
-                                              class="elementor-column-wrap elementor-element-populated"
-                                            >
-                                              <div
-                                                class="elementor-widget-wrap"
-                                              >
+                                            data-element_type="column" >
+                                            <div class="elementor-column-wrap elementor-element-populated">
+                                              <div class="elementor-widget-wrap">
                                                 <div
                                                   class="elementor-element elementor-element-589344b elementor-view-default elementor-widget elementor-widget-icon"
                                                   data-id="589344b"
                                                   data-element_type="widget"
-                                                  data-widget_type="icon.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <div
-                                                      class="elementor-icon-wrapper"
-                                                    >
-                                                      <div
-                                                        class="elementor-icon"
-                                                      >
-                                                        <i
-                                                          aria-hidden="true"
-                                                          class="fas fa-camera-retro"
-                                                        ></i>
+                                                  data-widget_type="icon.default">
+                                                  <div class="elementor-widget-container">
+                                                    <div class="elementor-icon-wrapper">
+                                                      <div class="elementor-icon">
+                                                        <i aria-hidden="true" class="fas fa-camera-retro"></i>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -3787,14 +3237,9 @@
                                                   class="elementor-element elementor-element-1003797 elementor-widget elementor-widget-heading"
                                                   data-id="1003797"
                                                   data-element_type="widget"
-                                                  data-widget_type="heading.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <h2
-                                                      class="elementor-heading-title elementor-size-default"
-                                                    >
+                                                  data-widget_type="heading.default">
+                                                  <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">
                                                       Nombre del artista
                                                     </h2>
                                                   </div>
@@ -3803,14 +3248,9 @@
                                                   class="elementor-element elementor-element-1fa7549 elementor-widget elementor-widget-text-editor"
                                                   data-id="1fa7549"
                                                   data-element_type="widget"
-                                                  data-widget_type="text-editor.default"
-                                                >
-                                                  <div
-                                                    class="elementor-widget-container"
-                                                  >
-                                                    <div
-                                                      class="elementor-text-editor elementor-clearfix"
-                                                    >
+                                                  data-widget_type="text-editor.default">
+                                                  <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
                                                       <p>
                                                         Pon el nombre del artista
                                                         o inserta un mensaje personal
@@ -3833,45 +3273,31 @@
                         <section
                           class="elementor-section elementor-top-section elementor-element elementor-element-26f105a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                           data-id="26f105a"
-                          data-element_type="section"
-                        >
-                          <div
-                            class="elementor-container elementor-column-gap-default"
-                          >
+                          data-element_type="section">
+                          <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                               <div
                                 class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-765c507"
                                 data-id="765c507"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-5baa227 elementor-widget elementor-widget-heading"
                                       data-id="5baa227"
                                       data-element_type="widget"
-                                      data-widget_type="heading.default"
-                                    >
+                                      data-widget_type="heading.default">
                                       <div class="elementor-widget-container">
-                                        <h1
-                                          class="elementor-heading-title elementor-size-default"
-                                        >
-                                          Resistente ⚡️
-                                        </h1>
+                                        <h1 class="elementor-heading-title elementor-size-default"> Resistente ⚡️</h1>
                                       </div>
                                     </div>
                                     <div
                                       class="elementor-element elementor-element-f741d7c elementor-widget elementor-widget-text-editor"
                                       data-id="f741d7c"
                                       data-element_type="widget"
-                                      data-widget_type="text-editor.default"
-                                    >
+                                      data-widget_type="text-editor.default">
                                       <div class="elementor-widget-container">
-                                        <div
-                                          class="elementor-text-editor elementor-clearfix"
-                                        >
+                                        <div class="elementor-text-editor elementor-clearfix">
                                           <p>
                                             Impresión laser directamente 
                                             sobre la placa de cristal acrílico 
@@ -3894,22 +3320,12 @@
                                       class="elementor-element elementor-element-fd9eed1 elementor-align-center elementor-widget elementor-widget-button"
                                       data-id="fd9eed1"
                                       data-element_type="widget"
-                                      data-widget_type="button.default"
-                                    >
+                                      data-widget_type="button.default">
                                       <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
-                                          <a
-                                            href="{{ items.get_absolute_url }}"
-                                            class="elementor-button-link elementor-button elementor-size-md"
-                                            role="button"
-                                          >
-                                            <span
-                                              class="elementor-button-content-wrapper"
-                                            >
-                                              <span
-                                                class="elementor-button-text"
-                                                >Hacer mi placa</span
-                                              >
+                                          <a href="{{ items.get_absolute_url }}" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                              <span class="elementor-button-text">Hacer mi placa</span>
                                             </span>
                                           </a>
                                         </div>
@@ -3921,18 +3337,14 @@
                               <div
                                 class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-28e54c6"
                                 data-id="28e54c6"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-16a07eb elementor-widget elementor-widget-image"
                                       data-id="16a07eb"
                                       data-element_type="widget"
-                                      data-widget_type="image.default"
-                                    >
+                                      data-widget_type="image.default">
                                       <div class="elementor-widget-container">
                                         <div class="elementor-image">
                                           <img
@@ -3966,32 +3378,22 @@
                         <section
                           class="elementor-section elementor-top-section elementor-element elementor-element-bc5ea71 elementor-section-full_width elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-height-default elementor-section-height-default"
                           data-id="bc5ea71"
-                          data-element_type="section"
-                        >
-                          <div
-                            class="elementor-container elementor-column-gap-default"
-                          >
+                          data-element_type="section">
+                          <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                               <div
                                 class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5bec994"
                                 data-id="5bec994"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-2040ce0 elementor-widget elementor-widget-heading"
                                       data-id="2040ce0"
                                       data-element_type="widget"
-                                      data-widget_type="heading.default"
-                                    >
+                                      data-widget_type="heading.default" >
                                       <div class="elementor-widget-container">
-                                        <h2
-                                          class="elementor-heading-title elementor-size-default"
-                                        >
-                                           AcchaStore™ Artworks
+                                        <h2 class="elementor-heading-title elementor-size-default"> AcchaStore™ Artworks
                                         </h2>
                                       </div>
                                     </div>
@@ -3999,51 +3401,25 @@
                                       class="elementor-element elementor-element-02fc75f elementor-widget elementor-widget-heading"
                                       data-id="02fc75f"
                                       data-element_type="widget"
-                                      data-widget_type="heading.default"
-                                    >
+                                      data-widget_type="heading.default">
                                       <div class="elementor-widget-container">
-                                        <h2
-                                          class="elementor-heading-title elementor-size-default"
-                                        >
-                                          Estos 
-                                          
-                                        </h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">Estos</h2>
                                       </div>
                                     </div>
                                     <div
                                       class="elementor-element elementor-element-ee4125e pp-insta-title-middle elementor-widget elementor-widget-pp-instafeed"
                                       data-id="ee4125e"
-                                      data-element_type="widget"
-                                     
-                                      data-widget_type="pp-instafeed.default"
-                                    >
+                                      data-element_type="widget" data-widget_type="pp-instafeed.default">
                                       <div class="elementor-widget-container">
-                                        <div
-                                          class="pp-instagram-feed clearfix pp-instagram-feed-grid pp-instagram-feed-always pp-instagram-feed-grid-4 pp-if-square-images"
-                                          
-                                        >
+                                        <div class="pp-instagram-feed clearfix pp-instagram-feed-grid pp-instagram-feed-always pp-instagram-feed-grid-4 pp-if-square-images">
                                           <div class="pp-insta-feed-inner">
                                             <div class="pp-instafeed">
-                                              <span
-                                                class="pp-instagram-feed-title-wrap"
-                                              >
-                                                <a
-                                                 href="#"  <!--linkLozano de instagram-->
-                                                >
-                                                  <span
-                                                    class="pp-instagram-feed-title"
-                                                  >
-                                                    <span
-                                                      class="pp-icon pp-icon-before_title"
-                                                    >
-                                                      <i
-                                                        aria-hidden="true"
-                                                        class="fab fa-instagram"
-                                                      ></i>
-                                                    </span>
-
-                                                    Sígue Accha.ec @
-                                                    Instagram
+                                              <span class="pp-instagram-feed-title-wrap">
+                                                <a href="#"  <!--linkLozano de instagram--> >
+                                                  <spanclass="pp-instagram-feed-title" >
+                                                    <span class="pp-icon pp-icon-before_title">
+                                                      <i aria-hidden="true" class="fab fa-instagram"></i>
+                                                    </span> Sígue Accha.ec @Instagram
                                                   </span>
                                                 </a>
                                               </span>
@@ -4065,43 +3441,29 @@
                         <section
                           class="elementor-section elementor-top-section elementor-element elementor-element-19f8f67f elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                           data-id="19f8f67f"
-                          data-element_type="section"
-                        >
-                          <div
-                            class="elementor-container elementor-column-gap-default"
-                          >
+                          data-element_type="section">
+                          <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3c54d637"
                                 data-id="3c54d637"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-1068e340 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="1068e340"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="far fa-check-circle"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="far fa-check-circle" ></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                              >Pago ideal con iDeal y
-                                              Paypal</span
-                                            >
+                                            <span class="elementor-icon-list-text">
+                                              Pago seguro con transferencia y Paypal
+                                            </span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4112,32 +3474,21 @@
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-5145452c"
                                 data-id="5145452c"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-545a218a elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="545a218a"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4146,22 +3497,14 @@
                                       class="elementor-element elementor-element-21488bbb elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="21488bbb"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4170,22 +3513,14 @@
                                       class="elementor-element elementor-element-16e6ed48 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="16e6ed48"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4194,22 +3529,14 @@
                                       class="elementor-element elementor-element-44efbc6b elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="44efbc6b"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4218,25 +3545,14 @@
                                       class="elementor-element elementor-element-22e4a273 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="22e4a273"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i  aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            >
-                                              4.7 | Más de 100 clientes
-                                              Satisfechos</span
-                                            >
+                                            <span class="elementor-icon-list-text"> 4.7 | Más de 100 clientes Satisfechos</span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4247,34 +3563,21 @@
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-18384507"
                                 data-id="18384507"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-2bde7bcf elementor-align-right elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="2bde7bcf"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-truck"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-truck"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                              >Entrega gratis dentro de 5 
-                                              días</span
-                                            >
+                                            <span class="elementor-icon-list-text">Entrega gratis dentro de 5 días</span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4288,43 +3591,29 @@
                         <section
                           class="elementor-section elementor-top-section elementor-element elementor-element-db6fef2 elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                           data-id="db6fef2"
-                          data-element_type="section"
-                        >
-                          <div
-                            class="elementor-container elementor-column-gap-default"
-                          >
+                          data-element_type="section">
+                          <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-303067c"
                                 data-id="303067c"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-0cda9fc elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="0cda9fc"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="far fa-check-circle"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true"class="far fa-check-circle"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                              >Pago Seguro con iDeal y
-                                              Paypal</span
-                                            >
+                                            <span class="elementor-icon-list-text">
+                                              Pago seguro con transferencia y Paypal
+                                            </span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4335,32 +3624,21 @@
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a23fb33"
                                 data-id="a23fb33"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-be49102 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="be49102"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4369,22 +3647,14 @@
                                       class="elementor-element elementor-element-fcaef3c elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="fcaef3c"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4393,22 +3663,14 @@
                                       class="elementor-element elementor-element-0c9bc29 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="0c9bc29"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4417,22 +3679,14 @@
                                       class="elementor-element elementor-element-9e6c3ed elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="9e6c3ed"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            ></span>
+                                            <span class="elementor-icon-list-text"></span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4441,25 +3695,16 @@
                                       class="elementor-element elementor-element-a405826 elementor-align-center elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="a405826"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-star"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-star"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                            >
-                                              4.7 | Más de 100 clientes
-                                              satisfechos</span
-                                            >
+                                            <span class="elementor-icon-list-text">
+                                              4.7 | Más de 100 clientes satisfechos
+                                            </span>
                                           </li>
                                         </ul>
                                       </div>
@@ -4470,34 +3715,23 @@
                               <div
                                 class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2ed93a2"
                                 data-id="2ed93a2"
-                                data-element_type="column"
-                              >
-                                <div
-                                  class="elementor-column-wrap elementor-element-populated"
-                                >
+                                data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                     <div
                                       class="elementor-element elementor-element-eb587ec elementor-align-right elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                       data-id="eb587ec"
                                       data-element_type="widget"
-                                      data-widget_type="icon-list.default"
-                                    >
+                                      data-widget_type="icon-list.default">
                                       <div class="elementor-widget-container">
                                         <ul class="elementor-icon-list-items">
                                           <li class="elementor-icon-list-item">
-                                            <span
-                                              class="elementor-icon-list-icon"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                class="fas fa-truck"
-                                              ></i>
+                                            <span class="elementor-icon-list-icon">
+                                              <i aria-hidden="true" class="fas fa-truck"></i>
                                             </span>
-                                            <span
-                                              class="elementor-icon-list-text"
-                                              >Entrega gratis dentro de 5  
-                                              días</span
-                                            >
+                                            <span class="elementor-icon-list-text">
+                                              Entrega gratis dentro de 5 días
+                                            </span>
                                           </li>
                                         </ul>
                                       </div>

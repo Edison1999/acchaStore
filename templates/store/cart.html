@@ -104,8 +104,8 @@
                         </div>
                     </div>
                     <div class="my-5 d-flex justify-content-between flex-column flex-lg-row">
-                        <a class="btn btn-link text-muted" href="/category"><i class="fa fa-chevron-left"></i> Continue Shopping</a>
-                        <a class="btn btn-dark" href="/checkout-1">Proceed to checkout <i class="fa fa-chevron-right"></i></a>
+                        <a class="btn btn-link text-muted" href="{{ order.itemsOrdered.0.product.get_absolute_url }}"><i class="fa fa-chevron-left"></i> Continue Shopping</a>
+                        <a class="btn btn-dark" href="{% url 'store:checkout' %}">Proceed to checkout <i class="fa fa-chevron-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -1347,13 +1347,13 @@
                             </div>
                         </div>
                     <!-- Empty cart container -->
-                        <h6 class="h4 my-4">Tu carro esta vacio.</h6>
+                        <h6 class="h4 my-4">Tu carro esta vacío.</h6>
                         <p class="px-md-5" style="max-width:544px; margin:0 auto;">
-                            Tu carro actualmente se encuentra vacio. Regresa a la tienda y revisa nuestras ultimas ofertas. Obten tu nueva placa de ACCHASTORE.
+                            Tu carro se encuentra actualmente vacío. Regresa a la tienda y revisa nuestras ultimas ofertas. Obten tu nueva Spotiglass por Acchastore.
                         </p>
                         <a  href="{{ items.get_absolute_url }}" class="btn btn-sm btn-primary btn-icon rounded-pill mt-5" style="letter-spacing:0.1em; padding:10px 10px;">
                             <span class="btn-inner--icon"><i class="fas fa-angle-left"></i></span>
-                            <span class="btn-inner--text">Regresa a la tienda</span>
+                            <span class="btn-inner--text">Regresar a la tienda</span>
                         </a>
                     </div>
                 </div>
